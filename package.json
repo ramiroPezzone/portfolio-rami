@@ -1,0 +1,20 @@
+{
+  "name": "portfolio-rami",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "nodemailer": "^6.7.2"
+  },
+  "engines": {
+    "node": "16.13.1"
+  }
+}

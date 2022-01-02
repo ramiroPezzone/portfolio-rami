@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta tags -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Hojas de estilo -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;400;500&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/images/icono-logoPR.ico" type="image/x-icon">
+
+  <!-- Title -->
+  <title>Portfolio Ramiro C. Pezzone</title>
+
+</head>
+
+<body>
+
+  <div class="contenedor-navbar">
+    <div class="contenedor-logo-navbar">
+      <a href="#">
+        <div class="logo-navbar"></div>
+      </a>
+    </div>
+    <div class="contenedor-menu-hamburguesa">
+      <div class="menu-hamburguesa"></div>
+      <div class="menu-hamburguesa-x"></div>
+    </div>
+  </div>
+
+  <div class="nav-bar-oculto">
+    <div class="contenedor-navbar-oculto">
+      <ul>
+        <li><a href="#aboutme">Acerca de mí</a></li>
+        <li><a href="#techs">Tecnologías</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#rrss">Vínculos de interés</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Confirmación de envío de mensaje -->
+  <div id="capa">
+    <div class="contenedor-flex-ventana-confirmacion">
+      <div class="ventana-mensaje">
+        <div class="title">Gracias por tu mensaje, será enviado ahora mismo!
+        <p class="title2">Al finalizar se te redirigirá al inicio del sitio</p>
+      </div>
+        <div class="buttons">
+          <input type="button" class="button" value="Aceptar" id="ok">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  -->
+
+  <div class="contenedor-grid">
+
+
+    <div class="navbar-lg">
+      <div class="contenedor-navbar-fixed">
+        <div class="img-navbar-fixed">
+          <a href="#"><img src="/images/logoPR-largo.png" alt=""></a>
+        </div>
+        <div class="contenedor-navbar-flex">
+          <a href="#aboutme"><span class="marker">-</span> Acerca de mí</a>
+          <div class="linea-divisora-navbar"></div>
+          <a href="#techs"><span class="marker">-</span> Tecnologías</a>
+          <div class="linea-divisora-navbar"></div>
+          <a href="#portfolio"><span class="marker">-</span> Portfolio</a>
+          <div class="linea-divisora-navbar"></div>
+          <a href="#contacto"><span class="marker">-</span> Contacto</a>
+          <div class="linea-divisora-navbar"></div>
+          <a href="#rrss"><span class="marker">-</span> Vínculos de interés</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contenedor-todo">
+      <div class="contenedor-foto-perfil">
+        <div class="contenedor-presentacion-header">
+          <div class="contenedor-saludo">
+            <h1>HELLO I'M <span class="saludo-nombre">RAMIRO PEZZONE</span></h1>
+          </div>
+          <div class="contenedor-titulo">
+            <h3>FULL STACK WEB DEVELOPER <span class="junior">JUNIOR</span></h3>
+          </div>
+        </div>
+      </div>
+
+      <div id="aboutme" class="separador-secciones"></div>
+      <section class="contenedor-about-me">
+        <div class="about-me">
+          <h2 class="titulo-section">ACERCA DE MI</h2>
+          <div class="contenedor-flex-about-me">
+            <p class="presentacion-1">Hola, soy Desarrollador Web Full Stack actualmente residiendo en Argentina. Mi
+              formación comenzó de manera autodidacta e intensa desde principios del año '21, a la cual sumé una formación de Desarrollador Web Full Stack impartido por la <a href="https://www.baeducacionejecutiva.com.ar/">BA
+                Coding School</a>.</p>
+            <p class="italic presentacion-1">Actualmente nos encontramos en la etapa de estudio de React.</p>
+
+            <div class="linea-divisora"></div>
+
+            <div class="about-me-2">
+              <div class="contenedor-presentacion-2">
+                <p class="presentacion-2">Todo comenzó con la inocente intención de desarrollar sitios y app's web para uso
+                  personal por ideas propias que quería darles vida, pero en cuanto comencé me di cuenta de cuanto me
+                  apasiona el desarrollo, tanto por su característica de tener que estar siempre superando algún obstáculo
+                  como por la inherente necesidad de tener que mantenerse siempre al día con las tecnologías.</p>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <div id="techs" class="separador-secciones"></div>
+
+      <section class="contenedor-general-skills">
+        <h2 class="titulo-section">TECNOLOGÍAS</h2>
+        <div class="contenedor-flex-skills">
+
+          <% for( let i = 0; i < skills.length; i++ ) { %>
+          <div class="contenedor-skills">
+            <div class="logo-skills">
+              <img src="/images/<%= skills[i].logo %>" alt="">
+            </div>
+            <div class="leyenda-tech">
+              <h3>
+                <%= skills[i].tecnologia %>
+              </h3>
+              <p>
+                <%= skills[i].descripcion %>
+              </p>
+            </div>
+          </div>
+
+          <% } %>
+
+
+
+        </div>
+
+      </section>
+
+      <div id="portfolio" class="separador-secciones"></div>
+
+      <section class="portfolio">
+        <h2 class="titulo-section">Portfolio</h2>
+        <h3 class="aclaracion-inicial">Todos los sitios web que se exponen a continuación fueron diseñados con la modalidad Mobile First y se dió especial hincapié en lo referido al diseño Responsive <span class="italic">(incluido en el que estás navegando en este preciso momento)</span></h3>
+
+        <!-- TRABAJOS PRÁCTICOS -->
+        <div class="trabajos-practicos item-portfolio">
+          <h3>Trabajos prácticos</h3>
+          <h4>Trabajos prácticos realizados para el curso de Desarrollador Web Full Stack de la BA Coding School</h4>
+
+          <div class="contenedor-flex-trabajos">
+            <% for( let a = 0; a < trabajosPracticos.length; a++ ) { %>
+
+            <div class="item-trabajo">
+              <h5>Título:</h5>
+              <p class="titulo-trabajo">
+                <%= trabajosPracticos[a].titulo %>
+              </p>
+              <div class="imagen-trabajo">
+                <img src="/images/<%= trabajosPracticos[a].imagen%>" alt="">
+              </div>
+              <p class="click-invitation">Clickeá en el link para ir a la visualización online:</p>
+              <a href='<%= trabajosPracticos[a].link %>' target="_blank" class="link-invitation">
+                <p> <%= trabajosPracticos[a].titulo %></p>
+              </a>
+
+              <h5>Descripción:</h5>
+              <div class="contenedor-btn-ver-detalles">
+                <button class="ver-detalles" id="<%= trabajosPracticos[a].imagen %>">Ver detalles</button>
+              </div>
+            </div>
+            <% } %>
+
+            <!-- DETALLES -->
+            <% for( let c = 0; c < trabajosPracticos.length; c++ ) { %>
+
+            <div class="contenedor-fixed-item-trabajo-detalles" id="id-<%=trabajosPracticos[c].imagen%>">
+              <div class="contenedor-flex-detalles-trabajos">
+                <div class="item-trabajo-detalles">
+                  <div class="contenedor-x"></div>
+                  <h5 class="titulo-detalles">Título:</h5>
+                  <p class="titulo-trabajo-detalles">
+                    <%= trabajosPracticos[c].titulo %>
+                  </p>
+                  <h5>Tecnologías utilizadas:</h5>
+
+                  <div class="contenedor-techs">
+                    <p>
+                      <%= trabajosPracticos[c].tecnologias %>
+                    </p>
+
+                  </div>
+
+                  <h5>Descripción:</h5>
+                  <p><%= trabajosPracticos[c].descripcion %></p>
+                  <h5>Obs:</h5>
+                  <p>
+                    <%= trabajosPracticos[c].observaciones %>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <% } %>
+            <!-- FIN DETALLES -->
+          </div>
+        </div>
+
+        <div class="linea-divisora"></div>
+
+        <!-- TRABAJOS A CLIENTES -->
+        <div class="trabajos-reales item-portfolio">
+          <h3>Trabajos en producción</h3>
+
+          <div class="contenedor-flex-trabajos">
+            <% for( let d = 0; d < trabajosReales.length; d++ ) { %>
+
+            <div class="item-trabajo">
+              <h5>Título:</h5>
+              <p class="titulo-trabajo">
+                <%= trabajosReales[d].titulo %>
+              </p>
+              <div class="imagen-trabajo">
+                <img src="/images/<%= trabajosReales[d].imagen%>" alt="">
+              </div>
+              <p class="click-invitation">Clickeá en el link para ir a la visualización online:</p>
+              <a href='<%= trabajosReales[d].link %>' target="_blank" class="link-invitation">
+                <p> <%= trabajosReales[d].titulo %></p>
+              </a>
+              <h5>Descripción:</h5>
+              <div class="contenedor-btn-ver-detalles">
+                <button class="ver-detalles" id="<%= trabajosReales[d].imagen %>">Ver detalles</button>
+              </div>
+            </div>
+            <% } %>
+
+            <!-- DETALLES -->
+            <% for( let e = 0; e < trabajosReales.length; e++ ) { %>
+
+            <div class="contenedor-fixed-item-trabajo-detalles" id="id-<%=trabajosReales[e].imagen%>">
+              <div class="contenedor-flex-detalles-trabajos">
+                <div class="item-trabajo-detalles">
+                  <div class="contenedor-x"></div>
+                  <h5 class="titulo-detalles">Título:</h5>
+                  <p class="titulo-trabajo-detalles">
+                    <%= trabajosReales[e].titulo %>
+                  </p>
+                  <h5>Tecnologías utilizadas:</h5>
+
+                  <div class="contenedor-techs">
+                    <p>
+                      <%= trabajosReales[e].tecnologias %>
+                    </p>
+
+                  </div>
+
+                  <h5>Módulos implementados:</h5>
+                  <div class="contenedor-modulos">
+                    <p>
+                      <%= trabajosReales[e].modulos %>
+                    </p>
+
+                  </div>
+
+                  <p>
+
+                  </p>
+
+                  <h5>Descripción:</h5>
+                  <p><%= trabajosReales[e].descripcion %></p>
+                  <h5>Obs:</h5>
+                  <p>
+                    <%= trabajosReales[e].observaciones %>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <% } %>
+            <!-- FIN DETALLES -->
+
+            <div class="linea-divisora"></div>
+
+            <!-- PROYECTOS -->
+
+            <div class="proyectos item-portfolio">
+              <h3>Proyectos en curso</h3>
+              <h4>Proyectos propios o de terceros en curso actualmente</h4>
+              <div class="contenedor-flex-trabajos">
+                <% for( let a = 0; a < proyectos.length; a++ ) { %>
+
+                <div class="item-trabajo">
+                  <h5>Título:</h5>
+                  <p class="titulo-trabajo">
+                    <%= proyectos[a].titulo %>
+                  </p>
+                  <div class="imagen-trabajo">
+                    <img src="/images/<%= proyectos[a].imagen%>" alt="">
+                  </div>
+
+                  <h5>Descripción:</h5>
+                  <div class="contenedor-btn-ver-detalles">
+                    <button class="ver-detalles" id="<%= proyectos[a].imagen %>">Ver detalles</button>
+                  </div>
+                </div>
+                <% } %>
+
+                <!-- DETALLES -->
+                <% for( let c = 0; c < proyectos.length; c++ ) { %>
+
+                <div class="contenedor-fixed-item-trabajo-detalles" id="id-<%=proyectos[c].imagen%>">
+                  <div class="contenedor-flex-detalles-trabajos">
+                    <div class="item-trabajo-detalles">
+                      <div class="contenedor-x"></div>
+                      <h5 class="titulo-detalles">Título:</h5>
+                      <p class="titulo-trabajo-detalles">
+                        <%= proyectos[c].titulo %>
+                      </p>
+                      <h5>Tecnologías utilizadas:</h5>
+
+                      <div class="contenedor-techs">
+                        <p>
+                          <%= proyectos[c].tecnologias %>
+                        </p>
+
+                      </div>
+
+                      <h5>Descripción:</h5>
+                      <p><%= proyectos[c].descripcion %></p>
+                    </div>
+                  </div>
+                </div>
+                <% } %>
+                <!-- FIN DETALLES -->
+      </section>
+
+      <div id="contacto" class="separador-secciones"></div>
+      <section class="contacto">
+        <h2 class="titulo-section">Contacto</h2>
+
+        <div class="contenedor-iconos-contacto">
+
+          <div class="opcion-de-contacto">
+            <div class="ico">
+              <a href="tel: +54 9 342 4 21-9046">
+                <img src="/images/icono-llamada-inactive.png" alt="">
+              </a>
+            </div>
+            <div class="action">
+              <p>Llamame</p>
+            </div>
+          </div>
+
+          <div class="opcion-de-contacto">
+            <div class="ico">
+              <a href="https://wa.link/tvsz7k" target="_blank">
+                <img src="/images/icono-whatsapp-inactive.png" alt="">
+              </a>
+            </div>
+            <div class="action">
+              <p>Enviame whatsapp</p>
+            </div>
+          </div>
+
+        </div>
+
+        <h3 class="aclaracion-inicial">O bien dejame tus datos y a la brevedad me pongo en contacto</h3>
+        <div class="contenedor-form-contacto">
+
+          <form method="post" action="/contacto" class="form-contacto" id="form-de-contacto">
+
+            <div class="item-form">
+              <div class="input-form">
+                <input type="text" name="nombre" id="" autocomplete="name" placeholder="*Tu nombre">
+              </div>
+            </div>
+
+            <div class="item-form">
+              <div class="input-form">
+                <input type="tel" name="tel" id="" autocomplete="tel" placeholder="*Tu número telefónico">
+              </div>
+            </div>
+
+
+            <div class="item-form">
+              <div class="input-form">
+                <input type="email" name="email" id="" autocomplete="email" placeholder="*Tu email">
+              </div>
+            </div>
+
+            <div class="item-form">
+              <div class="input-form">
+                <input type="text" name="company" id="" autocomplete="organization" placeholder="Tu compañía (si corresponde)">
+              </div>
+            </div>
+
+            <div class="item-form">
+              <div class="input-form">
+                <textarea name="mensaje" id="" cols="30" rows="7" placeholder="Tu mensaje"></textarea>
+              </div>
+            </div>
+
+            <div class="btns-form">
+              <button type="submit">Enviar</button>
+            </div>
+
+          </form>
+        </div>
+      </section>
+
+      <div id="rrss"></div>
+      <section class="rrss">
+        <h2 class="titulo-section-vinculos">Vínculos de interés</h2>
+
+        <div class="contenedor-logos-rrss">
+          <a href="https://www.facebook.com/ramiro.pezzone/" target="_blank">
+            <div class="logo-facebook"></div>
+          </a>
+          <a href="https://github.com/ramiroPezzone" target="_blank">
+            <div class="logo-github"></div>
+          </a>
+          <a href="https://www.linkedin.com/in/ramiro-c-pezzone-desarrollador-web/" target="_blank">
+            <div class="logo-linkedin"></div>
+          </a>
+          <a href="https://www.instagram.com/rami_pezzone/?hl=es" target="_blank">
+            <div class="logo-instagram"></div>
+          </a>
+        </div>
+        <div class="contenedor-logo-rp-rrss">
+          <div class="logo-rp-rrss"></div>
+        </div>
+      </section>
+
+      <div class="linea-divisora-footer"></div>
+
+      <footer class="footer">
+        <div>
+          <h6>© 2022 - Powered by: </h6>
+        </div>
+        <div class="img"> <img src="/images/logoPR.png" alt=""></div>
+        <div>
+          <h6>Ramiro C. Pezzone</h6>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="/js/dom-manipulation.js"></script>
+</body>
+
+</html>
