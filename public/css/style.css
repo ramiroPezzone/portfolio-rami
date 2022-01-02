@@ -26,7 +26,10 @@
 *::selection {
         background-color: var(--atomic-tangerine);
 }
-
+.imagen-miniatura {
+        width: 100%;
+        display: none;
+}
 /* Ventana confirmación de envío de mensaje */
 #capa {
         display: none;
