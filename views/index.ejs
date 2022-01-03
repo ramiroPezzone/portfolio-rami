@@ -8,20 +8,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Ramiro C. Pezzone">
 
+
   <!-- og's Meta -->
   <meta property="og:title" content="Ramiro Pezzone - Desarrollador Web Full Stack Jr" />
-  <meta property="og:description" content="Presentación al mundo de Ramiro Pezzone como Desarrollador Web"/>
+  <meta property="og:description" content="Presentación al mundo de Ramiro Pezzone como Desarrollador Web" />
   <meta property="og:url" content="https://portfolio-ramiro-pezzone.herokuapp.com/">
   <meta name="image" property="og:image" content="https://portfolio-ramiro-pezzone.herokuapp.com/images/vista-min-sitio-web.png">
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="600" />
 
-  
-  <meta property="og:type" content="portfolio" />
-  <meta name="author" property="og:site_name" content="Ramiro C. Pezzone - Desarrollador Web Full Stack"/>
-  
   <!-- Hojas de estilo -->
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="path/to/intlTelInput.css">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,6 +37,8 @@
 </head>
 
 <body>
+
+  <img src="/images/vista-min-sitio-web.png" alt="" class="imagen-miniatura">
 
   <!-- Confirmación de envío de mensaje -->
   <div id="capa">
@@ -70,8 +70,8 @@
   <div class="nav-bar-oculto">
     <div class="contenedor-navbar-oculto">
       <ul>
-        <li><a href="#aboutme">Acerca de mí</a></li>
-        <li><a href="#techs">Tecnologías</a></li>
+        <li><a href="#aboutme ">Acerca de mí</a></li>
+        <li><a href="#techs">Habilidades</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contacto">Contacto</a></li>
         <li><a href="#rrss">Vínculos de interés</a></li>
@@ -96,7 +96,7 @@
           <div class="linea-divisora-navbar"></div>
           <a href="#techs">
             <div class="link-navbar-fixed">
-              <span class="marker">-</span> Tecnologías
+              <span class="marker">-</span> Habilidades
             </div>
           </a>
           <div class="linea-divisora-navbar"></div>
@@ -138,7 +138,7 @@
         <div class="about-me">
           <h2 class="titulo-section">ACERCA DE MI</h2>
           <div class="contenedor-flex-about-me">
-            <p class="presentacion-1">Hola, soy Desarrollador Web Full Stack actualmente residiendo en Argentina. Mi
+            <p class="presentacion-1">Hola, mi nombre es Ramiro Carlos Pezzone, tengo 37 años, actualmente residiendo en Argentina. Soy Desarrollador Web Full Stack, siendo que mi
               formación comenzó de manera autodidacta e intensa desde principios del año '21, a la cual sumé una formación de Desarrollador Web Full Stack impartido por la <a href="https://www.baeducacionejecutiva.com.ar/" target="_blank" rel="noopener noreferrer">BA
                 Coding School</a>.</p>
             <p class="italic presentacion-1">Actualmente nos encontramos en la etapa de estudio de React.</p>
@@ -159,7 +159,7 @@
       <div id="techs" class="separador-secciones"></div>
 
       <section class="contenedor-general-skills">
-        <h2 class="titulo-section">TECNOLOGÍAS</h2>
+        <h2 class="titulo-section">HABILIDADES</h2>
         <div class="contenedor-flex-skills">
 
           <% for( let i = 0; i < skills.length; i++ ) { %>
@@ -178,12 +178,72 @@
           </div>
 
           <% } %>
-          
+
         </div>
 
       </section>
 
+        
+        
+        <section class="contenedor-general-soft-skills">
+          <h2 class="titulo-section">SOFT SKILLS</h2>
+          <div class="contenedor-flex-skills">
+  
+            <% for( let i = 0; i < softSkills.length; i++ ) { %>
+            <div class="contenedor-skills">
+              <div class="logo-soft-skills">
+                <img src="/images/<%= softSkills[i].logo %>" alt="">
+              </div>
+              <div class="leyenda-tech">
+                <h3>
+                  <%= softSkills[i].habilidad %>
+                </h3>
+                <p>
+                  <%= softSkills[i].descripcion %>
+                </p>
+              </div>
+            </div>
+  
+            <% } %>
+  
+          </div>
+
+        </section>
+
+        <section class="contenedor-general-soft-skills">
+          <h2 class="titulo-section">IDIOMAS</h2>
+          <div class="contenedor-flex-skills">
+            <div class="contenedor-idiomas">
+              <div class="idioma">
+                <h3>INGLÉS</h3>
+              </div>
+              <div class="leyenda-tech">
+                <p>
+                  Excelente manejo de la lectura. Nivel de conversación intermedio.
+                </p>
+              </div>
+            </div>
+            
+            <div class="contenedor-idiomas">
+              <div class="idioma">
+                <h3>Español</h3>
+              </div>
+              <div class="leyenda-tech">
+                <p>
+                  Lengua nativa.
+                </p>
+              </div>
+            </div>
+  
+  
+          </div>
+
+        </section>
+
+
       <div id="portfolio" class="separador-secciones"></div>
+
+      <div class="linea-divisora-2"></div>
 
       <section class="portfolio">
         <h2 class="titulo-section">Portfolio</h2>
@@ -378,7 +438,6 @@
                 </div>
                 <% } %>
                 <!-- FIN DETALLES -->
-                
       </section>
 
       <div id="contacto" class="separador-secciones"></div>
