@@ -4,6 +4,7 @@ trabajosPracticos = require('./trabajos/trabajosPracticos'),
 trabajosReales = require('./trabajos/trabajosReales'),
 proyectos = require('./trabajos/proyectos'),
 skills = require('./trabajos/skills'),
+softSkills = require('./trabajos/soft-skills'),
 port = process.env.PORT;
 if(port == null || port == "") {
     port = 8000;
@@ -31,7 +32,8 @@ app.get('/', (req, res) => {
         trabajosPracticos: trabajosPracticos,
         trabajosReales: trabajosReales,
         proyectos: proyectos,
-        skills: skills
+        skills: skills,
+        softSkills: softSkills
     })
 })
 // EMAIL
