@@ -26,6 +26,11 @@
 *::selection {
         background-color: var(--atomic-tangerine);
 }
+.imagen-miniatura {
+        width: 100%;
+        display: none;
+}
+
 /* Ventana confirmación de envío de mensaje */
 #capa {
         display: none;
@@ -287,9 +292,11 @@
 .about-me,
 .about-me-2,
 .contenedor-skills,
+.contenedor-general-skills,
 .portfolio {
         padding: 0 20px;
 }
+
 
 .titulo-section {
         font-family: var(--montserrat-subrayada);
@@ -347,6 +354,7 @@ h2::first-letter {
         align-content: center;
         
 }
+
 .contenedor-skills {
         display: flex;
         flex-direction: row;
@@ -357,9 +365,28 @@ h2::first-letter {
         margin-top: 30px;
         width: 300px;
 }
+.contenedor-idiomas {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        gap: 30px;
+        margin-top: 30px;
+        width: 300px;
+}
 
 .logo-skills img {
         width: 50px;
+}
+.contenedor-general-idiomas {
+        margin-bottom: 40px;
+}
+.contenedor-general-soft-skills {
+        margin-bottom: 40px;
+}
+.logo-soft-skills img {
+        width: 70px;
 }
 .leyenda-tech {
         flex-basis: 100%;
@@ -923,11 +950,6 @@ h2::first-letter {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
-        }
-
-        .contenedor-flex-skills {
-                height: 90vh;
-                gap: 5vw;
         }
 
         .aclaracion-inicial {
