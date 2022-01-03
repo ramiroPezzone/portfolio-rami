@@ -2,7 +2,7 @@ const trabajosPracticos = [
     {
         titulo: 'Delicious Taste - Delivery de hamburguesas',
         imagen: 'vista-previa-tp1.png',
-        tecnologias: 'HTML - CSS - JS',
+        tecnologias: 'HTML - CSS',
         descripcion: 'Trabajo práctico grupal consistente en la realización de un sitio web el cual debía contar con: una página principal, una en la que se exhiba un listado con productos, la visualización de los detalles de alguno de ellos, otra página que contenga un formulario de registro de usuarios y una más para el agregado de nuevos productos.',
         observaciones: 'Dado que JS no se encontraba entre las tecnologías disponibles a utilizar, se implementó la etiqueta "details" para emular el comportamiento de un navbar desplegable, como así también para el despliegue de la información de detalles de los productos.',
         link: "https://delicious-taste-trabajo-integrador-html-css.vercel.app/index.html"
