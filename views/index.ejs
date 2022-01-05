@@ -24,7 +24,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;600;700;800;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;400;500&display=swap" rel="stylesheet">
 
@@ -37,6 +37,8 @@
 </head>
 
 <body>
+
+  <img src="/images/vista-min-sitio-web.png" alt="" class="imagen-miniatura">
 
   <!-- Confirmación de envío de mensaje -->
   <div id="capa">
@@ -156,21 +158,74 @@
 
       <div id="techs" class="separador-secciones"></div>
 
-      <section class="contenedor-general-skills">
+      <section class="contenedor-general-skills contenedor-habilidades">
         <h2 class="titulo-section">HABILIDADES</h2>
+        <h3 class="titulo-section">TECNOLOGÍAS</h3>
+        <h4 class="titulo-section tipo-de-tech">Front:</h4>
+        <div class="contenedor-front contenedor-flex-techs">
+          <% for( let f = 0; f < front.length; f++ ) { %>
+          <div class="tech-front">
+            <div class="logo-tech">
+              <img src="/images/<%= front[f].logo %> " alt="">
+            </div>
+            <div class="leyenda-tech">
+              <p>
+                <%= front[f].tecnologia %>
+              </p>
+            </div>
+          </div>
+          <% } %>
+        </div>
+        <h4 class="titulo-section tipo-de-tech">Back:</h4>
+        <div class="contenedor-back contenedor-flex-techs">
+          <% for( let b = 0; b < back.length; b++ ) { %>
+          <div class="tech-front">
+            <div class="logo-tech">
+              <img src="/images/<%= back[b].logo %> " alt="">
+            </div>
+            <div class="leyenda-tech">
+              <p>
+                <%= back[b].tecnologia %>
+              </p>
+            </div>
+          </div>
+          <% } %>
+        </div>
+
+        <h4 class="titulo-section tipo-de-tech">Bases de datos:</h4>
+        <div class="contenedor-db contenedor-flex-techs">
+          <% for( let d = 0; d < db.length; d++ ) { %>
+          <div class="tech-front">
+            <div class="logo-tech">
+              <img src="/images/<%= db[d].logo %> " alt="">
+            </div>
+            <div class="leyenda-tech">
+              <p>
+                <%= db[d].tecnologia %>
+                </h4>
+            </div>
+          </div>
+          <% } %>
+        </div>
+      </section>
+
+
+
+      <section class="contenedor-habilidades contenedor-general-soft-skills">
+        <h2 class="titulo-section">SOFT SKILLS</h2>
         <div class="contenedor-flex-skills">
 
-          <% for( let i = 0; i < skills.length; i++ ) { %>
-          <div class="contenedor-skills">
-            <div class="logo-skills">
-              <img src="/images/<%= skills[i].logo %>" alt="">
+          <% for( let i = 0; i < softSkills.length; i++ ) { %>
+          <div class="contenedor-soft-skills">
+            <div class="logo-soft-skills">
+              <img src="/images/<%= softSkills[i].logo %>" alt="">
             </div>
             <div class="leyenda-tech">
               <h3>
-                <%= skills[i].tecnologia %>
+                <%= softSkills[i].habilidad %>
               </h3>
               <p>
-                <%= skills[i].descripcion %>
+                <%= softSkills[i].descripcion %>
               </p>
             </div>
           </div>
@@ -181,62 +236,23 @@
 
       </section>
 
-        
-        
-        <section class="contenedor-general-soft-skills">
-          <h2 class="titulo-section">SOFT SKILLS</h2>
-          <div class="contenedor-flex-skills">
-  
-            <% for( let i = 0; i < softSkills.length; i++ ) { %>
-            <div class="contenedor-skills">
-              <div class="logo-soft-skills">
-                <img src="/images/<%= softSkills[i].logo %>" alt="">
-              </div>
-              <div class="leyenda-tech">
-                <h3>
-                  <%= softSkills[i].habilidad %>
-                </h3>
-                <p>
-                  <%= softSkills[i].descripcion %>
-                </p>
-              </div>
+      <section class="contenedor-langs contenedor-habilidades">
+        <h2 class="titulo-section">Idiomas</h2>
+        <div class="contenedor-flex-langs">
+          <% for( let l = 0; l < lang.length; l++ ) { %>
+          <div class="langs">
+            <div class="imagen-lang">
+              <img src="/images/<%= lang[l].imagen %> " alt="">
             </div>
-  
-            <% } %>
-  
+            <div class="leyenda-lang">
+              <h3>Nivel:</h3>
+              <h4> <%= lang[l].nivel %> </h4>
+            </div>
           </div>
+          <% } %>
+        </div>
+      </section>
 
-        </section>
-
-        <section class="contenedor-general-soft-skills">
-          <h2 class="titulo-section">IDIOMAS</h2>
-          <div class="contenedor-flex-skills">
-            <div class="contenedor-idiomas">
-              <div class="idioma">
-                <h3>INGLÉS</h3>
-              </div>
-              <div class="leyenda-tech">
-                <p>
-                  Excelente manejo de la lectura. Nivel de conversación intermedio.
-                </p>
-              </div>
-            </div>
-            
-            <div class="contenedor-idiomas">
-              <div class="idioma">
-                <h3>Español</h3>
-              </div>
-              <div class="leyenda-tech">
-                <p>
-                  Lengua nativa.
-                </p>
-              </div>
-            </div>
-  
-  
-          </div>
-
-        </section>
 
 
       <div id="portfolio" class="separador-secciones"></div>
@@ -263,10 +279,12 @@
               <div class="imagen-trabajo">
                 <img src="/images/<%= trabajosPracticos[a].imagen%>" alt="">
               </div>
-              <p class="click-invitation">Clickeá en el link para ir a la visualización online:</p>
-              <a href='<%= trabajosPracticos[a].link %>' target="_blank" rel="noopener noreferrer" class="link-invitation">
-                <p> <%= trabajosPracticos[a].titulo %></p>
-              </a>
+              <h5>Enlace:</h5>
+              <div class="contenedor-btn-enlace">
+                <a href='<%= trabajosPracticos[a].link %>' target="_blank" rel="noopener noreferrer" class="link-invitation">
+                  <button class="enlace" type="menu">Ir al sitio</button>
+                </a>
+              </div>
 
               <div class="final-tarjeta-trabajos">
                 <h5>Descripción:</h5>
@@ -328,12 +346,14 @@
               <div class="imagen-trabajo">
                 <img src="/images/<%= trabajosReales[d].imagen%>" alt="">
               </div>
-              <p class="click-invitation">Clickeá en el link para ir a la visualización online:</p>
-              <a href='<%= trabajosReales[d].link %>' target="_blank" rel="noopener noreferrer" class="link-invitation">
-                <p> <%= trabajosReales[d].titulo %></p>
-              </a>
-              <div class="final-tarjeta-trabajos">
+              <h5>Enlace:</h5>
+              <div class="contenedor-btn-enlace">
+                <a href='<%= trabajosReales[d].link %>' target="_blank" rel="noopener noreferrer" class="link-invitation">
+                  <button class="enlace" type="menu">Ir al sitio</button>
+                </a>
+              </div>
 
+              <div class="final-tarjeta-trabajos">
                 <h5>Descripción:</h5>
                 <div class="contenedor-btn-ver-detalles">
                   <button class="ver-detalles" id="<%= trabajosReales[d].imagen %>">Ver detalles</button>
