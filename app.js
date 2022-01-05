@@ -1,12 +1,15 @@
 let express = require('express'),
-app = express(),
-trabajosPracticos = require('./trabajos/trabajosPracticos'),
-trabajosReales = require('./trabajos/trabajosReales'),
-proyectos = require('./trabajos/proyectos'),
-skills = require('./trabajos/skills'),
-softSkills = require('./trabajos/soft-skills'),
-port = process.env.PORT;
-if(port == null || port == "") {
+    app = express(),
+    trabajosPracticos = require('./trabajos/trabajosPracticos'),
+    trabajosReales = require('./trabajos/trabajosReales'),
+    proyectos = require('./trabajos/proyectos'),
+    front = require('./skills/front'),
+    back = require('./skills/back'),
+    db = require('./skills/db'),
+    softSkills = require('./skills/soft-skills'),
+    lang = require('./skills/langs'),
+    port = process.env.PORT;
+if (port == null || port == "") {
     port = 8000;
 }
 
@@ -23,7 +26,7 @@ app.set('view engine', 'ejs')
 app.use(express.static(__dirname + '/public'))
 
 // Seteando solicitudes post
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
 // Index
@@ -32,8 +35,11 @@ app.get('/', (req, res) => {
         trabajosPracticos: trabajosPracticos,
         trabajosReales: trabajosReales,
         proyectos: proyectos,
-        skills: skills,
-        softSkills: softSkills
+        front: front,
+        back: back,
+        db: db,
+        softSkills: softSkills,
+        lang: lang
     })
 })
 // EMAIL
