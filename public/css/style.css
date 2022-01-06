@@ -832,7 +832,7 @@ h2::first-letter {
         }
         .tech-front {
                 text-align: center;
-                width: 40%;
+                width: initial;
         }
         .contenedor-flex-techs {
                 gap:20px
