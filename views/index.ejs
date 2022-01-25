@@ -401,60 +401,6 @@
 
             <div class="linea-divisora"></div>
 
-            <!-- PROYECTOS -->
-
-            <div class="proyectos item-portfolio">
-              <h3>Proyectos en curso</h3>
-              <h4>Proyectos propios o de terceros en curso actualmente</h4>
-              <div class="contenedor-flex-trabajos">
-                <% for( let a = 0; a < proyectos.length; a++ ) { %>
-
-                <div class="item-trabajo">
-                  <h5>Título:</h5>
-                  <p class="titulo-trabajo">
-                    <%= proyectos[a].titulo %>
-                  </p>
-                  <div class="imagen-trabajo">
-                    <img src="/images/<%= proyectos[a].imagen%>" alt="">
-                  </div>
-
-                  <div class="final-tarjeta-trabajos">
-
-                    <h5>Descripción:</h5>
-                    <div class="contenedor-btn-ver-detalles">
-                      <button class="ver-detalles" id="<%= proyectos[a].imagen %>">Ver detalles</button>
-                    </div>
-                  </div>
-                </div>
-                <% } %>
-
-                <!-- DETALLES -->
-                <% for( let c = 0; c < proyectos.length; c++ ) { %>
-
-                <div class="contenedor-fixed-item-trabajo-detalles" id="id-<%=proyectos[c].imagen%>">
-                  <div class="contenedor-flex-detalles-trabajos">
-                    <div class="item-trabajo-detalles">
-                      <div class="contenedor-x"></div>
-                      <h5 class="titulo-detalles">Título:</h5>
-                      <p class="titulo-trabajo-detalles">
-                        <%= proyectos[c].titulo %>
-                      </p>
-                      <h5>Tecnologías utilizadas:</h5>
-
-                      <div class="contenedor-techs">
-                        <p>
-                          <%= proyectos[c].tecnologias %>
-                        </p>
-
-                      </div>
-
-                      <h5>Descripción:</h5>
-                      <p><%= proyectos[c].descripcion %></p>
-                    </div>
-                  </div>
-                </div>
-                <% } %>
-                <!-- FIN DETALLES -->
       </section>
 
       <div id="contacto" class="separador-secciones"></div>
