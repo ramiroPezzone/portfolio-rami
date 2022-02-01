@@ -160,52 +160,71 @@
       <section class="contenedor-general-skills contenedor-habilidades">
         <h2 class="titulo-section">HABILIDADES</h2>
         <h3 class="titulo-section">TECNOLOGÍAS</h3>
-        <h4 class="titulo-section tipo-de-tech">Front:</h4>
-        <div class="contenedor-front contenedor-flex-techs">
-          <% for( let f = 0; f < front.length; f++ ) { %>
-          <div class="tech-front">
-            <div class="logo-tech">
-              <img src="/images/<%= front[f].logo %> " alt="">
-            </div>
-            <div class="leyenda-tech">
-              <p>
-                <%= front[f].tecnologia %>
-              </p>
-            </div>
+
+        <div class="contenedor-techs">
+          <div class="titulo-tech">
+            <h4 class="tipo-de-tech">Front:</h4>
           </div>
-          <% } %>
-        </div>
-        <h4 class="titulo-section tipo-de-tech">Back:</h4>
-        <div class="contenedor-back contenedor-flex-techs">
-          <% for( let b = 0; b < back.length; b++ ) { %>
-          <div class="tech-front">
-            <div class="logo-tech">
-              <img src="/images/<%= back[b].logo %> " alt="">
+          <div class="contenedor-front contenedor-flex-techs">
+            <% for( let f = 0; f < front.length; f++ ) { %>
+            <div class="tech-front">
+              <div class="logo-tech">
+                <img src="/images/<%= front[f].logo %> " alt="">
+              </div>
+              <div class="leyenda-tech">
+                <p>
+                  <%= front[f].tecnologia %>
+                </p>
+              </div>
             </div>
-            <div class="leyenda-tech">
-              <p>
-                <%= back[b].tecnologia %>
-              </p>
-            </div>
+            <% } %>
           </div>
-          <% } %>
         </div>
 
-        <h4 class="titulo-section tipo-de-tech">Bases de datos:</h4>
-        <div class="contenedor-db contenedor-flex-techs">
-          <% for( let d = 0; d < db.length; d++ ) { %>
-          <div class="tech-front">
-            <div class="logo-tech">
-              <img src="/images/<%= db[d].logo %> " alt="">
-            </div>
-            <div class="leyenda-tech">
-              <p>
-                <%= db[d].tecnologia %>
-                </h4>
-            </div>
+        <div class="linea-divisora-footer"></div>
+
+        <div class="contenedor-techs">
+          <div class="titulo-tech">
+            <h4 class="titulo-section tipo-de-tech">Back:</h4>
           </div>
-          <% } %>
+          <div class="contenedor-back contenedor-flex-techs">
+            <% for( let b = 0; b < back.length; b++ ) { %>
+            <div class="tech-front">
+              <div class="logo-tech">
+                <img src="/images/<%= back[b].logo %> " alt="">
+              </div>
+              <div class="leyenda-tech">
+                <p>
+                  <%= back[b].tecnologia %>
+                </p>
+              </div>
+            </div>
+            <% } %>
+          </div>
         </div>
+
+        <div class="linea-divisora-footer"></div>
+
+        <div class="contenedor-techs">
+          <div class="titulo-tech">
+            <h4 class="titulo-section tipo-de-tech">Bases de datos:</h4>
+          </div>
+          <div class="contenedor-db contenedor-flex-techs">
+            <% for( let d = 0; d < db.length; d++ ) { %>
+            <div class="tech-front">
+              <div class="logo-tech">
+                <img src="/images/<%= db[d].logo %> " alt="">
+              </div>
+              <div class="leyenda-tech">
+                <p>
+                  <%= db[d].tecnologia %>
+                  </h4>
+              </div>
+            </div>
+            <% } %>
+          </div>
+        </div>
+
       </section>
 
 

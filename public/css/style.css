@@ -337,21 +337,28 @@ h2::first-letter {
         padding-bottom: 20px;
 }
 .tipo-de-tech {
-        margin: 40px;
+        /* margin: 40px; */
         margin-bottom: 10px;
+        font-size: 20px;
+        text-align: left;
+        text-transform: uppercase;
 }
 .logo-tech img {
-        width: 80px;
+        width: 70px;
 }
 .contenedor-flex-techs {
+        width: 100%;
         display: flex;
         margin: 0 auto;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-content: center;
-        gap: 50px;
+        justify-content: center;
+        align-content: flex-start;
+        gap: 30px;
         max-width: 728px;
+}
+.titulo-tech {
+        width: 20%;
 }
 .tech-front {
         text-align: center;
@@ -578,6 +585,7 @@ h2::first-letter {
         width: 100%;
 }
 .contenedor-techs, .contenedor-modulos {
+        width: 100%;
         display: flex;
         text-align: center;
         flex-wrap: nowrap;
@@ -835,7 +843,8 @@ h2::first-letter {
                 width: initial;
         }
         .contenedor-flex-techs {
-                gap:20px
+                gap:20px;
+                justify-content: space-around;
         }
         .tipo-de-tech {
                 margin: 20px;

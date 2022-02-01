@@ -18,6 +18,11 @@ const front = [
         tecnologia: 'JS',
         logo: 'js-logo.png',
         descripcion: 'Conocimientos intermedios/avanzados en lenguaje de programación JS'
+    },
+    {
+        tecnologia: 'REACT',
+        logo: 'react-logo.png',
+        descripcion: ''
     }
 ]
 
