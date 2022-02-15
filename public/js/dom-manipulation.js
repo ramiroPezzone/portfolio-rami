@@ -34,6 +34,12 @@ let btnTP2 = document.getElementById("vista-previa-tp2.png"),
 btnTP2.addEventListener("click", () => {
     contenedorTP2.classList.add("item-trabajo-detalles-revelado")
 })
+// TP3
+let btnTP3 = document.getElementById("vista-previa-tp3.png"),
+    contenedorTP3 = document.getElementById("id-vista-previa-tp3.png");
+btnTP3.addEventListener("click", () => {
+    contenedorTP3.classList.add("item-trabajo-detalles-revelado")
+})
 
 // TR1
 let btnTR1 = document.getElementById("vista-previa-tr1-aydhornosrotativos.png"),
@@ -67,6 +73,7 @@ btnDeCierreDeDetalles.forEach(btn => {
     btn.addEventListener("click", () => {
         contenedorTP1.classList.remove("item-trabajo-detalles-revelado")
         contenedorTP2.classList.remove("item-trabajo-detalles-revelado")
+        contenedorTP3.classList.remove("item-trabajo-detalles-revelado")
         contenedorTR1.classList.remove("item-trabajo-detalles-revelado")
         contenedorTR2.classList.remove("item-trabajo-detalles-revelado")
         // contenedorPR1.classList.remove("item-trabajo-detalles-revelado")

@@ -15,6 +15,13 @@ const trabajosPracticos = [
         observaciones: 'En el afán de querer ir a por más agregué: - Varias animaciones tanto onclick como también otras al desplazar el mouse por determinados elementos. -La limitación de que en el almanaque no pueda seleccionarse una fecha que sea anterior a la actual MENOS 18 años atrás (esto considerando que el sitio que confeccioné es de venta de cervezas).- Y un formulario más con la intención de darle realismo, en el que se solicita al usuario que si tiene cuenta inicie sesión, caso contrario continúe al formulario para la creación de una.',
         link: 'https://ejercitacion-unidad2-trabajo-pr-ctico1.vercel.app/'
     },
+    {
+        titulo: 'Movflix',
+        imagen: 'vista-previa-tp3.png',
+        tecnologias: 'REACT',
+        descripcion: 'Trabajo práctico consistente en la confección de un sitio web en el cual se realice el consumo de una API desde la cual se obtienen datos reales de películas y series. La misma está completamente realizada con REACT de manera de afianzar los conocimientos de componentización, manejos de estados, ciclos de vida de componentes y consumo de api. Además del consumo de la api mencionado se cuenta también con la opción de búsqueda de cualquier película, la opción por parte del visitante de asignar películas como favoritas o quitar dicho estado, como así también muchos agregados que no estaban incluidos en las consignas del trabajo.',
+        link: 'https://trabajo-integrador-react.vercel.app/'
+    },
 ];
 
 module.exports = trabajosPracticos

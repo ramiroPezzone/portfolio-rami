@@ -12,7 +12,7 @@
   --atomic-tangerine: hsla(24, 91%, 67%, 1);
   --atomic-tangerine-faded: hsla(24, 91%, 67%, 0.5);
   --smoky-black: hsla(23, 100%, 3%, 1);
-  --smoky-black-faded: hsla(23, 100%, 3%, .8);
+  --smoky-black-faded: hsla(23, 100%, 3%, 0.8);
   --gris-claro: hsla(204, 8%, 90%, 1);
   --yellow-minion: hsla(50, 100%, 68%, 1);
   --fondo-foto: #e2bd65;
@@ -955,12 +955,20 @@ h2::first-letter {
     color: #000;
     font-family: var(--josefin-sans);
     text-transform: uppercase;
-  }
-  .link-navbar-fixed {
     padding: 2.5vh 0;
+    background-image: linear-gradient(var(--fondo-foto), var(--fondo-foto));
+    background-size: 0% 100%;
+    transition: 0.3s;
+    background-position-x: left;
+    background-repeat: no-repeat;
   }
   .link-navbar-fixed:hover {
-    background-color: var(--fondo-foto);
+    background-size: 100% 100%;
+    transition: 0.3s;
+    background-position-x: left;
+  }
+  .link-navbar-fixed span {
+    margin-left: 5px;
   }
   .marker {
     color: var(--flame);
