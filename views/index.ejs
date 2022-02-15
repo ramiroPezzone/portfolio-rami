@@ -132,99 +132,105 @@
         </div>
       </div>
 
-      <div id="aboutme" class="separador-secciones"></div>
-      <section class="contenedor-about-me">
-        <div class="about-me">
-          <h2 class="titulo-section">ACERCA DE MI</h2>
-          <div class="contenedor-flex-about-me">
-            <p class="presentacion-1">Hola, mi nombre es Ramiro Carlos Pezzone, tengo 37 años, actualmente residiendo en Argentina. Soy Desarrollador Web Full Stack, siendo que mi
-              formación comenzó de manera autodidacta e intensa desde principios del año '21, a la cual sumé una formación de Desarrollador Web Full Stack impartido por la <a href="https://www.baeducacionejecutiva.com.ar/" target="_blank" rel="noopener noreferrer">BA
-                Coding School</a>. En la misma aprendimos la realización de aplicaciones con el stack MERN (MongoDB, Express, React y Nodejs).</p>
+      <div class="contenedorAboutMeYSkills">
 
-            <div class="linea-divisora"></div>
+        <div id="aboutme" class="separador-secciones"></div>
+        <section class="contenedor-about-me">
+          <div class="about-me">
+            <h2 class="titulo-section">ACERCA DE MI</h2>
+            <div class="contenedor-flex-about-me">
+              <p class="presentacion-1">Hola, mi nombre es Ramiro Carlos Pezzone, tengo 37 años, actualmente residiendo en Argentina. Soy Desarrollador Web Full Stack, siendo que mi
+                formación comenzó de manera autodidacta e intensa desde principios del año '21, a la cual sumé una formación de Desarrollador Web Full Stack impartido por la <a href="https://www.baeducacionejecutiva.com.ar/" target="_blank" rel="noopener noreferrer">BA
+                  Coding School</a>. En la misma aprendimos la realización de aplicaciones con el stack MERN (MongoDB, Express, React y Nodejs).</p>
+  
+              <div class="linea-divisora"></div>
+  
+              <div class="about-me-2">
+                <div class="contenedor-presentacion-2">
+                  <p class="presentacion-2">Todo comenzó con la inocente intención de desarrollar sitios y app's web para uso
+                    personal por ideas propias que quería darles vida, pero en cuanto comencé me di cuenta de cuanto me
+                    apasiona el desarrollo, tanto por su característica de tener que estar siempre superando algún obstáculo
+                    como por la inherente necesidad de tener que mantenerse siempre al día con las tecnologías.</p>
+                </div>
+              </div>
+            </div>
+        </section>
+  
+        <div id="techs" class="separador-secciones"></div>
+  
+        <section class="contenedor-general-skills contenedor-habilidades">
+          <div class="subcontenedor-gral-skills">
 
-            <div class="about-me-2">
-              <div class="contenedor-presentacion-2">
-                <p class="presentacion-2">Todo comenzó con la inocente intención de desarrollar sitios y app's web para uso
-                  personal por ideas propias que quería darles vida, pero en cuanto comencé me di cuenta de cuanto me
-                  apasiona el desarrollo, tanto por su característica de tener que estar siempre superando algún obstáculo
-                  como por la inherente necesidad de tener que mantenerse siempre al día con las tecnologías.</p>
+            <h2 class="titulo-section">HABILIDADES</h2>
+            <h3 class="titulo-section">TECNOLOGÍAS</h3>
+    
+            <div class="contenedor-techs">
+              <div class="titulo-tech">
+                <h4 class="tipo-de-tech">Front:</h4>
+              </div>
+              <div class="contenedor-front contenedor-flex-techs">
+                <% for( let f = 0; f < front.length; f++ ) { %>
+                <div class="tech-front">
+                  <div class="logo-tech">
+                    <img src="/images/<%= front[f].logo %> " alt="">
+                  </div>
+                  <div class="leyenda-tech">
+                    <p class="texto-leyendas-tech">
+                      <%= front[f].tecnologia %>
+                    </p>
+                  </div>
+                </div>
+                <% } %>
+              </div>
+            </div>
+    
+            <div class="linea-divisora-footer"></div>
+    
+            <div class="contenedor-techs">
+              <div class="titulo-tech">
+                <h4 class="titulo-section tipo-de-tech">Back:</h4>
+              </div>
+              <div class="contenedor-back contenedor-flex-techs">
+                <% for( let b = 0; b < back.length; b++ ) { %>
+                <div class="tech-front">
+                  <div class="logo-tech">
+                    <img src="/images/<%= back[b].logo %> " alt="">
+                  </div>
+                  <div class="leyenda-tech">
+                    <p>
+                      <%= back[b].tecnologia %>
+                    </p>
+                  </div>
+                </div>
+                <% } %>
+              </div>
+            </div>
+    
+            <div class="linea-divisora-footer"></div>
+    
+            <div class="contenedor-techs">
+              <div class="titulo-tech">
+                <h4 class="titulo-section tipo-de-tech">Bases de datos:</h4>
+              </div>
+              <div class="contenedor-db contenedor-flex-techs">
+                <% for( let d = 0; d < db.length; d++ ) { %>
+                <div class="tech-front">
+                  <div class="logo-tech">
+                    <img src="/images/<%= db[d].logo %> " alt="">
+                  </div>
+                  <div class="leyenda-tech">
+                    <p>
+                      <%= db[d].tecnologia %>
+                      </h4>
+                  </div>
+                </div>
+                <% } %>
               </div>
             </div>
           </div>
-      </section>
-
-      <div id="techs" class="separador-secciones"></div>
-
-      <section class="contenedor-general-skills contenedor-habilidades">
-        <h2 class="titulo-section">HABILIDADES</h2>
-        <h3 class="titulo-section">TECNOLOGÍAS</h3>
-
-        <div class="contenedor-techs">
-          <div class="titulo-tech">
-            <h4 class="tipo-de-tech">Front:</h4>
-          </div>
-          <div class="contenedor-front contenedor-flex-techs">
-            <% for( let f = 0; f < front.length; f++ ) { %>
-            <div class="tech-front">
-              <div class="logo-tech">
-                <img src="/images/<%= front[f].logo %> " alt="">
-              </div>
-              <div class="leyenda-tech">
-                <p>
-                  <%= front[f].tecnologia %>
-                </p>
-              </div>
-            </div>
-            <% } %>
-          </div>
-        </div>
-
-        <div class="linea-divisora-footer"></div>
-
-        <div class="contenedor-techs">
-          <div class="titulo-tech">
-            <h4 class="titulo-section tipo-de-tech">Back:</h4>
-          </div>
-          <div class="contenedor-back contenedor-flex-techs">
-            <% for( let b = 0; b < back.length; b++ ) { %>
-            <div class="tech-front">
-              <div class="logo-tech">
-                <img src="/images/<%= back[b].logo %> " alt="">
-              </div>
-              <div class="leyenda-tech">
-                <p>
-                  <%= back[b].tecnologia %>
-                </p>
-              </div>
-            </div>
-            <% } %>
-          </div>
-        </div>
-
-        <div class="linea-divisora-footer"></div>
-
-        <div class="contenedor-techs">
-          <div class="titulo-tech">
-            <h4 class="titulo-section tipo-de-tech">Bases de datos:</h4>
-          </div>
-          <div class="contenedor-db contenedor-flex-techs">
-            <% for( let d = 0; d < db.length; d++ ) { %>
-            <div class="tech-front">
-              <div class="logo-tech">
-                <img src="/images/<%= db[d].logo %> " alt="">
-              </div>
-              <div class="leyenda-tech">
-                <p>
-                  <%= db[d].tecnologia %>
-                  </h4>
-              </div>
-            </div>
-            <% } %>
-          </div>
-        </div>
-
-      </section>
+  
+        </section>
+      </div>
 
 
 
