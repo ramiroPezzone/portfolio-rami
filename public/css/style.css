@@ -3,7 +3,7 @@
   --montserrat-clasic: "Montserrat", "Gill Sans", "Gill Sans MT", Calibri,
     "Trebuchet MS", sans-serif;
   --montserrat-alternates: "Montserrat Alternates", sans-serif;
-  --white-blur: hsla(0, 0%, 100%, 0.5);
+  --white-blur: hsla(0, 0%, 100%, 0.85);
   --deep-space-sparkle: hsla(193, 34%, 30%, 1);
   --dark-purple: hsla(251, 52%, 13%, 1);
   --emerald: hsla(149, 89%, 43%, 1);
@@ -12,7 +12,7 @@
   --atomic-tangerine: hsla(24, 91%, 67%, 1);
   --atomic-tangerine-faded: hsla(24, 91%, 67%, 0.5);
   --smoky-black: hsla(23, 100%, 3%, 1);
-  --smoky-black-faded: hsla(23, 100%, 3%, 0.5);
+  --smoky-black-faded: hsla(23, 100%, 3%, .8);
   --gris-claro: hsla(204, 8%, 90%, 1);
   --yellow-minion: hsla(50, 100%, 68%, 1);
   --fondo-foto: #e2bd65;
@@ -211,7 +211,6 @@
   height: calc(100vh - 70px);
   background-color: var(--white-blur);
   backdrop-filter: blur(8px);
-  border-radius: 5% 5% 0 0;
   z-index: 300000;
   transition: 0.5s;
 }
@@ -482,7 +481,7 @@ h2::first-letter {
   right: 0;
   margin: auto;
   background-color: var(--smoky-black-faded);
-  backdrop-filter: grayscale() blur(8px);
+  backdrop-filter: blur(8px);
   z-index: 500000;
   transition: all 0.3s;
 }
@@ -984,7 +983,8 @@ h2::first-letter {
   }
 
   .aclaracion-inicial {
-    width: 60vw;
+    font-style: italic;
+    width: 60%;
     margin: auto;
     margin-bottom: 40px;
   }
