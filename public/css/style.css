@@ -174,7 +174,7 @@
 }
 
 .menu-hamburguesa {
-  background: url(/images/menu-hamburguesa-flecha-abajo.png) no-repeat center;
+  background: url(/images/menu-hamburguesa-flecha-abajo2.png) no-repeat center;
   margin: 0 auto;
   line-height: 70px;
   width: 70px;
@@ -190,13 +190,14 @@
 }
 
 .menu-hamburguesa-x {
-  background: url(/images/menu-hamburguesa-x.png) no-repeat center;
+  background: url(/images/menu-hamburguesa-x2.png) no-repeat center;
   position: absolute;
   line-height: 70px;
   width: 70px;
   height: 70px;
   background-size: 0px;
   transition: 0.7s;
+  transform: rotate(360deg);
 }
 
 .menu-hamburguesa-x-revelado {
