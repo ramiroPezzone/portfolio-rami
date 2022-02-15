@@ -49,18 +49,18 @@ btnTR2.addEventListener("click", () => {
     contenedorTR2.classList.add("item-trabajo-detalles-revelado")
 })
 
-// PR1
-let btnPR1 = document.getElementById("mercado-natural-kiara.jpg"),
-    contenedorPR1 = document.getElementById("id-mercado-natural-kiara.jpg");
-btnPR1.addEventListener("click", () => {
-    contenedorPR1.classList.add("item-trabajo-detalles-revelado")
-})
-// PR2
-let btnPR2 = document.getElementById("sin-imagen.jpg"),
-    contenedorPR2 = document.getElementById("id-sin-imagen.jpg");
-btnPR2.addEventListener("click", () => {
-    contenedorPR2.classList.add("item-trabajo-detalles-revelado")
-})
+// // PR1
+// let btnPR1 = document.getElementById("mercado-natural-kiara.jpg"),
+//     contenedorPR1 = document.getElementById("id-mercado-natural-kiara.jpg");
+// btnPR1.addEventListener("click", () => {
+//     contenedorPR1.classList.add("item-trabajo-detalles-revelado")
+// })
+// // PR2
+// let btnPR2 = document.getElementById("sin-imagen.jpg"),
+//     contenedorPR2 = document.getElementById("id-sin-imagen.jpg");
+// btnPR2.addEventListener("click", () => {
+//     contenedorPR2.classList.add("item-trabajo-detalles-revelado")
+// })
 
 
 btnDeCierreDeDetalles.forEach(btn => {
@@ -69,8 +69,8 @@ btnDeCierreDeDetalles.forEach(btn => {
         contenedorTP2.classList.remove("item-trabajo-detalles-revelado")
         contenedorTR1.classList.remove("item-trabajo-detalles-revelado")
         contenedorTR2.classList.remove("item-trabajo-detalles-revelado")
-        contenedorPR1.classList.remove("item-trabajo-detalles-revelado")
-        contenedorPR2.classList.remove("item-trabajo-detalles-revelado")
+        // contenedorPR1.classList.remove("item-trabajo-detalles-revelado")
+        // contenedorPR2.classList.remove("item-trabajo-detalles-revelado")
     })
 });
 
