@@ -1,7 +1,7 @@
 const lang = [
     {
         idioma: 'Inglés',
-        nivel: 'Escrito: avanzado - Oral: intermedio',
+        nivel: 'Escrito: avanzado Oral: intermedio',
         imagen: 'bandera-inglesa.png',
     },
     {

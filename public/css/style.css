@@ -335,6 +335,11 @@ h2::first-letter {
 .contenedor-langs {
   background-color: var(--gris-claro);
 }
+.lang-text {
+  width: 150px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
 .subcontenedor-general-skills {
   padding-top: 20px;
   padding-bottom: 20px;
