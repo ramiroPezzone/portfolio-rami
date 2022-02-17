@@ -695,9 +695,9 @@ h2::first-letter {
 .item-form textarea {
   width: 100%;
   margin: 10px 0;
-  /* height: 30px; */
   background-color: var(--gris-claro);
   border: 1px solid var(--silver-metallic);
+  resize: none
 }
 
 .item-form input:focus,
