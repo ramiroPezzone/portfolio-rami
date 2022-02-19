@@ -3,12 +3,20 @@ const contenedorMenuHamburguesa = document.querySelector(".contenedor-menu-hambu
     navBarOculto = document.querySelector(".nav-bar-oculto"),
     menuHamburguesa = document.querySelector(".menu-hamburguesa"),
     menuHamburguesaX = document.querySelector(".menu-hamburguesa-x"),
-    linksNavBar = document.querySelectorAll(".contenedor-navbar-oculto li")
+    linksNavBar = document.querySelectorAll(".contenedor-navbar-oculto li"),
+    logoNavBar = document.querySelector(".logo-navbar")
 
 contenedorMenuHamburguesa.addEventListener("click", () => {
     navBarOculto.classList.toggle("nav-bar-oculto-revelado")
     menuHamburguesa.classList.toggle("menu-hamburguesa-oculto")
     menuHamburguesaX.classList.toggle("menu-hamburguesa-x-revelado")
+})
+logoNavBar.addEventListener("click", () => {
+    navBarOculto.classList.remove("nav-bar-oculto-revelado")
+    if (!navBarOculto.classList.contains("nav-bar-oculto-revelado")) {
+        menuHamburguesa.classList.remove("menu-hamburguesa-oculto")
+        menuHamburguesaX.classList.remove("menu-hamburguesa-x-revelado")
+    }
 })
 
 linksNavBar.forEach(link => {
@@ -123,13 +131,15 @@ const emailVálido = email => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
+
+// CONFIRMACIÓN DE ENVÍO DE LA CONSULTA
 btnEnviar.addEventListener('click', (e) => {
-    
+
     formulario.addEventListener("submit", (e) => {
         e.preventDefault();
         capa.style.display = "block";
     })
-    
+
     ok.addEventListener("click", (e) => {
         capa.style.display = "none";
         document.forms["form-de-contacto"].submit();
@@ -150,5 +160,4 @@ btnEnviar.addEventListener('click', (e) => {
 
 
 
-// CONFIRMACIÓN DE ENVÍO DE LA CONSULTA
 
