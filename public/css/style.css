@@ -508,6 +508,7 @@ h2::first-letter {
   justify-content: center;
   margin: 0 auto;
   overflow-y: scroll;
+  overflow-x: hidden;
   width: 80%;
   margin-top: 20px;
   margin-bottom: 20px;

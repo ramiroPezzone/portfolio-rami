@@ -63,6 +63,13 @@ btnTR2.addEventListener("click", () => {
     contenedorTR2.classList.add("item-trabajo-detalles-revelado")
 })
 
+// TR3
+let btnTR3 = document.getElementById("vista-previa-tr-almacennaturalkiara.png"),
+    contenedorTR3 = document.getElementById("id-vista-previa-tr-almacennaturalkiara.png");
+btnTR3.addEventListener("click", () => {
+    contenedorTR3.classList.add("item-trabajo-detalles-revelado")
+})
+
 // // PR1
 // let btnPR1 = document.getElementById("mercado-natural-kiara.jpg"),
 //     contenedorPR1 = document.getElementById("id-mercado-natural-kiara.jpg");
@@ -84,8 +91,7 @@ btnDeCierreDeDetalles.forEach(btn => {
         contenedorTP3.classList.remove("item-trabajo-detalles-revelado")
         contenedorTR1.classList.remove("item-trabajo-detalles-revelado")
         contenedorTR2.classList.remove("item-trabajo-detalles-revelado")
-        // contenedorPR1.classList.remove("item-trabajo-detalles-revelado")
-        // contenedorPR2.classList.remove("item-trabajo-detalles-revelado")
+        contenedorTR3.classList.remove("item-trabajo-detalles-revelado")
     })
 });
 

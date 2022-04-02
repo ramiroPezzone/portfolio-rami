@@ -372,8 +372,13 @@
               <h5>Enlace:</h5>
               <div class="contenedor-btn-enlace">
                 <a href='<%= trabajosReales[d].link %>' target="_blank" rel="noopener noreferrer" class="link-invitation">
-                  <button class="enlace" type="menu">Ir al sitio</button>
+                  <button class="enlace" type="menu">Sitio del usuario</button>
                 </a>
+                <% if (trabajosReales[d].link2) { %>
+                <a href='<%= trabajosReales[d].link2 %>' target="_blank" rel="noopener noreferrer" class="link-invitation">
+                  <button class="enlace" type="menu">Sitio del admin</button>
+                </a>
+                <% } %>
               </div>
 
               <div class="final-tarjeta-trabajos">
