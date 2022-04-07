@@ -10,6 +10,11 @@ const front = [
         descripcion: 'Conocimientos intermedios/avanzados en la estilización'
     },
     {
+        tecnologia: 'SASS',
+        logo: 'sass-logo.png',
+        descripcion: 'Conocimientos intermedios/avanzados SASS'
+    },
+    {
         tecnologia: 'BOOTSTRAP',
         logo: 'bootstrap-logo.png',
         descripcion: 'Conocimientos básicos en el mencionado framework de estilos'
