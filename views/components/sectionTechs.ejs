@@ -1,24 +1,24 @@
 <section class="contenedor-general-skills contenedor-habilidades">
-    <div class="subcontenedor-gral-skills">
+  <div class="subcontenedor-gral-skills">
 
-      <h2 class="titulo-section">HABILIDADES</h2>
-      <h3 class="titulo-section">TECNOLOGÍAS</h3>
+    <h2 class="titulo-section">HABILIDADES</h2>
+    <h3 class="titulo-section">TECNOLOGÍAS</h3>
 
-      <div class="contenedor-techs">
-        <div class="contenedor-front contenedor-flex-techs">
-          <% for( let f = 0; f < techs.length; f++ ) { %>
-          <div class="tech-front">
-            <div class="logo-tech">
-              <img src="/images/<%= techs[f].logo %> " alt="">
-            </div>
-            <div class="leyenda-tech">
-              <p class="texto-leyendas-tech">
-                <%= techs[f].tecnologia %>
-              </p>
-            </div>
+    <div class="contenedor-techs">
+      <div class="contenedor-front contenedor-flex-techs">
+        <% for( let f = 0; f < techs.length; f++ ) { %>
+        <div class="tech-front">
+          <div class="logo-tech">
+            <img src="/images/<%= techs[f].logo %> " alt="">
           </div>
-          <% } %>
+          <div class="leyenda-tech">
+            <p class="texto-leyendas-tech">
+              <%= techs[f].tecnologia %>
+            </p>
+          </div>
         </div>
+        <% } %>
       </div>
     </div>
-  </section>
+  </div>
+</section>
