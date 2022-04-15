@@ -1,0 +1,86 @@
+<section class="contacto">
+    <h2 class="titulo-section">Contacto</h2>
+
+    <div class="contenedor-iconos-contacto">
+
+      <div class="opcion-de-contacto">
+        <div class="ico">
+          <a href="tel: +54 9 342 4 21-9046">
+            <img src="/images/icono-llamada-inactive.png" alt="" class="llamame">
+          </a>
+        </div>
+        <div class="action">
+          <p>Llamame</p>
+        </div>
+      </div>
+
+      <div class="opcion-de-contacto">
+        <div class="ico">
+          <a href="https://wa.link/tvsz7k" target="_blank" rel="noopener noreferrer">
+            <img src="/images/icono-whatsapp-inactive.png" alt="" class="whatsappeame">
+          </a>
+        </div>
+        <div class="action">
+          <p>Enviame whatsapp</p>
+        </div>
+      </div>
+
+    </div>
+
+    <h3 class="aclaracion-inicial">O bien dejame tus datos y a la brevedad me pongo en contacto</h3>
+    <div class="contenedor-form-contacto">
+
+      <form method="post" action="/contacto" class="form-contacto" id="form-de-contacto">
+
+        <div class="item-form">
+          <label for="nombre">
+            Nombre completo <span class="required">*</span>
+          </label>
+          <div class="input-form">
+            <input type="text" name="nombre" id="" autocomplete="name" placeholder="*Tu nombre" required>
+          </div>
+        </div>
+
+        <div class="item-form">
+          <label for="tel">
+            Teléfono <span class="required">*</span>
+          </label>
+          <div class="input-form">
+            <input type="tel" name="tel" id="tel" autocomplete="tel" placeholder="*Tu número telefónico" required>
+          </div>
+        </div>
+
+        <div class="item-form">
+          <label for="email">
+            Correo electrónico <span class="required">*</span>
+          </label>
+          <div class="input-form">
+            <input type="email" name="email" id="" autocomplete="email" placeholder="*Tu email" required>
+          </div>
+        </div>
+
+        <div class="item-form">
+          <label for="company">
+            Compañía
+          </label>
+          <div class="input-form">
+            <input type="text" name="company" id="" autocomplete="organization" placeholder="Tu compañía (si corresponde)">
+          </div>
+        </div>
+
+        <div class="item-form">
+          <label for="mensaje">
+            Motivo del mensaje
+          </label>
+          <div class="input-form">
+            <textarea name="mensaje" id="" cols="30" rows="7" placeholder="Tu mensaje"></textarea>
+          </div>
+        </div>
+
+        <div class="btns-form">
+          <button type="submit" id="btn-enviar">Enviar</button>
+        </div>
+
+      </form>
+    </div>
+  </section>

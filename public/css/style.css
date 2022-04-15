@@ -356,8 +356,7 @@ h2::first-letter {
   width: 60px;
 }
 .leyenda-tech p {
-  font-size: 0.7em;
-  overflow: hidden;
+  font-size: 0.8em;
 }
 .contenedor-flex-techs {
   width: 100%;
@@ -374,6 +373,10 @@ h2::first-letter {
   width: 20%;
 }
 .tech-front {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   width: 25%;
 }
@@ -654,7 +657,12 @@ h2::first-letter {
   background-color: var(--gris-claro);
   padding: 20px;
 }
-
+.contenedor-iconos-contacto {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 500px;
+  margin: 0 auto;
+}
 .opcion-de-contacto {
   display: flex;
   flex-direction: column;

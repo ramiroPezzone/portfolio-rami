@@ -3,9 +3,7 @@ let express = require('express'),
     trabajosPracticos = require('./trabajos/trabajosPracticos'),
     trabajosReales = require('./trabajos/trabajosReales'),
     proyectos = require('./trabajos/proyectos'),
-    front = require('./skills/front'),
-    back = require('./skills/back'),
-    db = require('./skills/db'),
+    techs = require('./skills/techs'),
     softSkills = require('./skills/soft-skills'),
     lang = require('./skills/langs'),
     port = process.env.PORT;
@@ -35,9 +33,7 @@ app.get('/', (req, res) => {
         trabajosPracticos: trabajosPracticos,
         trabajosReales: trabajosReales,
         proyectos: proyectos,
-        front: front,
-        back: back,
-        db: db,
+        techs: techs,
         softSkills: softSkills,
         lang: lang
     })

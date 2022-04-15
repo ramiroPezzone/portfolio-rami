@@ -1,0 +1,64 @@
+<div class="trabajos-practicos item-portfolio">
+    <h3>Trabajos prácticos</h3>
+    <h4>Trabajos prácticos realizados para el curso de Desarrollador Web Full Stack de la BA Coding School</h4>
+
+    <div class="contenedor-flex-trabajos">
+      <% for( let a = 0; a < trabajosPracticos.length; a++ ) { %>
+
+      <div class="item-trabajo">
+        <h5>Título:</h5>
+        <p class="titulo-trabajo">
+          <%= trabajosPracticos[a].titulo %>
+        </p>
+        <div class="imagen-trabajo">
+          <img src="/images/<%= trabajosPracticos[a].imagen%>" alt="">
+        </div>
+        <h5>Enlace:</h5>
+        <div class="contenedor-btn-enlace">
+          <a href='<%= trabajosPracticos[a].link %>' target="_blank" rel="noopener noreferrer" class="link-invitation">
+            <button class="enlace" type="menu">Ir al sitio</button>
+          </a>
+        </div>
+
+        <div class="final-tarjeta-trabajos">
+          <h5>Descripción:</h5>
+          <div class="contenedor-btn-ver-detalles">
+            <button class="ver-detalles" id="<%= trabajosPracticos[a].imagen %>">Ver detalles</button>
+          </div>
+        </div>
+      </div>
+      <% } %>
+
+      <!-- DETALLES -->
+      <% for( let c = 0; c < trabajosPracticos.length; c++ ) { %>
+
+      <div class="contenedor-fixed-item-trabajo-detalles" id="id-<%=trabajosPracticos[c].imagen%>">
+        <div class="contenedor-flex-detalles-trabajos">
+          <div class="item-trabajo-detalles">
+            <div class="contenedor-x"></div>
+            <h5 class="titulo-detalles">Título:</h5>
+            <p class="titulo-trabajo-detalles">
+              <%= trabajosPracticos[c].titulo %>
+            </p>
+            <h5>Tecnologías utilizadas:</h5>
+
+            <div class="contenedor-techs">
+              <p>
+                <%= trabajosPracticos[c].tecnologias %>
+              </p>
+
+            </div>
+
+            <h5>Descripción:</h5>
+            <p><%= trabajosPracticos[c].descripcion %></p>
+            <h5>Obs:</h5>
+            <p class="observaciones">
+              <%= trabajosPracticos[c].observaciones %>
+            </p>
+          </div>
+        </div>
+      </div>
+      <% } %>
+      <!-- FIN DETALLES -->
+    </div>
+  </div>

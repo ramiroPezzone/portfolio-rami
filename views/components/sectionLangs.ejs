@@ -1,0 +1,16 @@
+<section class="contenedor-langs contenedor-habilidades">
+    <h2 class="titulo-section">Idiomas</h2>
+    <div class="contenedor-flex-langs">
+      <% for( let l = 0; l < lang.length; l++ ) { %>
+      <div class="langs">
+        <div class="imagen-lang">
+          <img src="/images/<%= lang[l].imagen %> " alt="">
+        </div>
+        <div class="leyenda-lang">
+          <h3>Nivel:</h3>
+          <h4 class="lang-text"> <%= lang[l].nivel %> </h4>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </section>

@@ -1,0 +1,24 @@
+<section class="contenedor-habilidades contenedor-general-soft-skills">
+    <h2 class="titulo-section">SOFT SKILLS</h2>
+    <div class="contenedor-flex-skills">
+
+      <% for( let i = 0; i < softSkills.length; i++ ) { %>
+      <div class="contenedor-soft-skills">
+        <div class="logo-soft-skills">
+          <img src="/images/<%= softSkills[i].logo %>" alt="">
+        </div>
+        <div class="leyenda-tech">
+          <h3>
+            <%= softSkills[i].habilidad %>
+          </h3>
+          <p>
+            <%= softSkills[i].descripcion %>
+          </p>
+        </div>
+      </div>
+
+      <% } %>
+
+    </div>
+
+  </section>
