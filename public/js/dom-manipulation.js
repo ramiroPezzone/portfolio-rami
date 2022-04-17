@@ -34,7 +34,8 @@ if (document.getElementById("toggle-dark-mode")) {
     logoInstagram = document.querySelector(".logo-instagram"),
     logoRP = document.querySelector(".logo-rp-rrss"),
     logoSitioWeb = document.querySelectorAll(".iconoSitioWeb"),
-    logoVerDetalles = document.querySelectorAll(".ver-detalles");
+    logoVerDetalles = document.querySelectorAll(".ver-detalles"),
+    lineaDivisoraFooter = document.querySelectorAll(".linea-divisora-footer");
 
   if (btnDarkMode.checked) {
     body[0].classList.add("bodyDark");
@@ -61,7 +62,7 @@ if (document.getElementById("toggle-dark-mode")) {
     detalleTrabajo.forEach((det) => det.classList.add("itemDetalleDark"));
     contenedorX.forEach((x) => x.classList.add("xDark"));
     lineaDivisora1.forEach((linea) => linea.classList.add("lineaDark"));
-    sectionContacto.classList.add("cardDark");
+    sectionContacto.classList.add("cardDarkContacto");
     labels.forEach((lab) => lab.classList.add("fontDark"));
     btnEnviarCorreo.classList.add("btnEnviarDark");
     logoFacebook.classList.add("logoFacebookDark");
@@ -70,7 +71,10 @@ if (document.getElementById("toggle-dark-mode")) {
     logoInstagram.classList.add("logoInstagramDark");
     logoRP.classList.add("logoRPDark");
     logoSitioWeb.forEach((logo) => logo.classList.add("iconoSitioWebDark"));
-    logoVerDetalles.forEach((logo) => logo.classList.add("ver-detalles-dark"));
+    logoVerDetalles.forEach((logo) => logo.classList.add("ver-detalles-dark")),
+      lineaDivisoraFooter.forEach((line) =>
+        line.classList.add("lineaDivisoraFooterDark")
+      );
   }
 
   btnDarkMode.addEventListener("click", () => {
@@ -98,7 +102,7 @@ if (document.getElementById("toggle-dark-mode")) {
     detalleTrabajo.forEach((det) => det.classList.toggle("itemDetalleDark"));
     contenedorX.forEach((x) => x.classList.toggle("xDark"));
     lineaDivisora1.forEach((linea) => linea.classList.toggle("lineaDark"));
-    sectionContacto.classList.toggle("cardDark");
+    sectionContacto.classList.toggle("cardDarkContacto");
     labels.forEach((lab) => lab.classList.toggle("fontDark"));
     btnEnviarCorreo.classList.toggle("btnEnviarDark");
     logoFacebook.classList.toggle("logoFacebookDark");
@@ -109,6 +113,9 @@ if (document.getElementById("toggle-dark-mode")) {
     logoSitioWeb.forEach((logo) => logo.classList.toggle("iconoSitioWebDark"));
     logoVerDetalles.forEach((logo) =>
       logo.classList.toggle("ver-detalles-dark")
+    );
+    lineaDivisoraFooter.forEach((line) =>
+      line.classList.toggle("lineaDivisoraFooterDark")
     );
   });
 }
