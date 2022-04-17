@@ -764,13 +764,15 @@ h2::first-letter {
   display: flex;
   flex-direction: column;
   text-align: center;
-  flex-wrap: nowrap;
   margin: 20px 0;
 }
 
 .opcion-de-contacto p {
   font-family: var(--montserrat-alternates);
   font-weight: bold;
+}
+.action {
+  width: min-content;
 }
 
 .ico {
@@ -820,10 +822,63 @@ h2::first-letter {
   justify-content: flex-end;
 }
 
-.btnEnviar {
-  padding: 12px 26px;
+/* BTN enviar */
+/* From uiverse.io by @adamgiebl */
+button {
   font-family: var(--montserrat-alternates);
   border: 1px solid var(--silver-metallic);
+  cursor: pointer;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+button span {
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+button:hover span {
+  transform: translateX(5em);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+/*  */
+
+.btnEnviar {
+  /* padding: 12px 26px; */
+  font-family: var(--montserrat-alternates);
+  border: 1px solid var(--silver-metallic);
+  cursor: pointer;
 }
 
 /* RRSS */
