@@ -29,12 +29,14 @@
       <%- include("./components/btnDarkMode.ejs") %>
 
 
+
       <!-- Header -->
       <%- include("./components/header.ejs") %>
       <!--  -->
 
       <!-- About me, techs y soft skills -->
       <div class="contenedorAboutMeYSkills">
+
         <div id="aboutme" class="separador-secciones"></div>
 
         <!-- sección About Me -->
@@ -64,14 +66,12 @@
       <section class="portfolio">
         <h2 class="titulo-section">Portfolio</h2>
         <h3 class="aclaracion-inicial">Todos los sitios web que se exponen a continuación fueron diseñados con la modalidad Mobile First y se dió especial hincapié en lo referido al diseño Responsive <span class="italic">(incluido en el que estás navegando en este preciso momento)</span></h3>
-        <!-- TRABAJOS PRÁCTICOS -->
-        <!-- Trabajos prácticos -->
-        <%- include("./components/trabajosPracticos.ejs") %>
-        <!--  -->
-        <div class="linea-divisora"></div>
-        <!-- TRABAJOS A CLIENTES -->
         <!-- Trabajos reales -->
         <%- include("./components/trabajosReales.ejs") %>
+        <!--  -->
+        <div class="linea-divisora"></div>
+        <!-- Trabajos prácticos -->
+        <%- include("./components/trabajosPracticos.ejs") %>
         <!--  -->
         <div class="linea-divisora"></div>
       </section>
@@ -95,9 +95,34 @@
       <%- include("./components/footer.ejs") %>
       <!--  -->
 
+
     </div>
   </div>
+
+  <!-- Script propio -->
   <script src="/js/dom-manipulation.js"></script>
+
+  <!-- Scripts de swiper -->
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "2",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 0,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+  <!-- Fin scripts de swiper -->
 
 </body>
 

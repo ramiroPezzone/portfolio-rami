@@ -1,73 +1,71 @@
-<div class="trabajos-reales item-portfolio">
-    <h3>Trabajos en producción</h3>
-
-    <div class="contenedor-flex-trabajos">
-      <% for( let d = 0; d < trabajosReales.length; d++ ) { %>
-
-      <div class="item-trabajo">
-        <h5>Título:</h5>
-        <p class="titulo-trabajo">
-          <%= trabajosReales[d].titulo %>
-        </p>
-        <div class="imagen-trabajo">
-          <img src="/images/<%= trabajosReales[d].imagen%>" alt="">
-        </div>
-        <h5>Enlace:</h5>
-        <div class="contenedor-btn-enlace">
-          <a href='<%= trabajosReales[d].link %>' target="_blank" rel="noopener noreferrer" class="link-invitation">
-            <button class="enlace" type="menu">Sitio del usuario</button>
-          </a>
-          <% if (trabajosReales[d].link2) { %>
-          <a href='<%= trabajosReales[d].link2 %>' target="_blank" rel="noopener noreferrer" class="link-invitation">
-            <button class="enlace" type="menu">Sitio del admin</button>
-          </a>
-          <% } %>
-        </div>
-
-        <div class="final-tarjeta-trabajos">
-          <h5>Descripción:</h5>
-          <div class="contenedor-btn-ver-detalles">
-            <button class="ver-detalles" id="<%= trabajosReales[d].imagen %>">Ver detalles</button>
+<div class="trabajos-practicos item-portfolio">
+  <h3>Trabajos en producción</h3>
+  <div class="contenedor-flex-trabajos">
+    <!-- Slider main container -->
+    <div class="swiper mySwiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <% for( let d = 0; d < trabajosReales.length; d++ ) { %>
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="item-trabajo">
+            <h5>Título:</h5>
+            <p class="titulo-trabajo">
+              <%= trabajosReales[d].titulo %>
+            </p>
+            <div class="imagen-trabajo">
+              <img src="/images/<%= trabajosReales[d].imagen%>" alt="">
+            </div>
+            <div class="contenedor-btn-enlace">
+              <a href='<%= trabajosReales[d].link %>' target="_blank" rel="noopener noreferrer" class="link-invitation" title="ir al sitio">
+                <div class="iconoSitioWeb"></div>
+              </a>
+              <div class="ver-detalles" title="ver detalles" id="<%= trabajosReales[d].imagen %>"></div>
+            </div>
           </div>
         </div>
+        <% } %>
       </div>
-      <% } %>
-
-      <!-- DETALLES -->
-      <% for( let e = 0; e < trabajosReales.length; e++ ) { %>
-
-      <div class="contenedor-fixed-item-trabajo-detalles" id="id-<%=trabajosReales[e].imagen%>">
-        <div class="contenedor-flex-detalles-trabajos">
-          <div class="item-trabajo-detalles">
-            <div class="contenedor-x"></div>
-            <h5 class="titulo-detalles">Título:</h5>
-            <p class="titulo-trabajo-detalles">
-              <%= trabajosReales[e].titulo %>
-            </p>
-            <h5>Tecnologías utilizadas:</h5>
-
-            <div class="contenedor-techs">
-              <p>
-                <%= trabajosReales[e].tecnologias %>
-              </p>
-
-            </div>
-
-            <h5>Módulos implementados:</h5>
-            <div class="contenedor-modulos">
-              <p>
-                <%= trabajosReales[e].modulos %>
-              </p>
-            </div>
-            <h5>Descripción:</h5>
-            <p><%= trabajosReales[e].descripcion %></p>
-            <h5>Obs:</h5>
-            <p class="observaciones">
-              <%= trabajosReales[e].observaciones %>
-            </p>
-          </div>
-        </div>
-      </div>
-      <% } %>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- If we need navigation buttons -->
+      <!-- <div class="swiper-button-prev"></div> -->
+      <!-- <div class="swiper-button-next"></div> -->
+      <!-- If we need scrollbar -->
+      <!-- <div class="swiper-scrollbar"></div> -->
     </div>
+    <!-- DETALLES -->
+    <% for( let e = 0; e < trabajosReales.length; e++ ) { %>
+    <div class="contenedor-fixed-item-trabajo-detalles" id="id-<%=trabajosReales[e].imagen%>">
+      <div class="contenedor-flex-detalles-trabajos">
+        <div class="item-trabajo-detalles">
+          <div class="contenedor-x"></div>
+          <h5 class="titulo-detalles">Título:</h5>
+          <p class="titulo-trabajo-detalles">
+            <%= trabajosReales[e].titulo %>
+          </p>
+          <h5>Tecnologías utilizadas:</h5>
+          <div class="contenedor-techs">
+            <p>
+              <%= trabajosReales[e].tecnologias %>
+            </p>
+          </div>
+          <h5>Módulos implementados:</h5>
+          <div class="contenedor-modulos">
+            <p>
+              <%= trabajosReales[e].modulos %>
+            </p>
+          </div>
+
+          <h5>Descripción:</h5>
+          <p><%= trabajosReales[e].descripcion %></p>
+          <h5>Obs:</h5>
+          <p class="observaciones">
+            <%= trabajosReales[e].observaciones %>
+          </p>
+        </div>
+      </div>
+    </div>
+    <% } %>
     <!-- FIN DETALLES -->
+  </div>

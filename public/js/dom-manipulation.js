@@ -32,7 +32,9 @@ if (document.getElementById("toggle-dark-mode")) {
     logoGithub = document.querySelector(".logo-github"),
     logoLinkedin = document.querySelector(".logo-linkedin"),
     logoInstagram = document.querySelector(".logo-instagram"),
-    logoRP = document.querySelector(".logo-rp-rrss");
+    logoRP = document.querySelector(".logo-rp-rrss"),
+    logoSitioWeb = document.querySelectorAll(".iconoSitioWeb"),
+    logoVerDetalles = document.querySelectorAll(".ver-detalles");
 
   if (btnDarkMode.checked) {
     body[0].classList.add("bodyDark");
@@ -67,6 +69,8 @@ if (document.getElementById("toggle-dark-mode")) {
     logoLinkedin.classList.add("logoLinkedinDark");
     logoInstagram.classList.add("logoInstagramDark");
     logoRP.classList.add("logoRPDark");
+    logoSitioWeb.forEach((logo) => logo.classList.add("iconoSitioWebDark"));
+    logoVerDetalles.forEach((logo) => logo.classList.add("ver-detalles-dark"));
   }
 
   btnDarkMode.addEventListener("click", () => {
@@ -102,6 +106,10 @@ if (document.getElementById("toggle-dark-mode")) {
     logoLinkedin.classList.toggle("logoLinkedinDark");
     logoInstagram.classList.toggle("logoInstagramDark");
     logoRP.classList.toggle("logoRPDark");
+    logoSitioWeb.forEach((logo) => logo.classList.toggle("iconoSitioWebDark"));
+    logoVerDetalles.forEach((logo) =>
+      logo.classList.toggle("ver-detalles-dark")
+    );
   });
 }
 //

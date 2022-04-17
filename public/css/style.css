@@ -169,11 +169,16 @@ input:checked + .slider:before {
   text-align: right;
   padding: 5px 10px;
 }
-.enlace,
 .ver-detalles {
-  width: 135px;
-  height: 40px;
-  border-radius: 20px;
+  width: 45px;
+  height: 45px;
+  background: url("../images/ver-detalles.png") no-repeat center;
+  background-size: 100%;
+  cursor: pointer;
+}
+.ver-detalles-dark {
+  background: url("../images/ver-detalles-dark.png") no-repeat center;
+  background-size: 100%;
 }
 
 .button {
@@ -223,7 +228,6 @@ input:checked + .slider:before {
   justify-content: space-between;
   background-color: var(--white-blur);
   backdrop-filter: blur(10px);
-  border-radius: 0 0 10% 10%;
   z-index: 400000;
 }
 
@@ -502,21 +506,23 @@ h2::first-letter {
 }
 
 .contenedor-flex-trabajos {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  /* gap: 5% */
 }
-
 .item-trabajo {
   position: relative;
-  height: 500px;
-  padding: 5px 10px;
+  /* height: 500px; */
+  padding: 5px 0px;
   background-color: var(--gris-claro);
-  border-radius: 10px;
   margin: 20px auto;
-  max-width: 300px;
+  width: 100%;
+}
+.item-trabajo p,
+.item-trabajo h5 {
+  padding: 0 10px;
 }
 .final-tarjeta-trabajos {
   position: absolute;
@@ -526,11 +532,14 @@ h2::first-letter {
   bottom: 10px;
 }
 
-.contenedor-btn-ver-detalles,
 .contenedor-btn-enlace {
-  width: 100%;
+  width: 90%;
   text-align: center;
   margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 15px 0;
 }
 
 .contenedor-btn-ver-detalles button,
@@ -662,10 +671,18 @@ h2::first-letter {
 .item-trabajo p:not(.click-invitation) {
   margin: 8px 0;
 }
-
+.iconoSitioWeb {
+  width: 48px;
+  height: 48px;
+  background: url("../images/imgSitioWeb.png") no-repeat center;
+  background-size: 100%;
+}
+.iconoSitioWebDark {
+  background: url("../images/imgSitioWebDark.png") no-repeat center;
+  background-size: 100%;
+}
 .imagen-trabajo {
-  width: 80%;
-  /* height: 220px; */
+  width: 100%;
   margin: 0 auto;
   border-radius: 5px;
 }
@@ -967,6 +984,25 @@ h2::first-letter {
   background: url(/images/logoPR-largo-B&N-dark.png) no-repeat center;
   background-size: 50%;
 }
+
+/* Styles del Swiper */
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 80%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+/*  */
 
 /*  */
 
