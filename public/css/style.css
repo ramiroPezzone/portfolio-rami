@@ -16,6 +16,24 @@
   --gris-claro: hsla(204, 8%, 90%, 1);
   --yellow-minion: hsla(50, 100%, 68%, 1);
   --fondo-foto: #e2bd65;
+
+  /* Dark theme colors */
+  --background-dark: #1f1f1f;
+  --background-dark-faded: rgba(31, 31, 31, 0.8);
+  --font-dark: #bfbfbf;
+  --orange-dark: #e0612e;
+  --background-hover-dark: #664b00;
+  --marker-dark: #e6ad99;
+  --BG-element-dark: #2f3437;
+  --btn-dark: #665f72;
+  --border-btn-dark: #616161;
+}
+body {
+  transition: 0.3s;
+}
+.bodyDark {
+  background-color: var(--background-dark);
+  transition: 0.3s;
 }
 
 * {
@@ -27,6 +45,64 @@
 *::selection {
   background-color: var(--atomic-tangerine);
 }
+/* BTN DARK MODE */
+/* From uiverse.io by @satyamchaudharydev */
+/* The switch - the box around the slider */
+.switch {
+  /* --moon-mask: ; */
+  position: fixed;
+  top: calc(70px + 2vh);
+  right: calc(20px + 2vh);
+  z-index: 200000;
+  font-size: 17px;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f4f4f5;
+  transition: 0.4s;
+  border-radius: 30px;
+  box-shadow: 0 0 6px var(--atomic-tangerine);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.3em;
+  bottom: 0.3em;
+  background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #303136;
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.5em);
+  background: #303136;
+  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -5px 0 0 #a3dafb;
+}
+/* FIN BTN DARK MODE */
 .contenedor-grid {
   max-width: 1200px;
   margin: 0 auto;
@@ -93,6 +169,12 @@
   text-align: right;
   padding: 5px 10px;
 }
+.enlace,
+.ver-detalles {
+  width: 135px;
+  height: 40px;
+  border-radius: 20px;
+}
 
 .button {
   padding: 7px 12px;
@@ -126,20 +208,6 @@
   width: 90%;
   background-color: var(--smoky-black);
   margin: 30px auto;
-}
-
-.linea-divisora-2 {
-  height: 2px;
-  width: 90%;
-  background: linear-gradient(to right, #fff0, var(--smoky-black), #fff0);
-  margin: 10px auto;
-}
-
-.linea-divisora-2-techs {
-  height: 2px;
-  width: 90%;
-  background: linear-gradient(to right, #fff0, var(--smoky-black), #fff0);
-  margin: 10px auto;
 }
 
 .navbar-lg {
@@ -251,6 +319,7 @@
   height: calc(100vh - 70px);
   background-size: cover;
   margin-top: 70px;
+  transition: 0.3s;
 }
 
 .contenedor-presentacion-header {
@@ -277,6 +346,7 @@
 }
 
 .contenedor-titulo {
+  position: relative;
   padding: 1px 10px;
   background-color: var(--smoky-black);
   width: 100%;
@@ -504,6 +574,7 @@ h2::first-letter {
   height: 30px;
   background: url(/images/menu-hamburguesa-x.png) no-repeat center;
   background-size: 30px;
+  cursor: pointer;
 }
 
 .contenedor-flex-detalles-trabajos {
@@ -706,13 +777,15 @@ h2::first-letter {
   margin: 10px 0;
   background-color: var(--gris-claro);
   border: 1px solid var(--silver-metallic);
-  resize: none
+  resize: none;
 }
 
 .item-form input:focus,
 .item-form textarea:focus {
   background-color: #fff;
   transition: 0.7s;
+  outline: 1px solid var(--atomic-tangerine);
+  box-shadow: 0 0 4px 2px var(--atomic-tangerine);
 }
 
 .btns-form {
@@ -721,10 +794,10 @@ h2::first-letter {
   justify-content: flex-end;
 }
 
-.btns-form button {
+.btnEnviar {
   padding: 12px 26px;
   font-family: var(--montserrat-alternates);
-  border: 1px solid var(--deep-space-sparkle);
+  border: 1px solid var(--silver-metallic);
 }
 
 /* RRSS */
@@ -811,6 +884,91 @@ h2::first-letter {
   width: 35px;
   max-width: 35px;
 }
+
+/* Dark classes */
+.navbarSMDark {
+  background-color: var(--background-dark-faded);
+  backdrop-filter: blur(10px);
+}
+.imgLogoNavbarDark {
+  background: url("../images/logoPR-largoDark.png") no-repeat center;
+  background-size: 100%;
+  transition: 0.3s;
+}
+.fontDark {
+  color: var(--font-dark);
+  transition: 0.3s;
+}
+.fotoPerfilDark {
+  background: url(/images/foto-ramiro-dark.png) no-repeat center;
+  background-size: cover;
+  transition: 0.3s;
+}
+.BGElementDark {
+  background-color: var(--BG-element-dark);
+  color: var(--font-dark);
+  transition: 0.3s;
+}
+.BGElementDarkParaNavbar {
+  background-color: var(--background-dark-faded);
+  color: var(--font-dark);
+  transition: 0.3s;
+}
+.BGElementDarkParaNavbar a {
+  color: var(--font-dark);
+}
+.softSkillsDark {
+  color: var(--font-dark);
+  transition: 0.3s;
+}
+.cardDark {
+  background-color: var(--BG-element-dark);
+  transition: 0.3s;
+}
+.cardDark button {
+  background-color: var(--btn-dark);
+  border: 2px outset var(--border-btn-dark);
+  transition: 0.3s;
+}
+.itemDetalleDark {
+  background-color: var(--BG-element-dark);
+  transition: 0.3s;
+}
+.xDark {
+  background: url(../images/menu-hamburguesa-x-dark.png) no-repeat center;
+  background-size: 30px;
+  transition: 0.3s;
+}
+.lineaDark {
+  background-color: var(--silver-metallic);
+}
+.btnEnviarDark {
+  background: var(--background-dark) !important;
+  border: 1px solid var(--silver-metallic) !important;
+  color: var(--font-dark);
+}
+.logoFacebookDark {
+  background: url(/images/facebook-logo-dark.png) no-repeat center;
+  background-size: 40px;
+}
+.logoGithubDark {
+  background: url(/images/github-logo-dark.png) no-repeat center;
+  background-size: 40px;
+}
+.logoLinkedinDark {
+  background: url(/images/linkedin-logo-dark.png) no-repeat center;
+  background-size: 40px;
+}
+.logoInstagramDark {
+  background: url(/images/instagram-logo-dark.png) no-repeat center;
+  background-size: 40px;
+}
+.logoRPDark {
+  background: url(/images/logoPR-largo-B&N-dark.png) no-repeat center;
+  background-size: 50%;
+}
+
+/*  */
 
 @media (min-width: 375px) {
   .presentacion-1,
@@ -904,30 +1062,31 @@ h2::first-letter {
   .nav-bar-oculto-revelado {
     display: none;
   }
-
+  .switch {
+    /* --moon-mask: ; */
+    position: fixed;
+    top: calc(20px + 2vh);
+    right: 8vw;
+  }
   .separador-secciones {
     width: 100%;
     height: 0px;
   }
-
   .contenedor-foto-perfil {
     margin-top: 0%;
     width: 100%;
     height: 100vh;
   }
-
   .contenedor-todo {
     width: 75%;
     float: right;
     clear: both;
   }
-
   .navbar-lg {
     display: inline-block;
     width: 25%;
     height: 100vh;
   }
-
   .linea-divisora-navbar {
     width: 70%;
     height: 1px;
@@ -935,13 +1094,14 @@ h2::first-letter {
     margin: 20px;
     max-width: 210px;
   }
-
   .contenedor-navbar-fixed {
     position: fixed;
     top: 0;
     width: calc(25% - 30px);
     height: 100%;
     padding-left: 30px;
+    transition: 0.3s;
+    max-width: 270px;
   }
 
   .contenedor-navbar-flex {
@@ -956,6 +1116,14 @@ h2::first-letter {
     text-align: center;
     max-width: 300px;
   }
+  .imgLogoNavbar {
+    width: 200px;
+    height: 40px;
+    margin: 30px 0;
+    background: url("../images/logoPR-largo.png") no-repeat center;
+    background-size: 100%;
+    transition: 0.3s;
+  }
 
   .img-navbar-fixed img {
     width: 200px;
@@ -966,21 +1134,28 @@ h2::first-letter {
     text-decoration: none;
   }
   .link-navbar-fixed {
+    position: relative;
     text-decoration: none;
+    text-transform: uppercase;
     color: #000;
     font-family: var(--josefin-sans);
-    text-transform: uppercase;
     padding: 2.5vh 0;
-    background-image: linear-gradient(var(--fondo-foto), var(--fondo-foto));
-    background-size: 0% 100%;
     transition: 0.3s;
-    background-position-x: left;
-    background-repeat: no-repeat;
   }
-  .link-navbar-fixed:hover {
-    background-size: 100% 100%;
+  .backgroundHover {
+    position: absolute;
+    background: var(--fondo-foto) no-repeat center;
+    width: 0%;
+    height: 55px;
     transition: 0.3s;
-    background-position-x: left;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .link-navbar-fixed:hover > .backgroundHover {
+    width: 100%;
+    transition: 0.3s;
   }
   .link-navbar-fixed span {
     margin-left: 5px;
@@ -998,13 +1173,11 @@ h2::first-letter {
   }
 
   .contenedor-flex-about-me {
-    /* height: 90vh; */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     margin-bottom: 20px;
   }
-
   .aclaracion-inicial {
     font-style: italic;
     width: 60%;
@@ -1023,4 +1196,26 @@ h2::first-letter {
     filter: drop-shadow(0px 4px 3px rgb(88, 88, 88));
     transition: 0.3s;
   }
+
+  /* Dark classes */
+
+  .imgLogoNavbarDark {
+    background: url("../images/logoPR-largoDark.png") no-repeat center;
+    background-size: 100%;
+    transition: 0.3s;
+  }
+  .backgroundHoverDark {
+    background: var(--background-hover-dark);
+    transition: 0.3s;
+  }
+  .markerDark {
+    color: var(--marker-dark);
+    transition: 0.3s;
+  }
+  .fontDark {
+    color: var(--font-dark);
+    transition: 0.3s;
+  }
+
+  /*  */
 }
