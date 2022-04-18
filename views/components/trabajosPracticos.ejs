@@ -12,19 +12,19 @@
         <!-- Slides -->
         <div class="swiper-slide">
           <div class="item-trabajo">
-            <h5>Título:</h5>
-            <p class="titulo-trabajo">
-              <%= trabajosPracticos[a].titulo %>
-            </p>
+            <div class="containerTituloTrabajo">
+              <h5><%= trabajosPracticos[a].titulo %></h5>
+              <p><%= trabajosPracticos[a].tecnologias %></p>
+            </div>
             <div class="imagen-trabajo">
               <img src="/images/<%= trabajosPracticos[a].imagen%>" alt="">
             </div>
-            
+
             <div class="contenedor-btn-enlace">
-              <a href='<%= trabajosPracticos[a].link %>' target="_blank" rel="noopener noreferrer" class="link-invitation">
+              <a href='<%= trabajosPracticos[a].link %>' title="Ir al sitio" target="_blank" rel="noopener noreferrer" class="link-invitation">
                 <div class="iconoSitioWeb"></div>
               </a>
-              <div class="ver-detalles" id="<%= trabajosPracticos[a].imagen %>"></div>
+              <div class="ver-detalles" title="Ver detalles" id="<%= trabajosPracticos[a].imagen %>"></div>
             </div>
 
             <!-- <div class="final-tarjeta-trabajos">

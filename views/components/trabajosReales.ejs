@@ -9,18 +9,18 @@
         <!-- Slides -->
         <div class="swiper-slide">
           <div class="item-trabajo">
-            <h5>Título:</h5>
-            <p class="titulo-trabajo">
-              <%= trabajosReales[d].titulo %>
-            </p>
+            <div class="containerTituloTrabajo">
+              <h5><%= trabajosReales[d].titulo %></h5>
+              <p class="titulo-trabajo"><%= trabajosReales[d].tecnologias%></p>
+            </div>
             <div class="imagen-trabajo">
               <img src="/images/<%= trabajosReales[d].imagen%>" alt="">
             </div>
             <div class="contenedor-btn-enlace">
-              <a href='<%= trabajosReales[d].link %>' target="_blank" rel="noopener noreferrer" class="link-invitation" title="ir al sitio">
+              <a href='<%= trabajosReales[d].link %>' target="_blank" rel="noopener noreferrer" class="link-invitation" title="Ir al sitio">
                 <div class="iconoSitioWeb"></div>
               </a>
-              <div class="ver-detalles" title="ver detalles" id="<%= trabajosReales[d].imagen %>"></div>
+              <div class="ver-detalles" title="Ver detalles" id="<%= trabajosReales[d].imagen %>"></div>
             </div>
           </div>
         </div>

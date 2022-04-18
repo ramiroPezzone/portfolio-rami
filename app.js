@@ -2,7 +2,6 @@ let express = require('express'),
     app = express(),
     trabajosPracticos = require('./trabajos/trabajosPracticos'),
     trabajosReales = require('./trabajos/trabajosReales'),
-    proyectos = require('./trabajos/proyectos'),
     techs = require('./skills/techs'),
     softSkills = require('./skills/soft-skills'),
     lang = require('./skills/langs'),
@@ -32,7 +31,6 @@ app.get('/', (req, res) => {
     res.render('index', {
         trabajosPracticos: trabajosPracticos,
         trabajosReales: trabajosReales,
-        proyectos: proyectos,
         techs: techs,
         softSkills: softSkills,
         lang: lang

@@ -558,8 +558,16 @@ h2::first-letter {
   background-color: var(--silver-metallic);
   color: #fff;
 }
-.titulo-trabajo {
-  height: 50px;
+.containerTituloTrabajo {
+  height: min-content;
+}
+.container-logos-techs {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.container-logos-techs img {
+  width: 1px;
 }
 
 /* DETALLES FIXED */
