@@ -230,11 +230,17 @@ const btnEnviar = document.getElementById("btn-enviar"),
   containerTextoValidacionName = document.querySelector(
     ".containerTextoValidacionName"
   ),
+  containerTextoValidacionNameExtension = document.querySelector(
+    ".containerTextoValidacionNameExtension"
+  ),
   containerTextoValidacionTel = document.querySelector(
     ".containerTextoValidacionTel"
   ),
   containerTextoValidacionEmail = document.querySelector(
     ".containerTextoValidacionEmail"
+  ),
+  containerTextoValidacionEmailValido = document.querySelector(
+    ".containerTextoValidacionEmailValido"
   );
 
 formulario.addEventListener("submit", (e) => {
@@ -252,6 +258,13 @@ formulario.addEventListener("submit", (e) => {
   } else {
     containerTextoValidacionName.style.display = "none";
   }
+  if (nombre.value.length < 3) {
+    containerTextoValidacionNameExtension.style.display = "initial";
+    nombre.focus();
+    return;
+  } else {
+    containerTextoValidacionNameExtension.style.display = "none";
+  }
   if (telefono.value === "" || telefono.value.length < 9) {
     containerTextoValidacionTel.style.display = "initial";
     telefono.focus();
@@ -267,18 +280,14 @@ formulario.addEventListener("submit", (e) => {
     containerTextoValidacionEmail.style.display = "none";
   }
   if (!emailVálido(email.value)) {
-    containerTextoValidacionEmail.style.display = "initial";
+    containerTextoValidacionEmailValido.style.display = "initial";
     email.focus();
     return;
   } else {
-    containerTextoValidacionEmail.style.display = "none";
+    containerTextoValidacionEmailValido.style.display = "none";
   }
   // CONFIRMACIÓN DE ENVÍO DE LA CONSULTA
-  let ok = document.getElementById("ok");
   let capa = document.getElementById("capa");
   capa.style.display = "block";
-  ok.addEventListener("click", () => {
-    capa.style.display = "none";
-    document.forms["form-de-contacto"].submit();
-  });
+  document.forms["form-de-contacto"].submit();
 });

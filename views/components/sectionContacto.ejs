@@ -36,7 +36,10 @@
         <div class="input-form input-name">
           <input type="text" name="nombre" id="nombre" autocomplete="name" placeholder="*Tu nombre">
           <div class="containerTextoValidacionName">
-            <p>Por favor, ingresa tu nombre</p>
+            <p>Por favor, ingresá tu nombre</p>
+          </div>
+          <div class="containerTextoValidacionNameExtension">
+            <p>El nombre debe tener al menos 3 dígios</p>
           </div>
         </div>
       </div>
@@ -46,9 +49,9 @@
           Teléfono <span class="required">*</span>
         </label>
         <div class="input-form">
-          <input type="number" name="tel" id="tel" autocomplete="tel" placeholder="*Tu número telefónico">
+          <input type="number" name="tel" id="tel" autocomplete="tel" placeholder="*Tu número telefónico (Ej: 11xxxxxxxxx)">
           <div class="containerTextoValidacionTel">
-            <p>Por favor, ingresa un número válido (Deben ser solo números, no debe contener guiones y al menos debe tener 9 dígitos)</p>
+            <p>Por favor, ingresá un número válido (No debe contener guiones y al menos debe tener 9 dígitos)</p>
           </div>
         </div>
       </div>
@@ -58,9 +61,12 @@
           Correo electrónico <span class="required">*</span>
         </label>
         <div class="input-form">
-          <input type="email" name="email" id="email" autocomplete="email" placeholder="*Tu email">
+          <input type="text" name="email" id="email" autocomplete="email" placeholder="*Tu email">
           <div class="containerTextoValidacionEmail">
-            <p>Por favor, ingresa un correo electrónico válido</p>
+            <p>Por favor, ingresá un correo electrónico</p>
+          </div>
+          <div class="containerTextoValidacionEmailValido">
+            <p>Por favor, verificá que sea un correo electrónico válido</p>
           </div>
 
         </div>

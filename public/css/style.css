@@ -830,13 +830,17 @@ h2::first-letter {
   resize: none;
 }
 .containerTextoValidacionName,
+.containerTextoValidacionNameExtension,
 .containerTextoValidacionTel,
-.containerTextoValidacionEmail {
+.containerTextoValidacionEmail,
+.containerTextoValidacionEmailValido {
   display: none;
 }
 .containerTextoValidacionName p,
+.containerTextoValidacionNameExtension p,
 .containerTextoValidacionTel p,
-.containerTextoValidacionEmail p {
+.containerTextoValidacionEmail p,
+.containerTextoValidacionEmailValido p {
   animation: error 300ms;
   color: red;
   font-style: italic;
