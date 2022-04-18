@@ -811,21 +811,36 @@ h2::first-letter {
   margin: 0 auto;
 }
 
+.item-form {
+  margin: 10px 0;
+}
 .item-form input {
   width: 100%;
-  margin: 10px 0;
+  margin-top: 5px;
   height: 30px;
   background-color: var(--gris-claro);
   border: 1px solid var(--silver-metallic);
   transition: 0.5s;
 }
-
 .item-form textarea {
   width: 100%;
   margin: 10px 0;
   background-color: var(--gris-claro);
   border: 1px solid var(--silver-metallic);
   resize: none;
+}
+.containerTextoValidacionName,
+.containerTextoValidacionTel,
+.containerTextoValidacionEmail {
+  display: none;
+}
+.containerTextoValidacionName p,
+.containerTextoValidacionTel p,
+.containerTextoValidacionEmail p {
+  animation: error 300ms;
+  color: red;
+  font-style: italic;
+  font-size: 0.8em;
 }
 
 .item-form input:focus,
@@ -841,7 +856,21 @@ h2::first-letter {
   display: flex;
   justify-content: flex-end;
 }
-
+.error {
+  animation: error 300ms;
+  outline: 2px red;
+}
+@keyframes error {
+  25% {
+    transform: translateX(4px);
+  }
+  50% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
 /* BTN enviar */
 /* From uiverse.io by @adamgiebl */
 button {

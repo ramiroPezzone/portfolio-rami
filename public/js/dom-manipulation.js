@@ -226,11 +226,19 @@ btnDeCierreDeDetalles.forEach((btn) => {
 // VALIDACIÓN DE DATOS
 
 const btnEnviar = document.getElementById("btn-enviar"),
-  formulario = document.getElementById("form-de-contacto");
+  formulario = document.getElementById("form-de-contacto"),
+  containerTextoValidacionName = document.querySelector(
+    ".containerTextoValidacionName"
+  ),
+  containerTextoValidacionTel = document.querySelector(
+    ".containerTextoValidacionTel"
+  ),
+  containerTextoValidacionEmail = document.querySelector(
+    ".containerTextoValidacionEmail"
+  );
 
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
-
   const emailVálido = (email) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
@@ -238,30 +246,33 @@ formulario.addEventListener("submit", (e) => {
   const telefono = document.getElementById("tel");
   const email = document.getElementById("email");
   if (nombre.value === "") {
-    alert("Por favor, escribe tu nombre.");
+    containerTextoValidacionName.style.display = "initial";
     nombre.focus();
     return;
+  } else {
+    containerTextoValidacionName.style.display = "none";
   }
   if (telefono.value === "" || telefono.value.length < 9) {
-    alert(
-      "Por favor, escribe un número de contacto válido\n(No debe contener guiones y su extensión mínima debe ser de 9 caracteres)"
-    );
+    containerTextoValidacionTel.style.display = "initial";
     telefono.focus();
     return;
+  } else {
+    containerTextoValidacionTel.style.display = "none";
   }
-
   if (email.value === "") {
-    alert("Por favor, escribe tu correo electrónico");
+    containerTextoValidacionEmail.style.display = "initial";
     email.focus();
     return;
+  } else {
+    containerTextoValidacionEmail.style.display = "none";
   }
-
   if (!emailVálido(email.value)) {
-    alert("Por favor, escribe un correo electrónico válido");
+    containerTextoValidacionEmail.style.display = "initial";
     email.focus();
     return;
+  } else {
+    containerTextoValidacionEmail.style.display = "none";
   }
-
   // CONFIRMACIÓN DE ENVÍO DE LA CONSULTA
   let ok = document.getElementById("ok");
   let capa = document.getElementById("capa");
