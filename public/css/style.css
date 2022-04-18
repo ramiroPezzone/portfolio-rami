@@ -64,8 +64,8 @@ input[type="number"] {
 .switch {
   /* --moon-mask: ; */
   position: fixed;
-  top: calc(70px + 2vh);
-  right: calc(20px + 2vh);
+  top: 86px;
+  right: 31px;
   z-index: 200000;
   font-size: 17px;
   display: inline-block;
