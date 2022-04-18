@@ -1,0 +1,71 @@
+<div class="trabajos-practicos item-portfolio">
+  <h3>Proyectos personales</h3>
+  <div class="contenedor-flex-trabajos">
+    <!-- Slider main container -->
+    <div class="swiper mySwiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <% for( let d = 0; d < proyectosPersonales.length; d++ ) { %>
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="item-trabajo">
+            <div class="containerTituloTrabajo">
+              <h5><%= proyectosPersonales[d].titulo %></h5>
+              <p class="titulo-trabajo"><%= proyectosPersonales[d].tecnologias%></p>
+            </div>
+            <div class="imagen-trabajo">
+              <img src="/images/<%= proyectosPersonales[d].imagen%>" alt="">
+            </div>
+            <div class="contenedor-btn-enlace">
+              <a href='<%= proyectosPersonales[d].link %>' target="_blank" rel="noopener noreferrer" class="link-invitation" title="Ir al sitio">
+                <div class="iconoSitioWeb"></div>
+              </a>
+              <div class="ver-detalles" title="Ver detalles" id="<%= proyectosPersonales[d].imagen %>"></div>
+            </div>
+          </div>
+        </div>
+        <% } %>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- If we need navigation buttons -->
+      <!-- <div class="swiper-button-prev"></div> -->
+      <!-- <div class="swiper-button-next"></div> -->
+      <!-- If we need scrollbar -->
+      <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+    <!-- DETALLES -->
+    <% for( let e = 0; e < proyectosPersonales.length; e++ ) { %>
+    <div class="contenedor-fixed-item-trabajo-detalles" id="id-<%=proyectosPersonales[e].imagen%>">
+      <div class="contenedor-flex-detalles-trabajos">
+        <div class="item-trabajo-detalles">
+          <div class="contenedor-x"></div>
+          <h5 class="titulo-detalles">Título:</h5>
+          <p class="titulo-trabajo-detalles">
+            <%= proyectosPersonales[e].titulo %>
+          </p>
+          <h5>Tecnologías utilizadas:</h5>
+          <div class="contenedor-techs">
+            <p>
+              <%= proyectosPersonales[e].tecnologias %>
+            </p>
+          </div>
+          <h5>Módulos implementados:</h5>
+          <div class="contenedor-modulos">
+            <p>
+              <%= proyectosPersonales[e].modulos %>
+            </p>
+          </div>
+
+          <h5>Descripción:</h5>
+          <p><%= proyectosPersonales[e].descripcion %></p>
+          <h5>Obs:</h5>
+          <p class="observaciones">
+            <%= proyectosPersonales[e].observaciones %>
+          </p>
+        </div>
+      </div>
+    </div>
+    <% } %>
+    <!-- FIN DETALLES -->
+  </div>

@@ -2,7 +2,7 @@ const trabajosPracticos = [
   {
     titulo: "Movflix",
     imagen: "vista-previa-tp3.png",
-    tecnologias: "REACT",
+    tecnologias: "REACT - CSS",
     descripcion:
       "Trabajo práctico consistente en la confección de un sitio web en el cual se realice el consumo de una API desde la cual se obtienen datos reales de películas y series. La misma está completamente realizada con REACT de manera de afianzar los conocimientos de componentización, manejos de estados, ciclos de vida de componentes y consumo de api. Además del consumo de la api mencionado se cuenta también con la opción de búsqueda de cualquier película, la opción por parte del visitante de asignar películas como favoritas o quitar dicho estado, como así también muchos agregados que no estaban incluidos en las consignas del trabajo.",
     link: "https://trabajo-integrador-react.vercel.app/",

@@ -2,7 +2,7 @@ const trabajosReales = [
   {
     titulo: `Almacen natural Kiara`,
     imagen: "vista-previa-tr-almacennaturalkiara.png",
-    tecnologias: "STACK MERN",
+    tecnologias: "STACK MERN - BOOTSTRAP",
     modulos:
       "AXIOS - REACT-BOOTSTRAP - FORMIK - REACT-HOOK-FORM - REACT-ROUTER-DOM - REACT-SELECT - CLOUDINARY - DOTENV - MONGOOSE - MULTER - CORS",
     descripcion:
