@@ -122,35 +122,36 @@ if (document.getElementById("toggle-dark-mode")) {
 //
 
 // ANIMACIÓN MENÚ HAMBURGUESA & NAVBAR
-const contenedorMenuHamburguesa = document.querySelector(
-    ".contenedor-menu-hamburguesa"
-  ),
-  navBarOculto = document.querySelector(".nav-bar-oculto"),
-  menuHamburguesa = document.querySelector(".menu-hamburguesa"),
-  menuHamburguesaX = document.querySelector(".menu-hamburguesa-x"),
-  linksNavBar = document.querySelectorAll(".contenedor-navbar-oculto li"),
-  logoNavBar = document.querySelector(".logo-navbar");
+if (document.querySelector(".contenedor-menu-hamburguesa")) {
+  const contenedorMenuHamburguesa = document.querySelector(
+      ".contenedor-menu-hamburguesa"
+    ),
+    navBarOculto = document.querySelector(".nav-bar-oculto"),
+    menuHamburguesa = document.querySelector(".menu-hamburguesa"),
+    menuHamburguesaX = document.querySelector(".menu-hamburguesa-x"),
+    linksNavBar = document.querySelectorAll(".contenedor-navbar-oculto li"),
+    logoNavBar = document.querySelector(".logo-navbar");
 
-contenedorMenuHamburguesa.addEventListener("click", () => {
-  navBarOculto.classList.toggle("nav-bar-oculto-revelado");
-  menuHamburguesa.classList.toggle("menu-hamburguesa-oculto");
-  menuHamburguesaX.classList.toggle("menu-hamburguesa-x-revelado");
-});
-logoNavBar.addEventListener("click", () => {
-  navBarOculto.classList.remove("nav-bar-oculto-revelado");
-  if (!navBarOculto.classList.contains("nav-bar-oculto-revelado")) {
-    menuHamburguesa.classList.remove("menu-hamburguesa-oculto");
-    menuHamburguesaX.classList.remove("menu-hamburguesa-x-revelado");
-  }
-});
-
-linksNavBar.forEach((link) => {
-  link.addEventListener("click", () => {
-    navBarOculto.classList.remove("nav-bar-oculto-revelado");
-    menuHamburguesa.classList.remove("menu-hamburguesa-oculto");
-    menuHamburguesaX.classList.remove("menu-hamburguesa-x-revelado");
+  contenedorMenuHamburguesa.addEventListener("click", () => {
+    navBarOculto.classList.toggle("nav-bar-oculto-revelado");
+    menuHamburguesa.classList.toggle("menu-hamburguesa-oculto");
+    menuHamburguesaX.classList.toggle("menu-hamburguesa-x-revelado");
   });
-});
+  logoNavBar.addEventListener("click", () => {
+    navBarOculto.classList.remove("nav-bar-oculto-revelado");
+    if (!navBarOculto.classList.contains("nav-bar-oculto-revelado")) {
+      menuHamburguesa.classList.remove("menu-hamburguesa-oculto");
+      menuHamburguesaX.classList.remove("menu-hamburguesa-x-revelado");
+    }
+  });
+  linksNavBar.forEach((link) => {
+    link.addEventListener("click", () => {
+      navBarOculto.classList.remove("nav-bar-oculto-revelado");
+      menuHamburguesa.classList.remove("menu-hamburguesa-oculto");
+      menuHamburguesaX.classList.remove("menu-hamburguesa-x-revelado");
+    });
+  });
+}
 
 // ASIGNACIÓN DE EVENTO A BOTÓN DE DETALLES DE TRABAJOS
 // TP1
@@ -225,53 +226,47 @@ btnDeCierreDeDetalles.forEach((btn) => {
 // VALIDACIÓN DE DATOS
 
 const btnEnviar = document.getElementById("btn-enviar"),
-  formulario = document.getElementById("form-de-contacto"),
-  ok = document.getElementById("ok"),
-  capa = document.getElementById("capa");
+  formulario = document.getElementById("form-de-contacto");
 
-const validación = (e) => {
+formulario.addEventListener("submit", (e) => {
   e.preventDefault();
+
+  const emailVálido = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
   const nombre = document.getElementById("nombre");
   const telefono = document.getElementById("tel");
   const email = document.getElementById("email");
   if (nombre.value === "") {
     alert("Por favor, escribe tu nombre.");
     nombre.focus();
-    return false;
+    return;
   }
-  if (telefono.value === "") {
-    alert("Por favor, escribe número de contacto.");
+  if (telefono.value === "" || telefono.value.length < 9) {
+    alert(
+      "Por favor, escribe un número de contacto válido\n(No debe contener guiones y su extensión mínima debe ser de 9 caracteres)"
+    );
     telefono.focus();
-    return false;
+    return;
   }
 
   if (email.value === "") {
     alert("Por favor, escribe tu correo electrónico");
     email.focus();
-    return false;
+    return;
   }
 
   if (!emailVálido(email.value)) {
     alert("Por favor, escribe un correo electrónico válido");
-    emailAddress.focus();
-    return false;
+    email.focus();
+    return;
   }
 
-  return true; //Se pueden enviar los datos del formulario al servidor
-};
-
-const emailVálido = (email) => {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-};
-
-// CONFIRMACIÓN DE ENVÍO DE LA CONSULTA
-btnEnviar.addEventListener("click", (e) => {
-  formulario.addEventListener("submit", (e) => {
-    e.preventDefault();
-    capa.style.display = "block";
-  });
-
-  ok.addEventListener("click", (e) => {
+  // CONFIRMACIÓN DE ENVÍO DE LA CONSULTA
+  let ok = document.getElementById("ok");
+  let capa = document.getElementById("capa");
+  capa.style.display = "block";
+  ok.addEventListener("click", () => {
     capa.style.display = "none";
     document.forms["form-de-contacto"].submit();
   });

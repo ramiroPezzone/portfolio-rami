@@ -46,6 +46,18 @@ body {
 *::selection {
   background-color: var(--atomic-tangerine);
 }
+
+/* Para ocultar las flechas del input tipo number */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/*  */
 /* BTN DARK MODE */
 /* From uiverse.io by @satyamchaudharydev */
 /* The switch - the box around the slider */
