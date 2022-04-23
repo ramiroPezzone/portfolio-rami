@@ -14,10 +14,12 @@
           <div class="item-trabajo">
             <div class="containerTituloTrabajo">
               <h5><%= trabajosPracticos[a].titulo %></h5>
+
+              <div class="imagen-trabajo">
+                <img src="/images/demosResponsives/<%= trabajosPracticos[a].demoResponsive%>" alt="">
+              </div>
+
               <p><%= trabajosPracticos[a].tecnologias %></p>
-            </div>
-            <div class="imagen-trabajo">
-              <img src="/images/<%= trabajosPracticos[a].imagen%>" alt="">
             </div>
 
             <div class="contenedor-btn-enlace">
@@ -53,6 +55,11 @@
           <p class="titulo-trabajo-detalles">
             <%= trabajosPracticos[c].titulo %>
           </p>
+
+          <div class="containerImgDemoResponsiveDetalles">
+            <img src="/images/demosResponsives/<%= trabajosPracticos[c].demoResponsive%>" alt="">
+          </div>
+
           <h5>Tecnologías utilizadas:</h5>
           <div class="contenedor-techs">
             <p>
@@ -61,10 +68,14 @@
           </div>
           <h5>Descripción:</h5>
           <p><%= trabajosPracticos[c].descripcion %></p>
+
+          <% if (trabajosPracticos[c].observaciones !== "SIN OBS") { %>
           <h5>Obs:</h5>
           <p class="observaciones">
             <%= trabajosPracticos[c].observaciones %>
           </p>
+          <% } %>
+
         </div>
       </div>
     </div>

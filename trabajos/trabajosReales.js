@@ -2,6 +2,7 @@ const trabajosReales = [
   {
     titulo: `Almacen natural Kiara`,
     imagen: "vista-previa-tr-almacennaturalkiara.png",
+    demoResponsive: "demoResponsiveAlmNatKiara.png",
     tecnologias: "STACK MERN - BOOTSTRAP",
     modulos:
       "AXIOS - REACT-BOOTSTRAP - FORMIK - REACT-HOOK-FORM - REACT-ROUTER-DOM - REACT-SELECT - CLOUDINARY - DOTENV - MONGOOSE - MULTER - CORS",
@@ -13,8 +14,9 @@ const trabajosReales = [
     link2: "https://mercadito-natutal-kiara-v1-admin-front.vercel.app/",
   },
   {
-    titulo: "A & D -Segunda versión-",
+    titulo: "A & D (Segunda versión)",
     imagen: "vista-previa-tr1-aydhornosrotativos-v1-1.png",
+    demoResponsive: "demoResponsiveAYD2.png",
     tecnologias: "HTML - CSS - JS - NODEJS",
     modulos: "EXPRESS - EJS - NODEMAILER",
     descripcion:
@@ -24,8 +26,9 @@ const trabajosReales = [
     link: "https://ayd-hornos-rotativos-v-1-1.herokuapp.com/",
   },
   {
-    titulo: "A & D -Primera versión-",
+    titulo: "A & D (Primera versión)",
     imagen: "vista-previa-tr1-aydhornosrotativos.png",
+    demoResponsive: "demoResponsiveAYD.png",
     tecnologias: "HTML - CSS - JS",
     modulos: "-",
     descripcion:

@@ -193,6 +193,16 @@ input:checked + .slider:before {
   background: url("../images/ver-detalles-dark.png") no-repeat center;
   background-size: 100%;
 }
+.containerImgDemoResponsiveDetalles {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.containerImgDemoResponsiveDetalles img {
+  width: 100%;
+  max-width: 500px;
+}
 
 .button {
   padding: 7px 12px;
@@ -711,8 +721,8 @@ h2::first-letter {
   background-size: 100%;
 }
 .imagen-trabajo {
-  width: 100%;
-  margin: 0 auto;
+  width: 90%;
+  margin: 3vw auto;
   border-radius: 5px;
 }
 .imagen-trabajo img {
@@ -726,7 +736,7 @@ h2::first-letter {
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-evenly;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 .link-invitation {

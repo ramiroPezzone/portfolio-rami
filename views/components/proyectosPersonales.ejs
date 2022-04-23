@@ -14,13 +14,15 @@
               <p class="titulo-trabajo"><%= proyectosPersonales[d].tecnologias%></p>
             </div>
             <div class="imagen-trabajo">
-              <img src="/images/<%= proyectosPersonales[d].imagen%>" alt="">
+              <img src="/images/demosResponsives/<%= proyectosPersonales[d].demoResponsive%>" alt="">
             </div>
             <div class="contenedor-btn-enlace">
+              <% if (proyectosPersonales[d].link.length > 0) { %>
               <a href='<%= proyectosPersonales[d].link %>' target="_blank" rel="noopener noreferrer" class="link-invitation" title="Ir al sitio">
                 <div class="iconoSitioWeb"></div>
               </a>
-              <div class="ver-detalles" title="Ver detalles" id="<%= proyectosPersonales[d].imagen %>"></div>
+              <% } %>
+              <div class="ver-detalles" title="Ir a <%= proyectosPersonales[d].titulo%>" id="<%= proyectosPersonales[d].imagen %>"></div>
             </div>
           </div>
         </div>
@@ -39,11 +41,16 @@
     <div class="contenedor-fixed-item-trabajo-detalles" id="id-<%=proyectosPersonales[e].imagen%>">
       <div class="contenedor-flex-detalles-trabajos">
         <div class="item-trabajo-detalles">
-          <div class="contenedor-x"></div>
+          <div class="contenedor-x"></div>  
           <h5 class="titulo-detalles">Título:</h5>
           <p class="titulo-trabajo-detalles">
             <%= proyectosPersonales[e].titulo %>
           </p>
+
+          <div class="containerImgDemoResponsiveDetalles">
+            <img src="/images/demosResponsives/<%= proyectosPersonales[e].demoResponsive%>" alt="">
+          </div>
+
           <h5>Tecnologías utilizadas:</h5>
           <div class="contenedor-techs">
             <p>
@@ -59,10 +66,13 @@
 
           <h5>Descripción:</h5>
           <p><%= proyectosPersonales[e].descripcion %></p>
+
+          <% if (proyectosPersonales[e].observaciones !==  "SIN OBS") { %>
           <h5>Obs:</h5>
           <p class="observaciones">
             <%= proyectosPersonales[e].observaciones %>
           </p>
+          <% } %>
         </div>
       </div>
     </div>

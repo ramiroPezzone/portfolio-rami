@@ -14,10 +14,10 @@
               <p class="titulo-trabajo"><%= trabajosReales[d].tecnologias%></p>
             </div>
             <div class="imagen-trabajo">
-              <img src="/images/<%= trabajosReales[d].imagen%>" alt="">
+              <img src="/images/demosResponsives/<%= trabajosReales[d].demoResponsive%>" alt="">
             </div>
             <div class="contenedor-btn-enlace">
-              <a href='<%= trabajosReales[d].link %>' target="_blank" rel="noopener noreferrer" class="link-invitation" title="Ir al sitio">
+              <a href='<%= trabajosReales[d].link %>' target="_blank" rel="noopener noreferrer" class="link-invitation" title="Ir a <%= trabajosReales[d].titulo %>">
                 <div class="iconoSitioWeb"></div>
               </a>
               <div class="ver-detalles" title="Ver detalles" id="<%= trabajosReales[d].imagen %>"></div>
@@ -34,6 +34,7 @@
       <!-- If we need scrollbar -->
       <!-- <div class="swiper-scrollbar"></div> -->
     </div>
+
     <!-- DETALLES -->
     <% for( let e = 0; e < trabajosReales.length; e++ ) { %>
     <div class="contenedor-fixed-item-trabajo-detalles" id="id-<%=trabajosReales[e].imagen%>">
@@ -44,12 +45,18 @@
           <p class="titulo-trabajo-detalles">
             <%= trabajosReales[e].titulo %>
           </p>
+
+          <div class="containerImgDemoResponsiveDetalles">
+            <img src="/images/demosResponsives/<%= trabajosReales[e].demoResponsive%>" alt="">
+          </div>
+
           <h5>Tecnologías utilizadas:</h5>
           <div class="contenedor-techs">
             <p>
               <%= trabajosReales[e].tecnologias %>
             </p>
           </div>
+
           <h5>Módulos implementados:</h5>
           <div class="contenedor-modulos">
             <p>
@@ -59,10 +66,13 @@
 
           <h5>Descripción:</h5>
           <p><%= trabajosReales[e].descripcion %></p>
-          <h5>Obs:</h5>
-          <p class="observaciones">
-            <%= trabajosReales[e].observaciones %>
-          </p>
+
+          <% if (trabajosReales[e].observaciones !== "SIN OBS") { %>
+            <h5>Obs:</h5>
+            <p class="observaciones">
+              <%= trabajosReales[e].observaciones %>
+            </p>
+          <% } %>
         </div>
       </div>
     </div>
