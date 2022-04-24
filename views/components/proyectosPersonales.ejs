@@ -17,12 +17,12 @@
               <img src="/images/demosResponsives/<%= proyectosPersonales[d].demoResponsive%>" alt="">
             </div>
             <div class="contenedor-btn-enlace">
+              <div class="ver-detalles" title="Ir a <%= proyectosPersonales[d].titulo%>" id="<%= proyectosPersonales[d].imagen %>"></div>
               <% if (proyectosPersonales[d].link.length > 0) { %>
               <a href='<%= proyectosPersonales[d].link %>' target="_blank" rel="noopener noreferrer" class="link-invitation" title="Ir al sitio">
                 <div class="iconoSitioWeb"></div>
               </a>
               <% } %>
-              <div class="ver-detalles" title="Ir a <%= proyectosPersonales[d].titulo%>" id="<%= proyectosPersonales[d].imagen %>"></div>
             </div>
           </div>
         </div>
@@ -41,7 +41,7 @@
     <div class="contenedor-fixed-item-trabajo-detalles" id="id-<%=proyectosPersonales[e].imagen%>">
       <div class="contenedor-flex-detalles-trabajos">
         <div class="item-trabajo-detalles">
-          <div class="contenedor-x"></div>  
+          <div class="contenedor-x"></div>
           <h5 class="titulo-detalles">Título:</h5>
           <p class="titulo-trabajo-detalles">
             <%= proyectosPersonales[e].titulo %>

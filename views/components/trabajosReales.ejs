@@ -17,10 +17,10 @@
               <img src="/images/demosResponsives/<%= trabajosReales[d].demoResponsive%>" alt="">
             </div>
             <div class="contenedor-btn-enlace">
+              <div class="ver-detalles" title="Ver detalles" id="<%= trabajosReales[d].imagen %>"></div>
               <a href='<%= trabajosReales[d].link %>' target="_blank" rel="noopener noreferrer" class="link-invitation" title="Ir a <%= trabajosReales[d].titulo %>">
                 <div class="iconoSitioWeb"></div>
               </a>
-              <div class="ver-detalles" title="Ver detalles" id="<%= trabajosReales[d].imagen %>"></div>
             </div>
           </div>
         </div>
@@ -68,10 +68,10 @@
           <p><%= trabajosReales[e].descripcion %></p>
 
           <% if (trabajosReales[e].observaciones !== "SIN OBS") { %>
-            <h5>Obs:</h5>
-            <p class="observaciones">
-              <%= trabajosReales[e].observaciones %>
-            </p>
+          <h5>Obs:</h5>
+          <p class="observaciones">
+            <%= trabajosReales[e].observaciones %>
+          </p>
           <% } %>
         </div>
       </div>
