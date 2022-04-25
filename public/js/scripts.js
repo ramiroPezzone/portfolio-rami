@@ -38,6 +38,9 @@ if (document.getElementById("toggle-dark-mode")) {
     logoVerDetalles = document.querySelectorAll(".ver-detalles"),
     lineaDivisoraFooter = document.querySelectorAll(".linea-divisora-footer");
 
+  // if (DarkMode === "false") {
+  //   btnDarkMode.checked = false;
+  // }
   if (DarkMode === "true") {
     btnDarkMode.checked = true;
     body[0].classList.add("bodyDark");
@@ -82,16 +85,13 @@ if (document.getElementById("toggle-dark-mode")) {
   btnDarkMode.addEventListener("click", () => {
     if (DarkMode === null) {
       localStorage.setItem("DarkModePortfolioRami", true);
-      btnDarkMode.checked = true;
     }
 
     if (DarkMode !== null && DarkMode === "true") {
       localStorage.setItem("DarkModePortfolioRami", false);
-      btnDarkMode.checked = false;
     }
     if (DarkMode !== null && DarkMode === "false") {
       localStorage.setItem("DarkModePortfolioRami", true);
-      btnDarkMode.checked = true;
     }
 
     body[0].classList.toggle("bodyDark");
