@@ -38,9 +38,6 @@ if (document.getElementById("toggle-dark-mode")) {
     logoVerDetalles = document.querySelectorAll(".ver-detalles"),
     lineaDivisoraFooter = document.querySelectorAll(".linea-divisora-footer");
 
-  // if (DarkMode === "false") {
-  //   btnDarkMode.checked = false;
-  // }
   if (DarkMode === "true") {
     btnDarkMode.checked = true;
     body[0].classList.add("bodyDark");
@@ -197,6 +194,11 @@ let btnPP1 = document.getElementById("vista-previa-pp1.png"),
 btnPP1.addEventListener("click", () => {
   contenedorPP1.classList.add("item-trabajo-detalles-revelado");
 });
+let btnPP2 = document.getElementById("vista-previa-pp2.png"),
+  contenedorPP2 = document.getElementById("id-vista-previa-pp2.png");
+btnPP2.addEventListener("click", () => {
+  contenedorPP2.classList.add("item-trabajo-detalles-revelado");
+});
 
 // TR1
 let btnTR1 = document.getElementById("vista-previa-tr1-aydhornosrotativos.png"),
@@ -233,6 +235,7 @@ btnDeCierreDeDetalles.forEach((btn) => {
     contenedorTP2.classList.remove("item-trabajo-detalles-revelado");
     contenedorTP3.classList.remove("item-trabajo-detalles-revelado");
     contenedorPP1.classList.remove("item-trabajo-detalles-revelado");
+    contenedorPP2.classList.remove("item-trabajo-detalles-revelado");
     contenedorTR1.classList.remove("item-trabajo-detalles-revelado");
     contenedorTR2.classList.remove("item-trabajo-detalles-revelado");
     contenedorTR3.classList.remove("item-trabajo-detalles-revelado");
