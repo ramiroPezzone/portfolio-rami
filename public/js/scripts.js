@@ -36,7 +36,8 @@ if (document.getElementById("toggle-dark-mode")) {
     logoRP = document.querySelector(".logo-rp-rrss"),
     logoSitioWeb = document.querySelectorAll(".iconoSitioWeb"),
     logoVerDetalles = document.querySelectorAll(".ver-detalles"),
-    lineaDivisoraFooter = document.querySelectorAll(".linea-divisora-footer");
+    docs = document.querySelector(".docs"),
+    download = document.querySelector(".download");
 
   if (DarkMode === "true") {
     btnDarkMode.checked = true;
@@ -74,9 +75,8 @@ if (document.getElementById("toggle-dark-mode")) {
     logoRP.classList.add("logoRPDark");
     logoSitioWeb.forEach((logo) => logo.classList.add("iconoSitioWebDark"));
     logoVerDetalles.forEach((logo) => logo.classList.add("ver-detalles-dark")),
-      lineaDivisoraFooter.forEach((line) =>
-        line.classList.add("lineaDivisoraFooterDark")
-      );
+    docs.classList.add("docsDark");
+    download.classList.add("downloadDark");
   }
 
   btnDarkMode.addEventListener("click", () => {
@@ -127,9 +127,8 @@ if (document.getElementById("toggle-dark-mode")) {
     logoVerDetalles.forEach((logo) =>
       logo.classList.toggle("ver-detalles-dark")
     );
-    lineaDivisoraFooter.forEach((line) =>
-      line.classList.toggle("lineaDivisoraFooterDark")
-    );
+    docs.classList.toggle("docsDark");
+    download.classList.toggle("downloadDark");
   });
 }
 //

@@ -885,9 +885,10 @@ h2::first-letter {
     transform: translateX(4px);
   }
 }
+
 /* BTN enviar */
 /* From uiverse.io by @adamgiebl */
-button {
+.btnEnviar {
   font-family: var(--montserrat-alternates);
   border: 1px solid var(--silver-metallic);
   cursor: pointer;
@@ -898,33 +899,28 @@ button {
   transition: all 0.2s;
 }
 
-button span {
+.btnEnviar span {
   display: block;
   transition: all 0.3s ease-in-out;
 }
 
-button svg {
+.btnEnviar svg {
   display: block;
   transform-origin: center center;
   transition: transform 0.3s ease-in-out;
 }
-
-button:hover .svg-wrapper {
+.btnEnviar:hover .svg-wrapper {
   animation: fly-1 0.6s ease-in-out infinite alternate;
 }
-
-button:hover svg {
+.btnEnviar:hover svg {
   transform: translateX(1.2em) rotate(45deg) scale(1.1);
 }
-
-button:hover span {
+.btnEnviar:hover span {
   transform: translateX(5em);
 }
-
-button:active {
+.btnEnviar:active {
   transform: scale(0.95);
 }
-
 @keyframes fly-1 {
   from {
     transform: translateY(0.1em);
@@ -934,15 +930,7 @@ button:active {
     transform: translateY(-0.1em);
   }
 }
-
 /*  */
-
-.btnEnviar {
-  /* padding: 12px 26px; */
-  font-family: var(--montserrat-alternates);
-  border: 1px solid var(--silver-metallic);
-  cursor: pointer;
-}
 
 /* RRSS */
 .rrss {
@@ -1403,3 +1391,91 @@ button:active {
 
   /*  */
 }
+/* Download BTN */
+.container-btn-download {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+/* From uiverse.io by @adamgiebl */
+/* From uiverse.io by @barisdogansutcu */
+.download-button {
+  cursor: pointer;
+  position: relative;
+  border-width: 0;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 4px;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.docs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 40px;
+  padding: 0 10px;
+  border-radius: 4px;
+  z-index: 1;
+  background-color: #242a35;
+  border: solid 1px #e8e8e82d;
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.docsDark {
+  background-color: var(--btn-dark);
+  border: 1px solid var(--border-btn-dark);
+  color: var(--gris-claro);
+}
+
+.download-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  transition: 0.5s;
+}
+
+.download {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 90%;
+  margin: 0 auto;
+  z-index: -1;
+  border-radius: 4px;
+  transform: translateY(0%);
+  background-color: var(--atomic-tangerine);
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.downloadDark {
+  background-color: var(--atomic-tangerine-faded);
+}
+
+.download-button:hover .download {
+  transform: translateY(90%);
+}
+
+.download svg polyline,
+.download svg line {
+  animation: docs 1s infinite;
+}
+
+@keyframes docs {
+  0% {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(-15%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+/*  */
