@@ -1404,12 +1404,14 @@ h2::first-letter {
   cursor: pointer;
   position: relative;
   border-width: 0;
-  color: white;
+  color: var(--fondo-foto);
   font-size: 15px;
   font-weight: 600;
   border-radius: 4px;
   z-index: 1;
   transition: 0.5s;
+  box-shadow: 0 0 10px var(--background-dark);
+  text-shadow: 0 0 3px var(--background-dark);
 }
 
 .docs {
@@ -1428,17 +1430,12 @@ h2::first-letter {
 .docsDark {
   background-color: var(--btn-dark);
   border: 1px solid var(--border-btn-dark);
-  color: var(--gris-claro);
-}
-
-.download-button:hover {
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  transition: 0.5s;
+  box-shadow: 0 0 10px var(--gris-claro);
+  text-shadow: 0 0 3px var(--background-dark);
 }
 
 .download {
+  color: #fff;
   position: absolute;
   inset: 0;
   display: flex;
