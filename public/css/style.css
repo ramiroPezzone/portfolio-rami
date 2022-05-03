@@ -449,8 +449,20 @@ h2::first-letter {
   text-align: left;
   text-transform: uppercase;
 }
+
+.logo-tech {
+  width: 70px;
+  height: 70px;
+}
+.logo-tech:hover > img {
+  width: 100%;
+  transition: .3s;
+  filter: drop-shadow(0 0 5px var(--fondo-foto))
+}
 .logo-tech img {
   width: 60px;
+  transition: 1.5s;
+  z-index: 10;
 }
 .leyenda-tech p {
   font-size: 0.8em;
@@ -464,7 +476,7 @@ h2::first-letter {
   justify-content: center;
   align-content: flex-start;
   gap: 30px;
-  max-width: 728px;
+  max-width: 600px;
 }
 .titulo-tech {
   width: 20%;

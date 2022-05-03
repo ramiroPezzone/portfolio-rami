@@ -43,6 +43,11 @@ const techs = [
       "Conocimientos básicos en manejo de base de datos NoSQL (Not Only SQL)",
   },
   {
+    tecnologia: "MySQL",
+    logo: "mysql",
+    descripcion: "Conocimientos básicos en manejo de base de datos SQL",
+  },
+  {
     tecnologia: "GIT",
     logo: "git",
     descripcion: "",

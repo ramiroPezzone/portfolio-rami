@@ -6,19 +6,18 @@
 
     <div class="contenedor-techs">
       <div class="contenedor-front contenedor-flex-techs">
-        <% for( let f = 0; f < techs.length; f++ ) { %>
+        <% techs.forEach(tech => { %>
         <div class="tech-front">
           <div class="logo-tech">
-            <img src="/images/<%= techs[f].logo %>.png " alt="">
-
+            <img src="/images/<%= tech.logo %>.png " alt="">
           </div>
           <div class="leyenda-tech">
             <p class="texto-leyendas-tech">
-              <%= techs[f].tecnologia %>
+              <%= tech.tecnologia %>
             </p>
           </div>
         </div>
-        <% } %>
+        <% }) %>
       </div>
     </div>
   </div>
