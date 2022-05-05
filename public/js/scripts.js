@@ -75,7 +75,7 @@ if (document.getElementById("toggle-dark-mode")) {
     logoRP.classList.add("logoRPDark");
     logoSitioWeb.forEach((logo) => logo.classList.add("iconoSitioWebDark"));
     logoVerDetalles.forEach((logo) => logo.classList.add("ver-detalles-dark")),
-    docs.classList.add("docsDark");
+      docs.classList.add("docsDark");
     download.classList.add("downloadDark");
   }
 
@@ -226,6 +226,19 @@ let btnTR3 = document.getElementById("vista-previa-tr-almacennaturalkiara.png"),
   );
 btnTR3.addEventListener("click", () => {
   contenedorTR3.classList.add("item-trabajo-detalles-revelado");
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    contenedorTP1.classList.remove("item-trabajo-detalles-revelado");
+    contenedorTP2.classList.remove("item-trabajo-detalles-revelado");
+    contenedorTP3.classList.remove("item-trabajo-detalles-revelado");
+    contenedorPP1.classList.remove("item-trabajo-detalles-revelado");
+    contenedorPP2.classList.remove("item-trabajo-detalles-revelado");
+    contenedorTR1.classList.remove("item-trabajo-detalles-revelado");
+    contenedorTR2.classList.remove("item-trabajo-detalles-revelado");
+    contenedorTR3.classList.remove("item-trabajo-detalles-revelado");
+  }
 });
 
 btnDeCierreDeDetalles.forEach((btn) => {
