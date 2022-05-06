@@ -1,43 +1,42 @@
-// DARKMODE HANDLER
 const LS = localStorage;
 const d = document;
 
-const linksNavBar = document.querySelectorAll(".link-navbar-fixed"),
-  contenedorNavbarSM = document.querySelector(".contenedor-navbar"),
-  menuDesplegable = document.querySelector(".nav-bar-oculto"),
-  logoNavbarSM = document.querySelector(".logo-navbar"),
-  body = document.getElementsByTagName("body"),
-  fotoPerfil = document.querySelector(".contenedor-foto-perfil"),
-  logoNavBar = document.querySelector(".imgLogoNavbar"),
-  backgroundHover = document.querySelectorAll(".backgroundHover"),
-  marker = document.querySelectorAll(".marker"),
-  aboutMe = document.querySelector(".contenedor-about-me"),
-  skillsContainer = document.querySelector(".contenedor-general-skills"),
-  langsContainer = document.querySelector(".contenedor-langs"),
-  todosLosP = document.querySelectorAll("p"),
-  todosLosH2 = document.querySelectorAll("h2"),
-  todosLosH3 = document.querySelectorAll("h3"),
-  todosLosH4 = document.querySelectorAll("h4"),
-  todosLosH5 = document.querySelectorAll("h5"),
-  todosLosH6 = document.querySelectorAll("h6"),
-  itemTrabajo = document.querySelectorAll(".item-trabajo"),
-  detalleTrabajo = document.querySelectorAll(
-    ".contenedor-flex-detalles-trabajos"
-  ),
-  contenedorX = document.querySelectorAll(".contenedor-x"),
-  lineaDivisora1 = document.querySelectorAll(".linea-divisora"),
-  sectionContacto = document.querySelector(".contacto"),
-  labels = document.querySelectorAll("label"),
-  btnEnviarCorreo = document.querySelector("#btn-enviar"),
-  logoFacebook = document.querySelector(".logo-facebook"),
-  logoGithub = document.querySelector(".logo-github"),
-  logoLinkedin = document.querySelector(".logo-linkedin"),
-  logoInstagram = document.querySelector(".logo-instagram"),
-  logoRP = document.querySelector(".logo-rp-rrss"),
-  logoSitioWeb = document.querySelectorAll(".iconoSitioWeb"),
-  logoVerDetalles = document.querySelectorAll(".ver-detalles"),
-  docs = document.querySelector(".docs"),
-  download = document.querySelector(".download");
+// DARKMODE HANDLER
+
+const linksNavBar = d.querySelectorAll(".link-navbar-fixed"),
+  contenedorNavbarSM = d.querySelector(".contenedor-navbar"),
+  menuDesplegable = d.querySelector(".nav-bar-oculto"),
+  logoNavbarSM = d.querySelector(".logo-navbar"),
+  body = d.getElementsByTagName("body"),
+  fotoPerfil = d.querySelector(".contenedor-foto-perfil"),
+  logoNavBar = d.querySelector(".imgLogoNavbar"),
+  backgroundHover = d.querySelectorAll(".backgroundHover"),
+  marker = d.querySelectorAll(".marker"),
+  aboutMe = d.querySelector(".contenedor-about-me"),
+  skillsContainer = d.querySelector(".contenedor-general-skills"),
+  langsContainer = d.querySelector(".contenedor-langs"),
+  todosLosP = d.querySelectorAll("p"),
+  todosLosH2 = d.querySelectorAll("h2"),
+  todosLosH3 = d.querySelectorAll("h3"),
+  todosLosH4 = d.querySelectorAll("h4"),
+  todosLosH5 = d.querySelectorAll("h5"),
+  todosLosH6 = d.querySelectorAll("h6"),
+  itemTrabajo = d.querySelectorAll(".item-trabajo"),
+  detalleTrabajo = d.querySelectorAll(".contenedor-flex-detalles-trabajos"),
+  contenedorX = d.querySelectorAll(".contenedor-x"),
+  lineaDivisora1 = d.querySelectorAll(".linea-divisora"),
+  sectionContacto = d.querySelector(".contacto"),
+  labels = d.querySelectorAll("label"),
+  btnEnviarCorreo = d.querySelector("#btn-enviar"),
+  logoFacebook = d.querySelector(".logo-facebook"),
+  logoGithub = d.querySelector(".logo-github"),
+  logoLinkedin = d.querySelector(".logo-linkedin"),
+  logoInstagram = d.querySelector(".logo-instagram"),
+  logoRP = d.querySelector(".logo-rp-rrss"),
+  logoSitioWeb = d.querySelectorAll(".iconoSitioWeb"),
+  logoVerDetalles = d.querySelectorAll(".ver-detalles"),
+  docs = d.querySelector(".docs"),
+  download = d.querySelector(".download");
 
 if (d.getElementById("toggle-dark-mode")) {
   const btnDarkMode = d.getElementById("toggle-dark-mode");
@@ -136,21 +135,19 @@ if (d.getElementById("toggle-dark-mode")) {
     LS.getItem("theme") === null && LS.setItem("theme", "light");
     LS.getItem("theme") === "light" && lightMode();
     LS.getItem("theme") === "dark" && darkMode();
-    console.log(LS.getItem("theme"));
-    console.log(btnDarkMode.checked);
   });
 }
 
 // ANIMACIÓN MENÚ HAMBURGUESA & NAVBAR
-if (document.querySelector(".contenedor-menu-hamburguesa")) {
-  const contenedorMenuHamburguesa = document.querySelector(
+if (d.querySelector(".contenedor-menu-hamburguesa")) {
+  const contenedorMenuHamburguesa = d.querySelector(
       ".contenedor-menu-hamburguesa"
     ),
-    navBarOculto = document.querySelector(".nav-bar-oculto"),
-    menuHamburguesa = document.querySelector(".menu-hamburguesa"),
-    menuHamburguesaX = document.querySelector(".menu-hamburguesa-x"),
-    linksNavBar = document.querySelectorAll(".contenedor-navbar-oculto li"),
-    logoNavBar = document.querySelector(".logo-navbar");
+    navBarOculto = d.querySelector(".nav-bar-oculto"),
+    menuHamburguesa = d.querySelector(".menu-hamburguesa"),
+    menuHamburguesaX = d.querySelector(".menu-hamburguesa-x"),
+    linksNavBar = d.querySelectorAll(".contenedor-navbar-oculto li"),
+    logoNavBar = d.querySelector(".logo-navbar");
 
   contenedorMenuHamburguesa.addEventListener("click", () => {
     navBarOculto.classList.toggle("nav-bar-oculto-revelado");
@@ -175,41 +172,41 @@ if (document.querySelector(".contenedor-menu-hamburguesa")) {
 
 // ASIGNACIÓN DE EVENTO A BOTÓN DE DETALLES DE TRABAJOS
 // TP1
-let btnTP1 = document.getElementById("vista-previa-tp1.png"),
-  contenedorTP1 = document.getElementById("id-vista-previa-tp1.png"),
-  btnDeCierreDeDetalles = document.querySelectorAll(".contenedor-x");
+let btnTP1 = d.getElementById("vista-previa-tp1.png"),
+  contenedorTP1 = d.getElementById("id-vista-previa-tp1.png"),
+  btnDeCierreDeDetalles = d.querySelectorAll(".contenedor-x");
 
 btnTP1.addEventListener("click", () => {
   contenedorTP1.classList.add("item-trabajo-detalles-revelado");
 });
 
 // TP2
-let btnTP2 = document.getElementById("vista-previa-tp2.png"),
-  contenedorTP2 = document.getElementById("id-vista-previa-tp2.png");
+let btnTP2 = d.getElementById("vista-previa-tp2.png"),
+  contenedorTP2 = d.getElementById("id-vista-previa-tp2.png");
 btnTP2.addEventListener("click", () => {
   contenedorTP2.classList.add("item-trabajo-detalles-revelado");
 });
 // TP3
-let btnTP3 = document.getElementById("vista-previa-tp3.png"),
-  contenedorTP3 = document.getElementById("id-vista-previa-tp3.png");
+let btnTP3 = d.getElementById("vista-previa-tp3.png"),
+  contenedorTP3 = d.getElementById("id-vista-previa-tp3.png");
 btnTP3.addEventListener("click", () => {
   contenedorTP3.classList.add("item-trabajo-detalles-revelado");
 });
 // PP1
-let btnPP1 = document.getElementById("vista-previa-pp1.png"),
-  contenedorPP1 = document.getElementById("id-vista-previa-pp1.png");
+let btnPP1 = d.getElementById("vista-previa-pp1.png"),
+  contenedorPP1 = d.getElementById("id-vista-previa-pp1.png");
 btnPP1.addEventListener("click", () => {
   contenedorPP1.classList.add("item-trabajo-detalles-revelado");
 });
-let btnPP2 = document.getElementById("vista-previa-pp2.png"),
-  contenedorPP2 = document.getElementById("id-vista-previa-pp2.png");
+let btnPP2 = d.getElementById("vista-previa-pp2.png"),
+  contenedorPP2 = d.getElementById("id-vista-previa-pp2.png");
 btnPP2.addEventListener("click", () => {
   contenedorPP2.classList.add("item-trabajo-detalles-revelado");
 });
 
 // TR1
-let btnTR1 = document.getElementById("vista-previa-tr1-aydhornosrotativos.png"),
-  contenedorTR1 = document.getElementById(
+let btnTR1 = d.getElementById("vista-previa-tr1-aydhornosrotativos.png"),
+  contenedorTR1 = d.getElementById(
     "id-vista-previa-tr1-aydhornosrotativos.png"
   );
 btnTR1.addEventListener("click", () => {
@@ -217,10 +214,8 @@ btnTR1.addEventListener("click", () => {
 });
 
 // TR2
-let btnTR2 = document.getElementById(
-    "vista-previa-tr1-aydhornosrotativos-v1-1.png"
-  ),
-  contenedorTR2 = document.getElementById(
+let btnTR2 = d.getElementById("vista-previa-tr1-aydhornosrotativos-v1-1.png"),
+  contenedorTR2 = d.getElementById(
     "id-vista-previa-tr1-aydhornosrotativos-v1-1.png"
   );
 btnTR2.addEventListener("click", () => {
@@ -228,15 +223,15 @@ btnTR2.addEventListener("click", () => {
 });
 
 // TR3
-let btnTR3 = document.getElementById("vista-previa-tr-almacennaturalkiara.png"),
-  contenedorTR3 = document.getElementById(
+let btnTR3 = d.getElementById("vista-previa-tr-almacennaturalkiara.png"),
+  contenedorTR3 = d.getElementById(
     "id-vista-previa-tr-almacennaturalkiara.png"
   );
 btnTR3.addEventListener("click", () => {
   contenedorTR3.classList.add("item-trabajo-detalles-revelado");
 });
 
-document.addEventListener("keydown", (e) => {
+d.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     contenedorTP1.classList.remove("item-trabajo-detalles-revelado");
     contenedorTP2.classList.remove("item-trabajo-detalles-revelado");
@@ -264,21 +259,19 @@ btnDeCierreDeDetalles.forEach((btn) => {
 
 // VALIDACIÓN DE DATOS
 
-const btnEnviar = document.getElementById("btn-enviar"),
-  formulario = document.getElementById("form-de-contacto"),
-  containerTextoValidacionName = document.querySelector(
+const btnEnviar = d.getElementById("btn-enviar"),
+  formulario = d.getElementById("form-de-contacto"),
+  containerTextoValidacionName = d.querySelector(
     ".containerTextoValidacionName"
   ),
-  containerTextoValidacionNameExtension = document.querySelector(
+  containerTextoValidacionNameExtension = d.querySelector(
     ".containerTextoValidacionNameExtension"
   ),
-  containerTextoValidacionTel = document.querySelector(
-    ".containerTextoValidacionTel"
-  ),
-  containerTextoValidacionEmail = document.querySelector(
+  containerTextoValidacionTel = d.querySelector(".containerTextoValidacionTel"),
+  containerTextoValidacionEmail = d.querySelector(
     ".containerTextoValidacionEmail"
   ),
-  containerTextoValidacionEmailValido = document.querySelector(
+  containerTextoValidacionEmailValido = d.querySelector(
     ".containerTextoValidacionEmailValido"
   );
 
@@ -287,9 +280,9 @@ formulario.addEventListener("submit", (e) => {
   const emailVálido = (email) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
-  const nombre = document.getElementById("nombre");
-  const telefono = document.getElementById("tel");
-  const email = document.getElementById("email");
+  const nombre = d.getElementById("nombre");
+  const telefono = d.getElementById("tel");
+  const email = d.getElementById("email");
   if (nombre.value === "") {
     containerTextoValidacionName.style.display = "initial";
     nombre.focus();
@@ -326,7 +319,7 @@ formulario.addEventListener("submit", (e) => {
     containerTextoValidacionEmailValido.style.display = "none";
   }
   // CONFIRMACIÓN DE ENVÍO DE LA CONSULTA
-  let capa = document.getElementById("capa");
+  let capa = d.getElementById("capa");
   capa.style.display = "block";
-  document.forms["form-de-contacto"].submit();
+  d.forms["form-de-contacto"].submit();
 });
