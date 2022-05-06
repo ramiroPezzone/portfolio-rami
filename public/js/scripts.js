@@ -1,45 +1,92 @@
 // DARKMODE HANDLER
-if (document.getElementById("toggle-dark-mode")) {
-  const DarkMode = localStorage.getItem("DarkModePortfolioRami"),
-    btnDarkMode = document.getElementById("toggle-dark-mode"),
-    linksNavBar = document.querySelectorAll(".link-navbar-fixed"),
-    contenedorNavbarSM = document.querySelector(".contenedor-navbar"),
-    menuDesplegable = document.querySelector(".nav-bar-oculto"),
-    logoNavbarSM = document.querySelector(".logo-navbar"),
-    body = document.getElementsByTagName("body"),
-    fotoPerfil = document.querySelector(".contenedor-foto-perfil"),
-    logoNavBar = document.querySelector(".imgLogoNavbar"),
-    backgroundHover = document.querySelectorAll(".backgroundHover"),
-    marker = document.querySelectorAll(".marker"),
-    aboutMe = document.querySelector(".contenedor-about-me"),
-    skillsContainer = document.querySelector(".contenedor-general-skills"),
-    langsContainer = document.querySelector(".contenedor-langs"),
-    todosLosP = document.querySelectorAll("p"),
-    todosLosH2 = document.querySelectorAll("h2"),
-    todosLosH3 = document.querySelectorAll("h3"),
-    todosLosH4 = document.querySelectorAll("h4"),
-    todosLosH5 = document.querySelectorAll("h5"),
-    todosLosH6 = document.querySelectorAll("h6"),
-    itemTrabajo = document.querySelectorAll(".item-trabajo"),
-    detalleTrabajo = document.querySelectorAll(
-      ".contenedor-flex-detalles-trabajos"
-    ),
-    contenedorX = document.querySelectorAll(".contenedor-x"),
-    lineaDivisora1 = document.querySelectorAll(".linea-divisora"),
-    sectionContacto = document.querySelector(".contacto"),
-    labels = document.querySelectorAll("label"),
-    btnEnviarCorreo = document.querySelector("#btn-enviar"),
-    logoFacebook = document.querySelector(".logo-facebook"),
-    logoGithub = document.querySelector(".logo-github"),
-    logoLinkedin = document.querySelector(".logo-linkedin"),
-    logoInstagram = document.querySelector(".logo-instagram"),
-    logoRP = document.querySelector(".logo-rp-rrss"),
-    logoSitioWeb = document.querySelectorAll(".iconoSitioWeb"),
-    logoVerDetalles = document.querySelectorAll(".ver-detalles"),
-    docs = document.querySelector(".docs"),
-    download = document.querySelector(".download");
+const LS = localStorage;
+const d = document;
 
-  if (DarkMode === "true") {
+const linksNavBar = document.querySelectorAll(".link-navbar-fixed"),
+  contenedorNavbarSM = document.querySelector(".contenedor-navbar"),
+  menuDesplegable = document.querySelector(".nav-bar-oculto"),
+  logoNavbarSM = document.querySelector(".logo-navbar"),
+  body = document.getElementsByTagName("body"),
+  fotoPerfil = document.querySelector(".contenedor-foto-perfil"),
+  logoNavBar = document.querySelector(".imgLogoNavbar"),
+  backgroundHover = document.querySelectorAll(".backgroundHover"),
+  marker = document.querySelectorAll(".marker"),
+  aboutMe = document.querySelector(".contenedor-about-me"),
+  skillsContainer = document.querySelector(".contenedor-general-skills"),
+  langsContainer = document.querySelector(".contenedor-langs"),
+  todosLosP = document.querySelectorAll("p"),
+  todosLosH2 = document.querySelectorAll("h2"),
+  todosLosH3 = document.querySelectorAll("h3"),
+  todosLosH4 = document.querySelectorAll("h4"),
+  todosLosH5 = document.querySelectorAll("h5"),
+  todosLosH6 = document.querySelectorAll("h6"),
+  itemTrabajo = document.querySelectorAll(".item-trabajo"),
+  detalleTrabajo = document.querySelectorAll(
+    ".contenedor-flex-detalles-trabajos"
+  ),
+  contenedorX = document.querySelectorAll(".contenedor-x"),
+  lineaDivisora1 = document.querySelectorAll(".linea-divisora"),
+  sectionContacto = document.querySelector(".contacto"),
+  labels = document.querySelectorAll("label"),
+  btnEnviarCorreo = document.querySelector("#btn-enviar"),
+  logoFacebook = document.querySelector(".logo-facebook"),
+  logoGithub = document.querySelector(".logo-github"),
+  logoLinkedin = document.querySelector(".logo-linkedin"),
+  logoInstagram = document.querySelector(".logo-instagram"),
+  logoRP = document.querySelector(".logo-rp-rrss"),
+  logoSitioWeb = document.querySelectorAll(".iconoSitioWeb"),
+  logoVerDetalles = document.querySelectorAll(".ver-detalles"),
+  docs = document.querySelector(".docs"),
+  download = document.querySelector(".download");
+
+if (d.getElementById("toggle-dark-mode")) {
+  const btnDarkMode = d.getElementById("toggle-dark-mode");
+
+  const lightMode = () => {
+    btnDarkMode.checked = false;
+    body[0].classList.remove("bodyDark");
+    contenedorNavbarSM.classList.remove("navbarSMDark");
+    logoNavbarSM.classList.remove("imgLogoNavbarDark");
+    menuDesplegable.classList.remove("BGElementDarkParaNavbar");
+    fotoPerfil.classList.remove("fotoPerfilDark");
+    linksNavBar.forEach((link) => link.classList.remove("fontDark"));
+    logoNavBar.classList.remove("imgLogoNavbarDark");
+    backgroundHover.forEach((item) =>
+      item.classList.remove("backgroundHoverDark")
+    );
+    marker.forEach((mark) => mark.classList.remove("markerDark"));
+    aboutMe.classList.remove("fontDark");
+    skillsContainer.classList.remove("BGElementDark");
+    langsContainer.classList.remove("BGElementDark");
+    todosLosP.forEach((p) => p.classList.remove("fontDark"));
+    todosLosH2.forEach((h) => h.classList.remove("fontDark"));
+    todosLosH3.forEach((h) => h.classList.remove("fontDark"));
+    todosLosH4.forEach((h) => h.classList.remove("fontDark"));
+    todosLosH5.forEach((h) => h.classList.remove("fontDark"));
+    todosLosH6.forEach((h) => h.classList.remove("fontDark"));
+    itemTrabajo.forEach((card) => card.classList.remove("cardDark"));
+    detalleTrabajo.forEach((det) => det.classList.remove("itemDetalleDark"));
+    contenedorX.forEach((x) => x.classList.remove("xDark"));
+    lineaDivisora1.forEach((linea) => linea.classList.remove("lineaDark"));
+    sectionContacto.classList.remove("cardDarkContacto");
+    labels.forEach((lab) => lab.classList.remove("fontDark"));
+    btnEnviarCorreo.classList.remove("btnEnviarDark");
+    logoFacebook.classList.remove("logoFacebookDark");
+    logoGithub.classList.remove("logoGithubDark");
+    logoLinkedin.classList.remove("logoLinkedinDark");
+    logoInstagram.classList.remove("logoInstagramDark");
+    logoRP.classList.remove("logoRPDark");
+    logoSitioWeb.forEach((logo) => logo.classList.remove("iconoSitioWebDark"));
+    logoVerDetalles.forEach((logo) =>
+      logo.classList.remove("ver-detalles-dark")
+    );
+    docs.classList.remove("docsDark");
+    download.classList.remove("downloadDark");
+
+    LS.setItem("theme", "light");
+  };
+
+  const darkMode = () => {
     btnDarkMode.checked = true;
     body[0].classList.add("bodyDark");
     contenedorNavbarSM.classList.add("navbarSMDark");
@@ -75,63 +122,24 @@ if (document.getElementById("toggle-dark-mode")) {
     logoRP.classList.add("logoRPDark");
     logoSitioWeb.forEach((logo) => logo.classList.add("iconoSitioWebDark"));
     logoVerDetalles.forEach((logo) => logo.classList.add("ver-detalles-dark")),
-      docs.classList.add("docsDark");
-    download.classList.add("downloadDark");
-  }
+      docs.classList.add("docsDark"),
+      download.classList.add("downloadDark");
 
-  btnDarkMode.addEventListener("click", () => {
-    if (DarkMode === null) {
-      localStorage.setItem("DarkModePortfolioRami", true);
-    }
+    LS.setItem("theme", "dark");
+  };
 
-    if (DarkMode !== null && DarkMode === "true") {
-      localStorage.setItem("DarkModePortfolioRami", false);
-    }
-    if (DarkMode !== null && DarkMode === "false") {
-      localStorage.setItem("DarkModePortfolioRami", true);
-    }
+  btnDarkMode.addEventListener("click", (e) => {
+    e.target.checked === false ? lightMode() : darkMode();
+  });
 
-    body[0].classList.toggle("bodyDark");
-    contenedorNavbarSM.classList.toggle("navbarSMDark");
-    logoNavbarSM.classList.toggle("imgLogoNavbarDark");
-    menuDesplegable.classList.toggle("BGElementDarkParaNavbar");
-    fotoPerfil.classList.toggle("fotoPerfilDark");
-    linksNavBar.forEach((link) => link.classList.toggle("fontDark"));
-    logoNavBar.classList.toggle("imgLogoNavbarDark");
-    backgroundHover.forEach((item) =>
-      item.classList.toggle("backgroundHoverDark")
-    );
-    marker.forEach((mark) => mark.classList.toggle("markerDark"));
-    aboutMe.classList.toggle("fontDark");
-    skillsContainer.classList.toggle("BGElementDark");
-    langsContainer.classList.toggle("BGElementDark");
-    todosLosP.forEach((p) => p.classList.toggle("fontDark"));
-    todosLosH2.forEach((h) => h.classList.toggle("fontDark"));
-    todosLosH3.forEach((h) => h.classList.toggle("fontDark"));
-    todosLosH4.forEach((h) => h.classList.toggle("fontDark"));
-    todosLosH5.forEach((h) => h.classList.toggle("fontDark"));
-    todosLosH6.forEach((h) => h.classList.toggle("fontDark"));
-    itemTrabajo.forEach((card) => card.classList.toggle("cardDark"));
-    detalleTrabajo.forEach((det) => det.classList.toggle("itemDetalleDark"));
-    contenedorX.forEach((x) => x.classList.toggle("xDark"));
-    lineaDivisora1.forEach((linea) => linea.classList.toggle("lineaDark"));
-    sectionContacto.classList.toggle("cardDarkContacto");
-    labels.forEach((lab) => lab.classList.toggle("fontDark"));
-    btnEnviarCorreo.classList.toggle("btnEnviarDark");
-    logoFacebook.classList.toggle("logoFacebookDark");
-    logoGithub.classList.toggle("logoGithubDark");
-    logoLinkedin.classList.toggle("logoLinkedinDark");
-    logoInstagram.classList.toggle("logoInstagramDark");
-    logoRP.classList.toggle("logoRPDark");
-    logoSitioWeb.forEach((logo) => logo.classList.toggle("iconoSitioWebDark"));
-    logoVerDetalles.forEach((logo) =>
-      logo.classList.toggle("ver-detalles-dark")
-    );
-    docs.classList.toggle("docsDark");
-    download.classList.toggle("downloadDark");
+  d.addEventListener("DOMContentLoaded", () => {
+    LS.getItem("theme") === null && LS.setItem("theme", "light");
+    LS.getItem("theme") === "light" && lightMode();
+    LS.getItem("theme") === "dark" && darkMode();
+    console.log(LS.getItem("theme"));
+    console.log(btnDarkMode.checked);
   });
 }
-//
 
 // ANIMACIÓN MENÚ HAMBURGUESA & NAVBAR
 if (document.querySelector(".contenedor-menu-hamburguesa")) {

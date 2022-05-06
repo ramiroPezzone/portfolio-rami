@@ -456,8 +456,8 @@ h2::first-letter {
 }
 .logo-tech:hover > img {
   width: 100%;
-  transition: .3s;
-  filter: drop-shadow(0 0 5px var(--fondo-foto))
+  transition: 0.3s;
+  filter: drop-shadow(0 0 5px var(--fondo-foto));
 }
 .logo-tech img {
   width: 60px;
