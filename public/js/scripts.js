@@ -3,7 +3,6 @@ const d = document;
 
 // DARKMODE HANDLER
 LS.getItem("DarkModePortfolioRami") && LS.removeItem("DarkModePortfolioRami");
-
 const linksNavBar = d.querySelectorAll(".link-navbar-fixed"),
   contenedorNavbarSM = d.querySelector(".contenedor-navbar"),
   menuDesplegable = d.querySelector(".nav-bar-oculto"),
