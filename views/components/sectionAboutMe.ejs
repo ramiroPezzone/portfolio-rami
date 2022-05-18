@@ -27,7 +27,11 @@
     </div>
 
     <div class="contenedor-flex-about-me">
-      <p class="presentacion-1">Hola, mi nombre es Ramiro Carlos Pezzone, tengo 37 años y actualmente estoy residiendo en Argentina. Soy Desarrollador Web Full Stack. Mi
+      <% let fechaDeHoy = new Date().getFullYear() %>
+      <% let miFechaDeNac = new Date("1984-05-13 00:00").getFullYear() %>
+      <% let edad = fechaDeHoy - miFechaDeNac %>
+
+      <p class="presentacion-1">Hola, mi nombre es Ramiro Carlos Pezzone, tengo <%= edad %> años y actualmente estoy residiendo en Argentina. Soy Desarrollador Web Full Stack. Mi
         formación comenzó de manera autodidacta <span class="bolder">e intensa</span> desde principios del año '21, a la cual sumé una formación de Desarrollador Web Full Stack impartido por la <a href="https://www.baeducacionejecutiva.com.ar/" target="_blank" rel="noopener noreferrer">BA
           Coding School</a>. En la misma aprendimos la realización de aplicaciones con el stack MERN (MongoDB, Express, React y Nodejs).</p>
 
