@@ -28,25 +28,8 @@
 
     <div class="contenedor-flex-about-me">
 
-      <!-- Cálculo de edad -->
-      <% let añoActual = new Date().getFullYear() %>
-      <% let fechaDeNac = "1984-05-19" %>
-      <% let mesActual = new Date().getMonth() + 1 %>
-      <% let diaActual = new Date().getDate() %>
-      <% let miAñoDeNac = new Date(fechaDeNac).getFullYear() %>
-      <% let miMesDeNac = new Date(fechaDeNac).getMonth() + 1 %>
-      <% let miDiaDeNac = new Date(fechaDeNac).getDate() +1 %>
 
-      <% let edad = añoActual - miAñoDeNac %>
-
-      <% if ((Math.sign(mesActual - miMesDeNac) !== 1) && (Math.sign(diaActual - miDiaDeNac) !== 1)) { %>
-      <% edad  %>
-      <% } else {%>
-      <% edad = edad - 1 %>
-      <% } %>
-      <!--  -->
-
-      <p class="presentacion-1">Hola, mi nombre es Ramiro Carlos Pezzone, tengo <%= edad %> años y actualmente estoy residiendo en Argentina. Soy Desarrollador Web Full Stack. Mi
+      <p class="presentacion-1">Hola, mi nombre es Ramiro Carlos Pezzone, tengo <span id="edad"></span> años y actualmente estoy residiendo en Argentina. Soy Desarrollador Web Full Stack. Mi
         formación comenzó de manera autodidacta <span class="bolder">e intensa</span> desde principios del año '21, a la cual sumé una formación de Desarrollador Web Full Stack impartido por la <a href="https://www.baeducacionejecutiva.com.ar/" target="_blank" rel="noopener noreferrer">BA
           Coding School</a>. En la misma aprendimos la realización de aplicaciones con el stack MERN (MongoDB, Express, React y Nodejs).</p>
 

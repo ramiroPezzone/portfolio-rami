@@ -323,3 +323,24 @@ formulario.addEventListener("submit", (e) => {
   capa.style.display = "block";
   d.forms["form-de-contacto"].submit();
 });
+
+// Cálculo de edad
+const calculoDeEdad = (fechaDeNac) => {
+  let elementoEdad = d.getElementById("edad");
+  let añoActual = new Date().getFullYear();
+  let mesActual = new Date().getMonth() + 1;
+  let diaActual = new Date().getDate();
+  let miAñoDeNac = new Date(fechaDeNac).getFullYear();
+  let miMesDeNac = new Date(fechaDeNac).getMonth() + 1;
+  let miDiaDeNac = new Date(fechaDeNac).getDate() + 1;
+  let edad = añoActual - miAñoDeNac;
+  if (
+    Math.sign(mesActual - miMesDeNac) !== 1 &&
+    Math.sign(diaActual - miDiaDeNac) !== 1
+  ) {
+    elementoEdad.innerText = edad;
+  } else {
+    elementoEdad.innerText = edad - 1;
+  }
+};
+calculoDeEdad("1984-05-18");
