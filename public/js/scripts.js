@@ -323,4 +323,3 @@ formulario.addEventListener("submit", (e) => {
   capa.style.display = "block";
   d.forms["form-de-contacto"].submit();
 });
-const d = new Date().getDate
