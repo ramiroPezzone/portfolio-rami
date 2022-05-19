@@ -334,13 +334,10 @@ const calculoDeEdad = (fechaDeNac) => {
   let miMesDeNac = new Date(fechaDeNac).getMonth() + 1;
   let miDiaDeNac = new Date(fechaDeNac).getDate() + 1;
   let edad = añoActual - miAñoDeNac;
-  if (
-    Math.sign(mesActual - miMesDeNac) !== 1 &&
-    Math.sign(diaActual - miDiaDeNac) !== 1
-  ) {
-    elementoEdad.innerText = edad;
-  } else {
-    elementoEdad.innerText = edad - 1;
-  }
+
+  Math.sign(mesActual - miMesDeNac) !== 1 &&
+  Math.sign(diaActual - miDiaDeNac) !== 1
+    ? (elementoEdad.innerText = edad)
+    : (elementoEdad.innerText = edad - 1);
 };
 calculoDeEdad("1984-05-18");
