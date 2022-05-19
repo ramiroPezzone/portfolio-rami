@@ -36,7 +36,8 @@ const linksNavBar = d.querySelectorAll(".link-navbar-fixed"),
   logoSitioWeb = d.querySelectorAll(".iconoSitioWeb"),
   logoVerDetalles = d.querySelectorAll(".ver-detalles"),
   docs = d.querySelector(".docs"),
-  download = d.querySelector(".download");
+  btnDownloadLg = d.querySelector(".btn-descargar-cv"),
+  btnDownloadSm = d.querySelector(".btn-navbar-sm");
 
 if (d.getElementById("toggle-dark-mode")) {
   const btnDarkMode = d.getElementById("toggle-dark-mode");
@@ -79,8 +80,8 @@ if (d.getElementById("toggle-dark-mode")) {
     logoVerDetalles.forEach((logo) =>
       logo.classList.remove("ver-detalles-dark")
     );
-    docs.classList.remove("docsDark");
-    download.classList.remove("downloadDark");
+    btnDownloadLg.classList.remove("btn-descargar-cv-dark");
+    btnDownloadSm.classList.remove("btn-navbar-sm-dark");
 
     LS.setItem("theme", "light");
   };
@@ -121,8 +122,8 @@ if (d.getElementById("toggle-dark-mode")) {
     logoRP.classList.add("logoRPDark");
     logoSitioWeb.forEach((logo) => logo.classList.add("iconoSitioWebDark"));
     logoVerDetalles.forEach((logo) => logo.classList.add("ver-detalles-dark")),
-      docs.classList.add("docsDark"),
-      download.classList.add("downloadDark");
+      btnDownloadLg.classList.add("btn-descargar-cv-dark");
+    btnDownloadSm.classList.remove("btn-navbar-sm-dark");
 
     LS.setItem("theme", "dark");
   };

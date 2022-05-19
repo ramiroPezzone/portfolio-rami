@@ -1150,6 +1150,27 @@ h2::first-letter {
   display: block;
   width: 100%;
 }
+.container-btn-descargar-sm {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 8%;
+}
+.btn-navbar-sm {
+  width: 80%;
+  padding: 16px 5%;
+  border: 2px solid var(--fondo-foto);
+  /* color: var(--flame) !important; */
+  font-size: 1.2em !important;
+  text-align: center;
+}
+.btn-navbar-sm-dark {
+  border: 2px solid var(--fondo-foto);
+  color: var(--flame) !important;
+  font-size: 1.2em !important;
+  text-align: center;
+}
+
 /*  */
 
 /*  */
@@ -1271,11 +1292,29 @@ h2::first-letter {
     width: 25%;
     height: 100vh;
   }
+  .btn-descargar-cv:hover {
+    border: 2px solid var(--fondo-foto);
+    background-color: var(--fondo-foto);
+    color: var(--background-dark);
+    box-shadow: 0 0 25px var(--background-dark);
+  }
+  .btn-descargar-cv-dark:hover {
+    border: 2px solid var(--fondo-foto);
+    background-color: var(--fondo-foto);
+    color: var(--background-dark);
+    box-shadow: 0 0 25px var(--flame);
+  }
+  .linea-divisora-final {
+    height: 1px;
+    background-color: transparent;
+    margin: 20px;
+    max-width: 210px;
+  }
   .linea-divisora-navbar {
     width: 70%;
     height: 1px;
     background-color: var(--silver-metallic);
-    margin: 20px;
+    margin: 2vh 0;
     max-width: 210px;
   }
   .contenedor-navbar-fixed {
@@ -1289,9 +1328,9 @@ h2::first-letter {
   }
 
   .contenedor-navbar-flex {
+    position: relative;
     display: block;
     height: 80vh;
-    margin-top: 20px;
     max-width: 270px;
   }
 
@@ -1326,6 +1365,12 @@ h2::first-letter {
     padding: 2.5vh 0;
     transition: 0.3s;
   }
+  .btn-descargar-cv {
+    padding: 16px 5%;
+    border: 2px solid var(--fondo-foto);
+    color: var(--flame);
+  }
+
   .backgroundHover {
     position: absolute;
     background: var(--fondo-foto) no-repeat center;
