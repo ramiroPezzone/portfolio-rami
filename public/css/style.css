@@ -318,6 +318,7 @@ input:checked + .slider:before {
 }
 
 .nav-bar-oculto ul {
+  position: relative;
   margin-top: 0;
   margin-left: 10vw;
   display: flex;
@@ -1151,6 +1152,11 @@ h2::first-letter {
   width: 100%;
 }
 .container-btn-descargar-sm {
+  position: absolute;
+  left: -32px;
+  right: 0;
+  margin: auto;
+  bottom: 0;
   width: 100%;
   text-align: center;
 }
