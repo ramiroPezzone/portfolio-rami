@@ -12,6 +12,7 @@ const trabajosReales = [
       "La interfaz de usuarios, tanto para clientes como para administradores están alojadas en los servidores de Vercel. El servidor se encuentra alojado en Heroku.",
     link: "https://mercadito-natutal-kiara-v1-front.vercel.app/",
     link2: "https://mercadito-natutal-kiara-v1-admin-front.vercel.app/",
+    linkGithub: "https://github.com/ramiroPezzone/mercaditoNatutalKiaraV1-Front.git"
   },
   {
     titulo: "A & D (Segunda versión)",
@@ -24,6 +25,7 @@ const trabajosReales = [
     observaciones:
       "Como podrá observarse, el sitio mencionado se encuentra alojado en Heroku para poder ser visualizado. Actualmente la empresa se encuentra utilizando el sitio sin las funcionalidades de Backend, como tampoco del formulario de contacto. Esos cambios se verán reflejados en un futuro próximo.",
     link: "https://ayd-hornos-rotativos-v-1-1.herokuapp.com/",
+    linkGithub: "https://github.com/ramiroPezzone/aydhornosrotativos-v1.1.git"
   },
   {
     titulo: "A & D (Primera versión)",
@@ -36,6 +38,7 @@ const trabajosReales = [
     observaciones:
       "Este sitio lo tomé como un desafío para poner en práctica todo lo aprendido inclusive desde antes de haber iniciado la formación que aún en la actualidad curso. Tiene una estructura de etiquetas algo dificil de escalar, como también un diseño del responsive que claramente puede notarse la falta de experiencia en el manejo sistemas de grids o de flexbox. Dada la falta de conocimiento de ese primer momento no me era posible agregar un formulario de contacto para que el cliente envíe sus datos conjuntamente con una consulta. Todas estas limitaciones mencionadas se vieron superadas, dando vida luego a la segunda versión del mismo sitio, la cual presento a continuación.",
     link: "https://aydhornosrotativos.vercel.app/",
+    linkGithub: "https://github.com/ramiroPezzone/aydhornosrotativos.git"
   },
 ];
 

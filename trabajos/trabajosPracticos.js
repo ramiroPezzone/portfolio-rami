@@ -8,6 +8,7 @@ const trabajosPracticos = [
       "Trabajo práctico consistente en la confección de un sitio web en el cual se realice el consumo de una API desde la cual se obtienen datos reales de películas y series. La misma está completamente realizada con REACT de manera de afianzar los conocimientos de componentización, manejos de estados, ciclos de vida de componentes y consumo de api. Además del consumo de la api mencionado se cuenta también con la opción de búsqueda de cualquier película, la opción por parte del visitante de asignar películas como favoritas o quitar dicho estado, como así también muchos agregados que no estaban incluidos en las consignas del trabajo.",
       observaciones: "SIN OBS",
     link: "https://trabajo-integrador-react.vercel.app/",
+    linkGithub: "https://github.com/ramiroPezzone/trabajo-integrador-react.git"
   },
   {
     titulo: "Cerveza Abysmo",
@@ -19,6 +20,7 @@ const trabajosPracticos = [
     observaciones:
       "En el afán de querer ir a por más agregué: - Varias animaciones tanto onclick como también otras al desplazar el mouse por determinados elementos. -La limitación de que en el almanaque no pueda seleccionarse una fecha que sea anterior a la actual MENOS 18 años atrás (esto considerando que el sitio que confeccioné es de venta de cervezas).- Y un formulario más con la intención de darle realismo, en el que se solicita al usuario que si tiene cuenta inicie sesión, caso contrario continúe al formulario para la creación de una.",
     link: "https://ejercitacion-unidad2-trabajo-pr-ctico1.vercel.app/",
+    linkGithub: "https://github.com/ramiroPezzone/trabajo-integrador-js.git"
   },
   {
     titulo: "Delicious Taste",
@@ -30,6 +32,7 @@ const trabajosPracticos = [
     observaciones:
       'Dado que JS no se encontraba entre las tecnologías disponibles a utilizar, se implementó la etiqueta "details" para emular el comportamiento de un navbar desplegable, como así también para el despliegue de la información de detalles de los productos.',
     link: "https://delicious-taste-trabajo-integrador-html-css.vercel.app/index.html",
+    linkGithub: "https://github.com/ramiroPezzone/actividad-2-curso-html-css.git"
   },
 ];
 

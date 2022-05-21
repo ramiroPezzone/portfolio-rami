@@ -18,6 +18,9 @@
             </div>
             <div class="contenedor-btn-enlace">
               <div class="ver-detalles" title="Ir a <%= proyectosPersonales[d].titulo%>" id="<%= proyectosPersonales[d].imagen %>"></div>
+              <a href='<%= proyectosPersonales[d].linkGithub %>' target="_blank" rel="noopener noreferrer" class="link-invitation" title="Ir al repositorio en github de <%= proyectosPersonales[d].titulo %>">
+                <div class="iconoGithub"></div>
+              </a>
               <% if (proyectosPersonales[d].link.length > 0) { %>
               <a href='<%= proyectosPersonales[d].link %>' target="_blank" rel="noopener noreferrer" class="link-invitation" title="Ir al sitio">
                 <div class="iconoSitioWeb"></div>

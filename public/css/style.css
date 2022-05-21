@@ -739,6 +739,18 @@ h2::first-letter {
   background: url("../images/imgSitioWeb.png") no-repeat center;
   background-size: 100%;
 }
+.iconoGithub {
+  width: 48px;
+  height: 48px;
+  background: url("../images/github-logo.png") no-repeat center;
+  background-size: 100%;
+}
+.iconoGithubDark {
+  width: 48px;
+  height: 48px;
+  background: url("../images/github-logo-dark.png") no-repeat center;
+  background-size: 100%;
+}
 .iconoSitioWebDark {
   background: url("../images/imgSitioWebDark.png") no-repeat center;
   background-size: 100%;

@@ -17,32 +17,33 @@ const linksNavBar = d.querySelectorAll(".link-navbar-fixed"),
     ".container-linea-divisora-skills"
   );
 lineaDivisoraSkills = d.querySelectorAll(".linea-divisora-skills");
-skillsContainer = d.querySelector(".contenedor-general-skills"),
-  softSkillsContainer = d.querySelector(".contenedor-general-soft-skills"),
-  langsContainer = d.querySelector(".contenedor-langs"),
-  todosLosP = d.querySelectorAll("p"),
-  todosLosH2 = d.querySelectorAll("h2"),
-  todosLosH3 = d.querySelectorAll("h3"),
-  todosLosH4 = d.querySelectorAll("h4"),
-  todosLosH5 = d.querySelectorAll("h5"),
-  todosLosH6 = d.querySelectorAll("h6"),
-  itemTrabajo = d.querySelectorAll(".item-trabajo"),
-  detalleTrabajo = d.querySelectorAll(".contenedor-flex-detalles-trabajos"),
-  contenedorX = d.querySelectorAll(".contenedor-x"),
-  lineaDivisora1 = d.querySelectorAll(".linea-divisora"),
-  sectionContacto = d.querySelector(".contacto"),
-  labels = d.querySelectorAll("label"),
-  btnEnviarCorreo = d.querySelector("#btn-enviar"),
-  logoFacebook = d.querySelector(".logo-facebook"),
-  logoGithub = d.querySelector(".logo-github"),
-  logoLinkedin = d.querySelector(".logo-linkedin"),
-  logoInstagram = d.querySelector(".logo-instagram"),
-  logoRP = d.querySelector(".logo-rp-rrss"),
-  logoSitioWeb = d.querySelectorAll(".iconoSitioWeb"),
-  logoVerDetalles = d.querySelectorAll(".ver-detalles"),
-  docs = d.querySelector(".docs"),
-  btnDownloadLg = d.querySelector(".btn-descargar-cv"),
-  btnDownloadSm = d.querySelector(".btn-navbar-sm");
+(skillsContainer = d.querySelector(".contenedor-general-skills")),
+  (softSkillsContainer = d.querySelector(".contenedor-general-soft-skills")),
+  (langsContainer = d.querySelector(".contenedor-langs")),
+  (todosLosP = d.querySelectorAll("p")),
+  (todosLosH2 = d.querySelectorAll("h2")),
+  (todosLosH3 = d.querySelectorAll("h3")),
+  (todosLosH4 = d.querySelectorAll("h4")),
+  (todosLosH5 = d.querySelectorAll("h5")),
+  (todosLosH6 = d.querySelectorAll("h6")),
+  (itemTrabajo = d.querySelectorAll(".item-trabajo")),
+  (detalleTrabajo = d.querySelectorAll(".contenedor-flex-detalles-trabajos")),
+  (contenedorX = d.querySelectorAll(".contenedor-x")),
+  (lineaDivisora1 = d.querySelectorAll(".linea-divisora")),
+  (sectionContacto = d.querySelector(".contacto")),
+  (labels = d.querySelectorAll("label")),
+  (btnEnviarCorreo = d.querySelector("#btn-enviar")),
+  (logoFacebook = d.querySelector(".logo-facebook")),
+  (logoGithub = d.querySelector(".logo-github")),
+  (logoLinkedin = d.querySelector(".logo-linkedin")),
+  (logoInstagram = d.querySelector(".logo-instagram")),
+  (logoRP = d.querySelector(".logo-rp-rrss")),
+  (logoSitioWeb = d.querySelectorAll(".iconoSitioWeb")),
+  (logoVerDetalles = d.querySelectorAll(".ver-detalles")),
+  (docs = d.querySelector(".docs")),
+  (btnDownloadLg = d.querySelector(".btn-descargar-cv")),
+  (btnDownloadSm = d.querySelector(".btn-navbar-sm"));
+iconoGithub = d.querySelectorAll(".iconoGithub");
 
 if (d.getElementById("toggle-dark-mode")) {
   const btnDarkMode = d.getElementById("toggle-dark-mode");
@@ -94,6 +95,7 @@ if (d.getElementById("toggle-dark-mode")) {
     );
     btnDownloadLg.classList.remove("btn-descargar-cv-dark");
     btnDownloadSm.classList.remove("btn-navbar-sm-dark");
+    iconoGithub.forEach((ico) => ico.classList.remove("iconoGithubDark"));
 
     LS.setItem("theme", "light");
   };
@@ -143,7 +145,8 @@ if (d.getElementById("toggle-dark-mode")) {
     logoSitioWeb.forEach((logo) => logo.classList.add("iconoSitioWebDark"));
     logoVerDetalles.forEach((logo) => logo.classList.add("ver-detalles-dark")),
       btnDownloadLg.classList.add("btn-descargar-cv-dark");
-    btnDownloadSm.classList.remove("btn-navbar-sm-dark");
+    btnDownloadSm.classList.add("btn-navbar-sm-dark");
+    iconoGithub.forEach((ico) => ico.classList.add("iconoGithubDark"));
 
     LS.setItem("theme", "dark");
   };
@@ -162,8 +165,8 @@ if (d.getElementById("toggle-dark-mode")) {
 // ANIMACIÓN MENÚ HAMBURGUESA & NAVBAR
 if (d.querySelector(".contenedor-menu-hamburguesa")) {
   const contenedorMenuHamburguesa = d.querySelector(
-    ".contenedor-menu-hamburguesa"
-  ),
+      ".contenedor-menu-hamburguesa"
+    ),
     navBarOculto = d.querySelector(".nav-bar-oculto"),
     menuHamburguesa = d.querySelector(".menu-hamburguesa"),
     menuHamburguesaX = d.querySelector(".menu-hamburguesa-x"),
@@ -357,7 +360,7 @@ const calculoDeEdad = (fechaDeNac) => {
   let edad = añoActual - miAñoDeNac;
 
   Math.sign(mesActual - miMesDeNac) !== 1 &&
-    Math.sign(diaActual - miDiaDeNac) !== 1
+  Math.sign(diaActual - miDiaDeNac) !== 1
     ? (elementoEdad.innerText = edad)
     : (elementoEdad.innerText = edad - 1);
 };
