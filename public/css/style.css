@@ -1306,12 +1306,35 @@ h2::first-letter {
     width: 25%;
     height: 100vh;
   }
+  .btn-descargar-cv {
+    position: relative;
+    padding: 16px 5% !important;
+    border: 2px solid var(--fondo-foto);
+    color: var(--flame) !important;
+  }
   .btn-descargar-cv:hover {
     border: 2px solid var(--fondo-foto);
     background-color: var(--fondo-foto);
-    color: var(--background-dark);
-    box-shadow: 0 0 25px var(--background-dark);
+    box-shadow: 0 0 25px var(--atomic-tangerine);
+    color: #fff !important;
   }
+  .btn-descargar-cv::before {
+    content: "";
+    position: absolute;
+    left: -5%;
+    top: 32px;
+    background: transparent;
+    height: 70%;
+    width: 110%;
+    transform: perspective(6.5em) rotateX(45deg) scale(1, .5);
+    filter: blur(13px);
+    transition: 1s ease;
+  }
+  .btn-descargar-cv:hover::before {
+    background: var(--fondo-foto);
+    top: 50px;
+  }
+
   .btn-descargar-cv-dark:hover {
     border: 2px solid var(--fondo-foto);
     background-color: var(--fondo-foto);
@@ -1378,11 +1401,6 @@ h2::first-letter {
     font-family: var(--josefin-sans);
     padding: 2.5vh 0;
     transition: 0.3s;
-  }
-  .btn-descargar-cv {
-    padding: 16px 5%;
-    border: 2px solid var(--fondo-foto);
-    color: var(--flame);
   }
 
   .backgroundHover {
