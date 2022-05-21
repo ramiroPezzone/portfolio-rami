@@ -237,6 +237,15 @@ input:checked + .slider:before {
   background: linear-gradient(to right, #fff0, var(--smoky-black), #fff0);
   margin: 30px auto;
 }
+.container-linea-divisora-skills {
+  padding: 30px;
+  background-color: var(--gris-claro);
+}
+.linea-divisora-skills {
+  height: 2px;
+  width: 90%;
+  background: linear-gradient(to right, #fff0, var(--smoky-black), #fff0);
+}
 
 .navbar-lg {
   display: none;
@@ -430,7 +439,8 @@ h2::first-letter {
 /* SKILLS */
 /* TECNOLOGIAS */
 .contenedor-general-skills,
-.contenedor-langs {
+.contenedor-langs,
+.contenedor-habilidades {
   background-color: var(--gris-claro);
 }
 .lang-text {
@@ -494,9 +504,6 @@ h2::first-letter {
   background-color: #fff;
 }
 /* SOFT-SKILLS */
-.contenedor-general-soft-skills {
-  margin: 20px 0;
-}
 .logo-soft-skills img {
   width: 80px;
 }
@@ -509,6 +516,9 @@ h2::first-letter {
   display: flex;
   gap: 30px;
   margin: 20px 0;
+}
+.contenedor-soft-skills:last-child {
+  margin-bottom: 0;
 }
 /* IDIOMAS */
 .imagen-lang img {

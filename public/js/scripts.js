@@ -13,7 +13,12 @@ const linksNavBar = d.querySelectorAll(".link-navbar-fixed"),
   backgroundHover = d.querySelectorAll(".backgroundHover"),
   marker = d.querySelectorAll(".marker"),
   aboutMe = d.querySelector(".contenedor-about-me"),
-  skillsContainer = d.querySelector(".contenedor-general-skills"),
+  containerLineaDivisoraSkills = d.querySelectorAll(
+    ".container-linea-divisora-skills"
+  );
+lineaDivisoraSkills = d.querySelectorAll(".linea-divisora-skills");
+skillsContainer = d.querySelector(".contenedor-general-skills"),
+  softSkillsContainer = d.querySelector(".contenedor-general-soft-skills"),
   langsContainer = d.querySelector(".contenedor-langs"),
   todosLosP = d.querySelectorAll("p"),
   todosLosH2 = d.querySelectorAll("h2"),
@@ -57,6 +62,13 @@ if (d.getElementById("toggle-dark-mode")) {
     marker.forEach((mark) => mark.classList.remove("markerDark"));
     aboutMe.classList.remove("fontDark");
     skillsContainer.classList.remove("BGElementDark");
+    softSkillsContainer.classList.remove("BGElementDark");
+    containerLineaDivisoraSkills.forEach((line) => {
+      line.classList.remove("BGElementDark");
+    });
+    lineaDivisoraSkills.forEach((line) => {
+      line.classList.remove("lineaDark");
+    });
     langsContainer.classList.remove("BGElementDark");
     todosLosP.forEach((p) => p.classList.remove("fontDark"));
     todosLosH2.forEach((h) => h.classList.remove("fontDark"));
@@ -100,7 +112,15 @@ if (d.getElementById("toggle-dark-mode")) {
     );
     marker.forEach((mark) => mark.classList.add("markerDark"));
     aboutMe.classList.add("fontDark");
+    containerLineaDivisoraSkills.forEach((line) => {
+      line.classList.add("BGElementDark");
+    });
+    lineaDivisoraSkills.forEach((line) => {
+      line.classList.add("lineaDark");
+    });
+
     skillsContainer.classList.add("BGElementDark");
+    softSkillsContainer.classList.add("BGElementDark");
     langsContainer.classList.add("BGElementDark");
     todosLosP.forEach((p) => p.classList.add("fontDark"));
     todosLosH2.forEach((h) => h.classList.add("fontDark"));
@@ -142,8 +162,8 @@ if (d.getElementById("toggle-dark-mode")) {
 // ANIMACIÓN MENÚ HAMBURGUESA & NAVBAR
 if (d.querySelector(".contenedor-menu-hamburguesa")) {
   const contenedorMenuHamburguesa = d.querySelector(
-      ".contenedor-menu-hamburguesa"
-    ),
+    ".contenedor-menu-hamburguesa"
+  ),
     navBarOculto = d.querySelector(".nav-bar-oculto"),
     menuHamburguesa = d.querySelector(".menu-hamburguesa"),
     menuHamburguesaX = d.querySelector(".menu-hamburguesa-x"),
@@ -337,7 +357,7 @@ const calculoDeEdad = (fechaDeNac) => {
   let edad = añoActual - miAñoDeNac;
 
   Math.sign(mesActual - miMesDeNac) !== 1 &&
-  Math.sign(diaActual - miDiaDeNac) !== 1
+    Math.sign(diaActual - miDiaDeNac) !== 1
     ? (elementoEdad.innerText = edad)
     : (elementoEdad.innerText = edad - 1);
 };
