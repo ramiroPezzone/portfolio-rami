@@ -5,7 +5,7 @@ let express = require("express"),
   contrasenia = "aiclfwwgpgovmrak",
   enviarA = "ramiro.pezzone@gmail.com",
   dateNow = new Date().toLocaleDateString("es-AR"),
-  hourNow = new Date().getHours(),
+  hourNow = new Date().getHours() - 3,
   minsNow = new Date().getMinutes();
 
 router.post("/contacto", async (req, res) => {
