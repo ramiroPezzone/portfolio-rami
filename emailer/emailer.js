@@ -4,12 +4,14 @@ let express = require("express"),
   usuario = "ramiro.pezzone.emailer@gmail.com",
   contrasenia = "aiclfwwgpgovmrak",
   enviarA = "ramiro.pezzone@gmail.com",
-  dateNow = new Date().toLocaleString();
+  { DateTime } = require("luxon");
+
+let dateNow = DateTime.now().setLocale().toFormat("DDDD, HH:mm:ss");
 
 router.post("/contacto", async (req, res) => {
   const { nombre, tel, email, company, mensaje } = req.body;
 
-  const mensajeSaliente = `<h1>Un nueva mensaje fue enviado el día ${dateNow}</h1>
+  const mensajeSaliente = `<h1>Un nuevo mensaje fue enviado el día ${dateNow}</h1>
   <hr>
   <h2 style="color: rgb(150, 150, 150)"><u>Los datos de contacto son</u>:</h2>
   <h3 style="color: rgb(150, 150, 150)"><u>Nombre completo</u>:</h3>
