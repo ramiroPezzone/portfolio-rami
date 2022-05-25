@@ -9,7 +9,7 @@ let express = require("express"),
 let dateNow = DateTime.now().setLocale().toFormat("DDDD, HH:mm:ss");
 
 router.post("/contacto", async (req, res) => {
-  const { nombre, tel, email, company, mensaje } = req.body; 
+  const { nombre, tel, email, company, mensaje } = req.body;
 
   const mensajeSaliente = `<h1>Un nuevo mensaje fue enviado el día ${dateNow}</h1>
   <hr>
