@@ -4,9 +4,7 @@ let express = require("express"),
   usuario = "ramiro.pezzone.emailer@gmail.com",
   contrasenia = "aiclfwwgpgovmrak",
   enviarA = "ramiro.pezzone@gmail.com",
-  { DateTime } = require("luxon");
-
-let dateNow = DateTime.now().setLocale().toFormat("DDDD, HH:mm:ss");
+  dateNow = new Date().toLocaleDateString();
 
 router.post("/contacto", async (req, res) => {
   const { nombre, tel, email, company, mensaje } = req.body;
