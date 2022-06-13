@@ -1,5 +1,16 @@
 const proyectosPersonales = [
   {
+    titulo: "Smart Wallet",
+    imagen: "vista-previa-pp3.png",
+    demoResponsive: "demoResponsiveSmartWallet.png",
+    tecnologias: "HTML - CSS - JS - NODEJS - BOOTSTRAP",
+    descripcion:
+      "Proyecto inspirado en los consejos de T. Harv Eker en su libro 'Secretos de una mente millonaria', la propuesta del mismo es que sea utilizado como herramienta de registro de ingresos y egresos, siendo éstos últimos dividos en categorías, tal como se recomienda en el libro mencionado. Al contar con el sistema de autenticación oAuth2 el usuario debe iniciar sesión con su cuenta de Google y no se le pide ningún dato personal adicional. La primera vez que inicia sesión se le solicita que haga una primer división de como considera que deberá dividir su presupuesto mensual, pudiendo también ser editado en otro momento. Luego de eso, siempre que vuelva a ingresar inicia en la pantalla principal en la que se muestran solo dos botones, uno para registrar ingresos y otro para los egresos. Cuenta también con un apartado para ver los movimientos registrados. Pensado para que sea una herramienta práctica y agil, en la que el usuario solo ingrese, registre y salga, y luego realice las consultas cuando lo crea necesario. Realizado bajo la arquitectura MVC y con el motor de vistas EJS. ",
+    link: "https://smart-wallet-by-ramiro.herokuapp.com/",
+    linkGithub: "https://github.com/ramiroPezzone/smart-wallet.git",
+    observaciones: "SIN OBS",
+  },
+  {
     titulo: "Sitio web personal",
     imagen: "vista-previa-pp1.png",
     demoResponsive: "demoResponsivePortfolioRami.png",

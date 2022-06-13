@@ -222,10 +222,17 @@ let btnPP1 = d.getElementById("vista-previa-pp1.png"),
 btnPP1.addEventListener("click", () => {
   contenedorPP1.classList.add("item-trabajo-detalles-revelado");
 });
+// PP2
 let btnPP2 = d.getElementById("vista-previa-pp2.png"),
   contenedorPP2 = d.getElementById("id-vista-previa-pp2.png");
 btnPP2.addEventListener("click", () => {
   contenedorPP2.classList.add("item-trabajo-detalles-revelado");
+});
+// PP3
+let btnPP3 = d.getElementById("vista-previa-pp3.png"),
+  contenedorPP3 = d.getElementById("id-vista-previa-pp3.png");
+btnPP3.addEventListener("click", () => {
+  contenedorPP3.classList.add("item-trabajo-detalles-revelado");
 });
 
 // TR1
@@ -262,6 +269,7 @@ d.addEventListener("keydown", (e) => {
     contenedorTP3.classList.remove("item-trabajo-detalles-revelado");
     contenedorPP1.classList.remove("item-trabajo-detalles-revelado");
     contenedorPP2.classList.remove("item-trabajo-detalles-revelado");
+    contenedorPP3.classList.remove("item-trabajo-detalles-revelado");
     contenedorTR1.classList.remove("item-trabajo-detalles-revelado");
     contenedorTR2.classList.remove("item-trabajo-detalles-revelado");
     contenedorTR3.classList.remove("item-trabajo-detalles-revelado");
@@ -275,6 +283,7 @@ btnDeCierreDeDetalles.forEach((btn) => {
     contenedorTP3.classList.remove("item-trabajo-detalles-revelado");
     contenedorPP1.classList.remove("item-trabajo-detalles-revelado");
     contenedorPP2.classList.remove("item-trabajo-detalles-revelado");
+    contenedorPP3.classList.remove("item-trabajo-detalles-revelado");
     contenedorTR1.classList.remove("item-trabajo-detalles-revelado");
     contenedorTR2.classList.remove("item-trabajo-detalles-revelado");
     contenedorTR3.classList.remove("item-trabajo-detalles-revelado");
